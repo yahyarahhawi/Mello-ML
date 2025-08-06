@@ -3,54 +3,45 @@ import numpy as np
 import argparse
 from sklearn.metrics.pairwise import cosine_similarity
 from sklearn.neighbors import NearestNeighbors
-import sys
+from sklearn.preprocessing import StandardScaler
 
-def load_embeddings(model_type):
-    """Load embeddings based on model type"""
-    if model_type.lower() == 'minilm':
-        filename = 'semantic_profiles.json'
-    elif model_type.lower() == 'e5':
-        filename = 'semantic_profiles_e5.json'
-    elif model_type.lower() == 'combined':
-        filename = 'combined_profiles_e5.json'
-    else:
-        raise ValueError("Model must be 'minilm', 'e5', or 'combined'")
-    
+def load_book_embeddings_200():
+    """Load the book embeddings from the 200-person dataset with Gemini vectors"""
     try:
+        # Load the new Gemini embeddings with Yahya
+        filename = 'main.json'
         with open(filename, 'r', encoding='utf-8') as f:
             profiles = json.load(f)
+        print(f"Loaded {len(profiles)} profiles from {filename}")
         return profiles
+        
     except FileNotFoundError:
-        print(f"Error: {filename} not found. Run the appropriate embedding script first.")
+        print(f"Error: {filename} not found. Make sure to generate it first.")
         return None
     except Exception as e:
         print(f"Error loading embeddings: {e}")
         return None
 
-def get_user_vector(profiles, name, category):
-    """Get the vector for a specific user and category"""
-    vector_key = f"{category}_vector"
-    
+def get_user_vector(profiles, target_name):
+    """Get the specified user's book vector"""
     for profile in profiles:
-        if profile['name'].lower() == name.lower():
-            if vector_key in profile:
-                return np.array(profile[vector_key]), profile['name']
+        if profile['name'].lower() == target_name.lower():
+            if 'books_vector' in profile:
+                return np.array(profile['books_vector']), profile['name']
             else:
-                raise ValueError(f"Category '{category}' not found for user '{name}'")
+                raise ValueError(f"books_vector not found for {target_name}")
     
-    raise ValueError(f"User '{name}' not found")
+    raise ValueError(f"{target_name} not found in profiles")
 
-def calculate_cosine_similarities(target_vector, profiles, category, use_mean_center=True):
-    """Calculate cosine similarities between target user and all others"""
-    vector_key = f"{category}_vector"
-    
-    # Extract all vectors
+def calculate_manhattan_similarities(target_vector, profiles, target_name, use_mean_center=True):
+    """Calculate Manhattan distance similarities between target user and all others"""
+    # Extract all book vectors
     all_vectors = []
     names = []
     
     for profile in profiles:
-        if vector_key in profile:
-            all_vectors.append(profile[vector_key])
+        if 'books_vector' in profile:
+            all_vectors.append(profile['books_vector'])
             names.append(profile['name'])
     
     if not all_vectors:
@@ -68,7 +59,7 @@ def calculate_cosine_similarities(target_vector, profiles, category, use_mean_ce
         # Use raw vectors
         vectors_to_use = embeddings
     
-    # Find target vector index
+    # Find target user's vector index
     target_idx = None
     target_vector_flat = target_vector.flatten()
     for i, vector in enumerate(all_vectors):
@@ -77,30 +68,32 @@ def calculate_cosine_similarities(target_vector, profiles, category, use_mean_ce
             break
     
     if target_idx is None:
-        raise ValueError("Target user not found in vectors")
+        raise ValueError(f"{target_name} not found in vectors")
     
-    target_to_use = vectors_to_use[target_idx].reshape(1, -1)
+    target_to_use = vectors_to_use[target_idx]
     
-    # Calculate similarities
+    # Calculate Manhattan distances (lower = more similar)
     similarities = []
     for i, name in enumerate(names):
-        vector = vectors_to_use[i].reshape(1, -1)
-        similarity = cosine_similarity(target_to_use, vector)[0][0]
-        similarities.append((name, similarity))
+        if name.lower() != target_name.lower():  # Exclude target user themselves
+            vector = vectors_to_use[i]
+            # Manhattan distance is sum of absolute differences
+            manhattan_dist = np.sum(np.abs(target_to_use - vector))
+            # Convert to similarity (negative distance so lower distance = higher similarity)
+            similarity = -manhattan_dist
+            similarities.append((name, similarity))
     
     return similarities
 
-def calculate_nearest_neighbors(target_vector, profiles, category, use_mean_center=True, n_neighbors=None):
-    """Calculate nearest neighbors using euclidean distance"""
-    vector_key = f"{category}_vector"
-    
-    # Extract all vectors and names
+def calculate_manhattan_neighbors(target_vector, profiles, target_name, use_mean_center=True, n_neighbors=10):
+    """Calculate nearest neighbors using Manhattan distance"""
+    # Extract all book vectors and names
     vectors = []
     names = []
     
     for profile in profiles:
-        if vector_key in profile:
-            vectors.append(profile[vector_key])
+        if 'books_vector' in profile:
+            vectors.append(profile['books_vector'])
             names.append(profile['name'])
     
     if not vectors:
@@ -117,7 +110,7 @@ def calculate_nearest_neighbors(target_vector, profiles, category, use_mean_cent
         # Use raw vectors
         vectors_to_use = embeddings
     
-    # Find target user index
+    # Find target user's index
     target_vector_flat = target_vector.flatten()
     target_idx = None
     for i, vector in enumerate(vectors):
@@ -126,17 +119,13 @@ def calculate_nearest_neighbors(target_vector, profiles, category, use_mean_cent
             break
     
     if target_idx is None:
-        raise ValueError("Target user not found in vectors")
+        raise ValueError(f"{target_name} not found in vectors")
     
-    # Set n_neighbors to all users if not specified
-    if n_neighbors is None:
-        n_neighbors = len(vectors_to_use)
-    
-    # Fit nearest neighbors
-    nn = NearestNeighbors(n_neighbors=min(n_neighbors, len(vectors_to_use)), metric='euclidean')
+    # Fit nearest neighbors with Manhattan distance
+    nn = NearestNeighbors(n_neighbors=min(n_neighbors + 1, len(vectors_to_use)), metric='manhattan')
     nn.fit(vectors_to_use)
     
-    # Find neighbors using target vector
+    # Find neighbors using target user's vector
     target_to_use = vectors_to_use[target_idx]
     distances, indices = nn.kneighbors([target_to_use])
     
@@ -144,101 +133,109 @@ def calculate_nearest_neighbors(target_vector, profiles, category, use_mean_cent
     # Using negative distance so we can sort in descending order
     similarities = []
     for dist, idx in zip(distances[0], indices[0]):
-        if idx != target_idx:  # Exclude the target user themselves
+        if idx != target_idx:  # Exclude target user themselves
             similarity = -dist  # Negative distance for sorting
             similarities.append((names[idx], similarity))
     
     return similarities
 
-def format_output(similarities, target_name, category, method, model_type, use_mean_center=True):
+def format_output(similarities, target_name, method, use_mean_center=True, top_n=10, profiles=None):
     """Format and display the results"""
-    print(f"\n{'='*60}")
-    if use_mean_center:
-        print(f"SIMILARITY SEARCH RESULTS (MEAN-CENTERED)")
-    else:
-        print(f"SIMILARITY SEARCH RESULTS (RAW VECTORS)")
-    print(f"{'='*60}")
+    print(f"\n{'='*70}")
+    print(f"SIMILARITY SEARCH RESULTS (RAW VECTORS)")
+    print(f"{'='*70}")
     print(f"Target User: {target_name}")
-    print(f"Category: {category.title()}")
-    print(f"Model: {model_type.upper()}")
+    print(f"Category: Books (768-dimensional Gemini embeddings)")
     print(f"Method: {method.replace('_', ' ').title()}")
-    if use_mean_center:
-        print(f"Note: Vectors mean-centered to highlight uniqueness")
-    else:
-        print(f"Note: Using raw vectors without mean-centering")
-    print(f"{'='*60}")
+    print(f"Note: Using raw vectors without mean-centering")
+    print(f"{'='*70}")
     
-    if method == 'cosine_similarity':
-        print(f"{'Rank':<4} {'User Name':<20} {'Cosine Similarity':<18}")
-        print("-" * 44)
-        for i, (name, score) in enumerate(similarities, 1):
-            print(f"{i:<4} {name:<20} {score:.6f}")
-    else:  # nearest_neighbor
-        print(f"{'Rank':<4} {'User Name':<20} {'Distance (neg)':<15}")
-        print("-" * 41)
-        for i, (name, score) in enumerate(similarities, 1):
-            print(f"{i:<4} {name:<20} {score:.6f}")
+    # Show top N results
+    top_similarities = similarities[:top_n]
     
-    print(f"\nTotal users ranked: {len(similarities)}")
+    if method == 'manhattan_similarity':
+        print(f"{'Rank':<4} {'User Name':<25} {'Manhattan Similarity':<18} {'Archetype':<40}")
+        print("-" * 89)
+        for i, (name, score) in enumerate(top_similarities, 1):
+            # Find archetype for this user
+            archetype = "Unknown"
+            if profiles:
+                for profile in profiles:
+                    if profile.get('name', '').lower() == name.lower():
+                        archetype = profile.get('personality_archetype', 'Unknown')
+                        break
+            
+            # Truncate archetype if too long
+            archetype_short = archetype[:37] + "..." if len(archetype) > 40 else archetype
+            print(f"{i:<4} {name:<25} {score:.6f} {archetype_short:<40}")
+    else:  # manhattan_neighbor
+        print(f"{'Rank':<4} {'User Name':<25} {'Manhattan Distance (neg)':<20} {'Archetype':<40}")
+        print("-" * 91)
+        for i, (name, score) in enumerate(top_similarities, 1):
+            # Find archetype for this user
+            archetype = "Unknown"
+            if profiles:
+                for profile in profiles:
+                    if profile.get('name', '').lower() == name.lower():
+                        archetype = profile.get('personality_archetype', 'Unknown')
+                        break
+            
+            # Truncate archetype if too long
+            archetype_short = archetype[:37] + "..." if len(archetype) > 40 else archetype
+            print(f"{i:<4} {name:<25} {score:.6f} {archetype_short:<40}")
+    
+    print(f"\nTop {len(top_similarities)} most similar users shown out of {len(similarities)} total")
 
 def main():
     """Main function with argument parsing"""
     parser = argparse.ArgumentParser(
-        description='Find users with similar taste based on semantic embeddings',
+        description='Find users with similar book taste based on 768-dimensional Gemini embeddings',
         formatter_class=argparse.RawDescriptionHelpFormatter,
         epilog="""
 Examples:
-  python find_similar_users.py "Elena Park" books minilm cosine_similarity
-  python find_similar_users.py "Maya Ortiz" movies e5 nearest_neighbor
-  python find_similar_users.py "Jordan Chen" music minilm cosine_similarity
+  python find_similar_users_200.py
+  python find_similar_users_200.py "Michael Rodgers"
+  python find_similar_users_200.py "Yahya Rahhawi"
         """
     )
     
-    parser.add_argument('name', type=str, help='Name of the target user')
-    parser.add_argument('category', choices=['books', 'movies', 'music'], 
-                       help='Category to compare (books, movies, or music)')
-    parser.add_argument('model', choices=['minilm', 'e5', 'combined'], 
-                       help='Embedding model to use (minilm, e5, or combined)')
-    parser.add_argument('method', choices=['cosine_similarity', 'nearest_neighbor'], 
-                       help='Similarity calculation method')
-    parser.add_argument('--no-mean-center', action='store_true',
-                       help='Disable mean-centering (use raw vectors)')
+    parser.add_argument('user', nargs='?', default='Yahya Rahhawi', 
+                       help='Name of the target user (default: Yahya Rahhawi)')
     
     args = parser.parse_args()
+    target_user = args.user
+    
+    print("Loading book embeddings from 200-person dataset...")
+    profiles = load_book_embeddings_200()
+    if not profiles:
+        return
     
     try:
-        # Load embeddings
-        print(f"Loading {args.model.upper()} embeddings...")
-        profiles = load_embeddings(args.model)
-        if not profiles:
-            return
-        
         # Get target user's vector
-        print(f"Finding vector for user '{args.name}' in category '{args.category}'...")
-        target_vector, actual_name = get_user_vector(profiles, args.name, args.category)
+        print(f"Finding {target_user}'s book vector...")
+        target_vector, actual_name = get_user_vector(profiles, target_user)
+        print(f"Found vector for: {actual_name}")
         
-        # Calculate similarities
-        use_mean_center = not args.no_mean_center
-        print(f"Calculating similarities using {args.method.replace('_', ' ')}...")
-        if args.method == 'cosine_similarity':
-            similarities = calculate_cosine_similarities(target_vector, profiles, args.category, use_mean_center)
-            # Remove target user and sort by similarity (descending)
-            similarities = [(name, score) for name, score in similarities if name != actual_name]
-            similarities.sort(key=lambda x: x[1], reverse=True)
-        else:  # nearest_neighbor
-            similarities = calculate_nearest_neighbors(target_vector, profiles, args.category, use_mean_center)
-            # Sort by similarity (descending, which means smallest negative distance first)
-            similarities.sort(key=lambda x: x[1], reverse=True)
+        # Calculate similarities using both methods
+        print("\n" + "="*70)
+        print(f"ANALYSIS RESULTS FOR {actual_name.upper()}")
+        print("="*70)
         
-        # Display results
-        format_output(similarities, actual_name, args.category, args.method, args.model, use_mean_center)
+        # Manhattan Similarity (raw vectors only)
+        print("\nMANHATTAN SIMILARITY (RAW VECTORS)")
+        print("-" * 40)
+        similarities_manhattan = calculate_manhattan_similarities(target_vector, profiles, target_user, use_mean_center=False)
+        similarities_manhattan.sort(key=lambda x: x[1], reverse=True)
+        format_output(similarities_manhattan, actual_name, 'manhattan_similarity', use_mean_center=False, top_n=10, profiles=profiles)
+        
+        print(f"\n{'='*70}")
+        print("ANALYSIS COMPLETE")
+        print(f"{'='*70}")
         
     except ValueError as e:
         print(f"Error: {e}")
-        sys.exit(1)
     except Exception as e:
         print(f"Unexpected error: {e}")
-        sys.exit(1)
 
 if __name__ == "__main__":
-    main()
+    main() 

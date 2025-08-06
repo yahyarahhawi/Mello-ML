@@ -9,11 +9,7 @@ def load_book_embeddings_200():
     """Load the book embeddings from the 200-person dataset"""
     try:
         # Try the updated version first, then fall back to others
-        filenames = [
-            'book_embeddings_e5_200_randomized_updated.json',
-            'book_embeddings_e5_200_randomized.json',
-            'book_embeddings_e5_200.json'
-        ]
+        filenames = ["main.json"]
         
         for filename in filenames:
             try:
