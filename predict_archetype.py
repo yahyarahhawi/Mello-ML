@@ -8,7 +8,7 @@ def load_book_embeddings_200():
     """Load the book embeddings from the 200-person dataset with Gemini vectors"""
     try:
         # Load the new Gemini embeddings with Yahya
-        filename = 'book_gemini_embeddings_with_yahya.json'
+        filename = 'book_gemini_embeddings_with_yahya_and_lukka.json'
         with open(filename, 'r', encoding='utf-8') as f:
             profiles = json.load(f)
         print(f"Loaded {len(profiles)} profiles from {filename}")
