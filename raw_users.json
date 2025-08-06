@@ -1,0 +1,5782 @@
+[
+  {
+    "name": "Eleanor Whitaker",
+    "books": [
+      {
+        "title": "Being and Time",
+        "author": "Martin Heidegger",
+        "rating": 4
+      },
+      {
+        "title": "The Brothers Karamazov",
+        "author": "Fyodor Dostoevsky",
+        "rating": 5
+      },
+      {
+        "title": "The Unbearable Lightness of Being",
+        "author": "Milan Kundera",
+        "rating": 4
+      },
+      {
+        "title": "Meditations",
+        "author": "Marcus Aurelius",
+        "rating": 5
+      },
+      {
+        "title": "The Structure of Scientific Revolutions",
+        "author": "Thomas Kuhn",
+        "rating": 3
+      },
+      {
+        "title": "Siddhartha",
+        "author": "Hermann Hesse",
+        "rating": 4
+      },
+      {
+        "title": "The Denial of Death",
+        "author": "Ernest Becker",
+        "rating": 5
+      },
+      {
+        "title": "Man's Search for Meaning",
+        "author": "Viktor Frankl",
+        "rating": 5
+      },
+      {
+        "title": "The Remains of the Day",
+        "author": "Kazuo Ishiguro",
+        "rating": 3
+      },
+      {
+        "title": "Walden",
+        "author": "Henry David Thoreau",
+        "rating": 3
+      },
+      {
+        "title": "The Book of Disquiet",
+        "author": "Fernando Pessoa",
+        "rating": 4
+      },
+      {
+        "title": "The Conquest of Happiness",
+        "author": "Bertrand Russell",
+        "rating": 2
+      },
+      {
+        "title": "Ishmael",
+        "author": "Daniel Quinn",
+        "rating": 3
+      },
+      {
+        "title": "The Master and Margarita",
+        "author": "Mikhail Bulgakov",
+        "rating": 5
+      },
+      {
+        "title": "The Stranger",
+        "author": "Albert Camus",
+        "rating": 4
+      },
+      {
+        "title": "The Varieties of Religious Experience",
+        "author": "William James",
+        "rating": 4
+      },
+      {
+        "title": "Letters to a Young Poet",
+        "author": "Rainer Maria Rilke",
+        "rating": 5
+      },
+      {
+        "title": "The Unconscious Civilization",
+        "author": "John Ralston Saul",
+        "rating": 2
+      },
+      {
+        "title": "If on a winter's night a traveler",
+        "author": "Italo Calvino",
+        "rating": 3
+      },
+      {
+        "title": "The Art of Loving",
+        "author": "Erich Fromm",
+        "rating": 4
+      }
+    ],
+    "movies": [
+      {
+        "title": "Stalker",
+        "year": 1979,
+        "rating": 5
+      },
+      {
+        "title": "Synecdoche, New York",
+        "year": 2008,
+        "rating": 4
+      },
+      {
+        "title": "The Seventh Seal",
+        "year": 1957,
+        "rating": 5
+      },
+      {
+        "title": "Her",
+        "year": 2013,
+        "rating": 4
+      },
+      {
+        "title": "The Tree of Life",
+        "year": 2011,
+        "rating": 3
+      },
+      {
+        "title": "Wings of Desire",
+        "year": 1987,
+        "rating": 4
+      },
+      {
+        "title": "Eternal Sunshine of the Spotless Mind",
+        "year": 2004,
+        "rating": 4
+      },
+      {
+        "title": "Persona",
+        "year": 1966,
+        "rating": 3
+      },
+      {
+        "title": "Melancholia",
+        "year": 2011,
+        "rating": 2
+      },
+      {
+        "title": "Lost in Translation",
+        "year": 2003,
+        "rating": 4
+      },
+      {
+        "title": "Solaris",
+        "year": 1972,
+        "rating": 5
+      },
+      {
+        "title": "The Sacrifice",
+        "year": 1986,
+        "rating": 4
+      },
+      {
+        "title": "I'm Thinking of Ending Things",
+        "year": 2020,
+        "rating": 3
+      },
+      {
+        "title": "The Lives of Others",
+        "year": 2006,
+        "rating": 5
+      },
+      {
+        "title": "The Double Life of Véronique",
+        "year": 1991,
+        "rating": 3
+      },
+      {
+        "title": "Amélie",
+        "year": 2001,
+        "rating": 2
+      },
+      {
+        "title": "The Diving Bell and the Butterfly",
+        "year": 2007,
+        "rating": 4
+      },
+      {
+        "title": "Another Earth",
+        "year": 2011,
+        "rating": 2
+      },
+      {
+        "title": "Three Colors: Blue",
+        "year": 1993,
+        "rating": 4
+      },
+      {
+        "title": "Dead Poets Society",
+        "year": 1989,
+        "rating": 5
+      }
+    ],
+    "songs": [
+      {
+        "title": "Holocene",
+        "artist": "Bon Iver"
+      },
+      {
+        "title": "Motion Picture Soundtrack",
+        "artist": "Radiohead"
+      },
+      {
+        "title": "The Night We Met",
+        "artist": "Lord Huron"
+      },
+      {
+        "title": "First Breath After Coma",
+        "artist": "Explosions in the Sky"
+      },
+      {
+        "title": "Reckoner",
+        "artist": "Radiohead"
+      },
+      {
+        "title": "To Build a Home",
+        "artist": "The Cinematic Orchestra"
+      },
+      {
+        "title": "Skinny Love",
+        "artist": "Bon Iver"
+      },
+      {
+        "title": "Midnight",
+        "artist": "Coldplay"
+      },
+      {
+        "title": "An Ending (Ascent)",
+        "artist": "Brian Eno"
+      },
+      {
+        "title": "Intro",
+        "artist": "The xx"
+      },
+      {
+        "title": "Your Hand in Mine",
+        "artist": "Explosions in the Sky"
+      },
+      {
+        "title": "The Burren",
+        "artist": "Max Richter"
+      },
+      {
+        "title": "On the Nature of Daylight",
+        "artist": "Max Richter"
+      },
+      {
+        "title": "Experience",
+        "artist": "Ludovico Einaudi"
+      },
+      {
+        "title": "Shelter",
+        "artist": "Portico Quartet"
+      },
+      {
+        "title": "Nara",
+        "artist": "alt-J"
+      },
+      {
+        "title": "Perth",
+        "artist": "Bon Iver"
+      },
+      {
+        "title": "Daydreaming",
+        "artist": "Radiohead"
+      },
+      {
+        "title": "Sunrise",
+        "artist": "Nils Frahm"
+      },
+      {
+        "title": "Weightless",
+        "artist": "Marconi Union"
+      }
+    ]
+  },
+  {
+    "name": "Maya Ortiz",
+    "books": [
+      {
+        "title": "Ways of Seeing",
+        "author": "John Berger",
+        "rating": 5
+      },
+      {
+        "title": "The Argonauts",
+        "author": "Maggie Nelson",
+        "rating": 5
+      },
+      {
+        "title": "Camera Lucida",
+        "author": "Roland Barthes",
+        "rating": 4
+      },
+      {
+        "title": "The Mushroom at the End of the World",
+        "author": "Anna Tsing",
+        "rating": 4
+      },
+      {
+        "title": "The Queer Art of Failure",
+        "author": "Jack Halberstam",
+        "rating": 4
+      },
+      {
+        "title": "The Gifts of Imperfection",
+        "author": "Brené Brown",
+        "rating": 3
+      },
+      {
+        "title": "The Body Keeps the Score",
+        "author": "Bessel van der Kolk",
+        "rating": 4
+      },
+      {
+        "title": "The Tao of Pooh",
+        "author": "Benjamin Hoff",
+        "rating": 2
+      },
+      {
+        "title": "Just Kids",
+        "author": "Patti Smith",
+        "rating": 5
+      },
+      {
+        "title": "The Left Hand of Darkness",
+        "author": "Ursula K. Le Guin",
+        "rating": 5
+      },
+      {
+        "title": "The Artist's Way",
+        "author": "Julia Cameron",
+        "rating": 3
+      },
+      {
+        "title": "Pilgrim at Tinker Creek",
+        "author": "Annie Dillard",
+        "rating": 4
+      },
+      {
+        "title": "The Order of Time",
+        "author": "Carlo Rovelli",
+        "rating": 3
+      },
+      {
+        "title": "Hunger",
+        "author": "Roxane Gay",
+        "rating": 5
+      },
+      {
+        "title": "The Little Prince",
+        "author": "Antoine de Saint-Exupéry",
+        "rating": 5
+      },
+      {
+        "title": "The Life-Changing Magic of Tidying Up",
+        "author": "Marie Kondō",
+        "rating": 2
+      },
+      {
+        "title": "Between the World and Me",
+        "author": "Ta-Nehisi Coates",
+        "rating": 4
+      },
+      {
+        "title": "The Power of Now",
+        "author": "Eckhart Tolle",
+        "rating": 2
+      },
+      {
+        "title": "Braiding Sweetgrass",
+        "author": "Robin Wall Kimmerer",
+        "rating": 5
+      },
+      {
+        "title": "The God Delusion",
+        "author": "Richard Dawkins",
+        "rating": 3
+      }
+    ],
+    "movies": [
+      {
+        "title": "Persona",
+        "year": 1966,
+        "rating": 5
+      },
+      {
+        "title": "Eternal Sunshine of the Spotless Mind",
+        "year": 2004,
+        "rating": 5
+      },
+      {
+        "title": "Waking Life",
+        "year": 2001,
+        "rating": 4
+      },
+      {
+        "title": "Uncut Gems",
+        "year": 2019,
+        "rating": 4
+      },
+      {
+        "title": "The Holy Mountain",
+        "year": 1973,
+        "rating": 4
+      },
+      {
+        "title": "Princess Mononoke",
+        "year": 1997,
+        "rating": 5
+      },
+      {
+        "title": "Midsommar",
+        "year": 2019,
+        "rating": 4
+      },
+      {
+        "title": "Her",
+        "year": 2013,
+        "rating": 4
+      },
+      {
+        "title": "Moonlight",
+        "year": 2016,
+        "rating": 5
+      },
+      {
+        "title": "Synecdoche, New York",
+        "year": 2008,
+        "rating": 3
+      },
+      {
+        "title": "Climax",
+        "year": 2018,
+        "rating": 3
+      },
+      {
+        "title": "The Tree of Life",
+        "year": 2011,
+        "rating": 3
+      },
+      {
+        "title": "Under the Skin",
+        "year": 2013,
+        "rating": 4
+      },
+      {
+        "title": "The Lobster",
+        "year": 2015,
+        "rating": 3
+      },
+      {
+        "title": "Call Me by Your Name",
+        "year": 2017,
+        "rating": 5
+      },
+      {
+        "title": "Enter the Void",
+        "year": 2009,
+        "rating": 2
+      },
+      {
+        "title": "Lady Bird",
+        "year": 2017,
+        "rating": 4
+      },
+      {
+        "title": "Annihilation",
+        "year": 2018,
+        "rating": 4
+      },
+      {
+        "title": "Koyaanisqatsi",
+        "year": 1982,
+        "rating": 4
+      },
+      {
+        "title": "Garden State",
+        "year": 2004,
+        "rating": 2
+      }
+    ],
+    "songs": [
+      {
+        "title": "Motion Picture Soundtrack",
+        "artist": "Radiohead"
+      },
+      {
+        "title": "Motion Sickness",
+        "artist": "Phoebe Bridgers"
+      },
+      {
+        "title": "Two Weeks",
+        "artist": "FKA twigs"
+      },
+      {
+        "title": "Holocene",
+        "artist": "Bon Iver"
+      },
+      {
+        "title": "The Less I Know the Better",
+        "artist": "Tame Impala"
+      },
+      {
+        "title": "Pink Moon",
+        "artist": "Nick Drake"
+      },
+      {
+        "title": "Archie, Marry Me",
+        "artist": "Alvvays"
+      },
+      {
+        "title": "Drunk Walk Home",
+        "artist": "Mitski"
+      },
+      {
+        "title": "Oblivion",
+        "artist": "Grimes"
+      },
+      {
+        "title": "Myth",
+        "artist": "Beach House"
+      },
+      {
+        "title": "Breathe Deeper",
+        "artist": "Tame Impala"
+      },
+      {
+        "title": "Your Best American Girl",
+        "artist": "Mitski"
+      },
+      {
+        "title": "Season 2 Episode 3",
+        "artist": "Glass Animals"
+      },
+      {
+        "title": "Video Girl",
+        "artist": "FKA twigs"
+      },
+      {
+        "title": "I Know the End",
+        "artist": "Phoebe Bridgers"
+      },
+      {
+        "title": "Space Song",
+        "artist": "Beach House"
+      },
+      {
+        "title": "This Is the Day",
+        "artist": "The The"
+      },
+      {
+        "title": "Seventeen",
+        "artist": "Sharon Van Etten"
+      },
+      {
+        "title": "Night Shift",
+        "artist": "Lucy Dacus"
+      },
+      {
+        "title": "The Wilhelm Scream",
+        "artist": "James Blake"
+      }
+    ]
+  },
+  {
+    "name": "Kai Morales",
+    "books": [
+      {
+        "title": "The Three-Body Problem",
+        "author": "Cixin Liu",
+        "rating": 5
+      },
+      {
+        "title": "Astrophysics for People in a Hurry",
+        "author": "Neil deGrasse Tyson",
+        "rating": 4
+      },
+      {
+        "title": "1984",
+        "author": "George Orwell",
+        "rating": 5
+      },
+      {
+        "title": "The Martian",
+        "author": "Andy Weir",
+        "rating": 4
+      },
+      {
+        "title": "Dune",
+        "author": "Frank Herbert",
+        "rating": 5
+      },
+      {
+        "title": "The Singularity is Near",
+        "author": "Ray Kurzweil",
+        "rating": 3
+      },
+      {
+        "title": "Brave New World",
+        "author": "Aldous Huxley",
+        "rating": 4
+      },
+      {
+        "title": "Sapiens",
+        "author": "Yuval Noah Harari",
+        "rating": 5
+      },
+      {
+        "title": "Neuromancer",
+        "author": "William Gibson",
+        "rating": 4
+      },
+      {
+        "title": "Man's Search for Meaning",
+        "author": "Viktor Frankl",
+        "rating": 5
+      },
+      {
+        "title": "Foundation",
+        "author": "Isaac Asimov",
+        "rating": 4
+      },
+      {
+        "title": "The Hitchhiker's Guide to the Galaxy",
+        "author": "Douglas Adams",
+        "rating": 3
+      },
+      {
+        "title": "Snow Crash",
+        "author": "Neal Stephenson",
+        "rating": 4
+      },
+      {
+        "title": "The Selfish Gene",
+        "author": "Richard Dawkins",
+        "rating": 4
+      },
+      {
+        "title": "Do Androids Dream of Electric Sheep?",
+        "author": "Philip K. Dick",
+        "rating": 5
+      },
+      {
+        "title": "The Emperor's New Mind",
+        "author": "Roger Penrose",
+        "rating": 3
+      },
+      {
+        "title": "Hyperion",
+        "author": "Dan Simmons",
+        "rating": 5
+      },
+      {
+        "title": "Thinking, Fast and Slow",
+        "author": "Daniel Kahneman",
+        "rating": 4
+      },
+      {
+        "title": "The Left Hand of Darkness",
+        "author": "Ursula K. Le Guin",
+        "rating": 4
+      },
+      {
+        "title": "The Right Stuff",
+        "author": "Tom Wolfe",
+        "rating": 4
+      }
+    ],
+    "movies": [
+      {
+        "title": "Blade Runner 2049",
+        "year": 2017,
+        "rating": 5
+      },
+      {
+        "title": "The Matrix",
+        "year": 1999,
+        "rating": 5
+      },
+      {
+        "title": "Interstellar",
+        "year": 2014,
+        "rating": 5
+      },
+      {
+        "title": "Arrival",
+        "year": 2016,
+        "rating": 4
+      },
+      {
+        "title": "2001: A Space Odyssey",
+        "year": 1968,
+        "rating": 5
+      },
+      {
+        "title": "Gattaca",
+        "year": 1997,
+        "rating": 4
+      },
+      {
+        "title": "Ex Machina",
+        "year": 2014,
+        "rating": 4
+      },
+      {
+        "title": "Gravity",
+        "year": 2013,
+        "rating": 3
+      },
+      {
+        "title": "Children of Men",
+        "year": 2006,
+        "rating": 5
+      },
+      {
+        "title": "Minority Report",
+        "year": 2002,
+        "rating": 4
+      },
+      {
+        "title": "District 9",
+        "year": 2009,
+        "rating": 4
+      },
+      {
+        "title": "Her",
+        "year": 2013,
+        "rating": 4
+      },
+      {
+        "title": "The Martian",
+        "year": 2015,
+        "rating": 4
+      },
+      {
+        "title": "Oblivion",
+        "year": 2013,
+        "rating": 3
+      },
+      {
+        "title": "Moon",
+        "year": 2009,
+        "rating": 4
+      },
+      {
+        "title": "Ready Player One",
+        "year": 2018,
+        "rating": 3
+      },
+      {
+        "title": "Eternal Sunshine of the Spotless Mind",
+        "year": 2004,
+        "rating": 5
+      },
+      {
+        "title": "A.I. Artificial Intelligence",
+        "year": 2001,
+        "rating": 3
+      },
+      {
+        "title": "Coherence",
+        "year": 2013,
+        "rating": 4
+      },
+      {
+        "title": "The Fountain",
+        "year": 2006,
+        "rating": 4
+      }
+    ],
+    "songs": [
+      {
+        "title": "Starman",
+        "artist": "David Bowie"
+      },
+      {
+        "title": "Space Oddity",
+        "artist": "David Bowie"
+      },
+      {
+        "title": "Midnight City",
+        "artist": "M83"
+      },
+      {
+        "title": "Starlight",
+        "artist": "Muse"
+      },
+      {
+        "title": "Dayvan Cowboy",
+        "artist": "Boards of Canada"
+      },
+      {
+        "title": "Contact",
+        "artist": "Daft Punk"
+      },
+      {
+        "title": "Saturn",
+        "artist": "Sleeping At Last"
+      },
+      {
+        "title": "Life on Mars?",
+        "artist": "David Bowie"
+      },
+      {
+        "title": "Neon Genesis",
+        "artist": "Boris Brejcha"
+      },
+      {
+        "title": "Apocalypse Dreams",
+        "artist": "Tame Impala"
+      },
+      {
+        "title": "Weightless",
+        "artist": "Marconi Union"
+      },
+      {
+        "title": "Echoes",
+        "artist": "Pink Floyd"
+      },
+      {
+        "title": "Intro",
+        "artist": "The xx"
+      },
+      {
+        "title": "Electric Feel",
+        "artist": "MGMT"
+      },
+      {
+        "title": "Subdivisions",
+        "artist": "Rush"
+      },
+      {
+        "title": "The Reeling",
+        "artist": "Passion Pit"
+      },
+      {
+        "title": "Cosmic Love",
+        "artist": "Florence + The Machine"
+      },
+      {
+        "title": "Satellite",
+        "artist": "Guster"
+      },
+      {
+        "title": "Welcome to the Machine",
+        "artist": "Pink Floyd"
+      },
+      {
+        "title": "Supermassive Black Hole",
+        "artist": "Muse"
+      }
+    ]
+  },
+  {
+    "name": "Jordan Patel",
+    "books": [
+      {
+        "title": "Atomic Habits",
+        "author": "James Clear",
+        "rating": 5
+      },
+      {
+        "title": "Subtle Art of Not Giving a F*ck",
+        "author": "Mark Manson",
+        "rating": 4
+      },
+      {
+        "title": "Where the Crawdads Sing",
+        "author": "Delia Owens",
+        "rating": 4
+      },
+      {
+        "title": "It Ends with Us",
+        "author": "Colleen Hoover",
+        "rating": 3
+      },
+      {
+        "title": "The Seven Husbands of Evelyn Hugo",
+        "author": "Taylor Jenkins Reid",
+        "rating": 5
+      },
+      {
+        "title": "The Alchemist",
+        "author": "Paulo Coelho",
+        "rating": 2
+      },
+      {
+        "title": "Becoming",
+        "author": "Michelle Obama",
+        "rating": 5
+      },
+      {
+        "title": "Verity",
+        "author": "Colleen Hoover",
+        "rating": 4
+      },
+      {
+        "title": "The Midnight Library",
+        "author": "Matt Haig",
+        "rating": 3
+      },
+      {
+        "title": "Educated",
+        "author": "Tara Westover",
+        "rating": 5
+      },
+      {
+        "title": "The Power of Now",
+        "author": "Eckhart Tolle",
+        "rating": 2
+      },
+      {
+        "title": "A Court of Thorns and Roses",
+        "author": "Sarah J. Maas",
+        "rating": 4
+      },
+      {
+        "title": "The Silent Patient",
+        "author": "Alex Michaelides",
+        "rating": 3
+      },
+      {
+        "title": "Girl, Wash Your Face",
+        "author": "Rachel Hollis",
+        "rating": 2
+      },
+      {
+        "title": "It Starts with Us",
+        "author": "Colleen Hoover",
+        "rating": 3
+      },
+      {
+        "title": "Sapiens",
+        "author": "Yuval Noah Harari",
+        "rating": 4
+      },
+      {
+        "title": "Ugly Love",
+        "author": "Colleen Hoover",
+        "rating": 3
+      },
+      {
+        "title": "The 5 Love Languages",
+        "author": "Gary Chapman",
+        "rating": 4
+      },
+      {
+        "title": "A Brief History of Time",
+        "author": "Stephen Hawking",
+        "rating": 2
+      },
+      {
+        "title": "The Love Hypothesis",
+        "author": "Ali Hazelwood",
+        "rating": 4
+      }
+    ],
+    "movies": [
+      {
+        "title": "Avengers: Endgame",
+        "year": 2019,
+        "rating": 5
+      },
+      {
+        "title": "Spider-Man: No Way Home",
+        "year": 2021,
+        "rating": 5
+      },
+      {
+        "title": "Top Gun: Maverick",
+        "year": 2022,
+        "rating": 5
+      },
+      {
+        "title": "The Hunger Games",
+        "year": 2012,
+        "rating": 4
+      },
+      {
+        "title": "La La Land",
+        "year": 2016,
+        "rating": 4
+      },
+      {
+        "title": "Barbie",
+        "year": 2023,
+        "rating": 4
+      },
+      {
+        "title": "Titanic",
+        "year": 1997,
+        "rating": 5
+      },
+      {
+        "title": "The Notebook",
+        "year": 2004,
+        "rating": 4
+      },
+      {
+        "title": "Friends with Benefits",
+        "year": 2011,
+        "rating": 3
+      },
+      {
+        "title": "Mean Girls",
+        "year": 2004,
+        "rating": 5
+      },
+      {
+        "title": "Twilight",
+        "year": 2008,
+        "rating": 2
+      },
+      {
+        "title": "The Proposal",
+        "year": 2009,
+        "rating": 4
+      },
+      {
+        "title": "Divergent",
+        "year": 2014,
+        "rating": 3
+      },
+      {
+        "title": "10 Things I Hate About You",
+        "year": 1999,
+        "rating": 5
+      },
+      {
+        "title": "The Kissing Booth",
+        "year": 2018,
+        "rating": 2
+      },
+      {
+        "title": "Crazy Rich Asians",
+        "year": 2018,
+        "rating": 4
+      },
+      {
+        "title": "Fast & Furious 9",
+        "year": 2021,
+        "rating": 3
+      },
+      {
+        "title": "To All the Boys I've Loved Before",
+        "year": 2018,
+        "rating": 4
+      },
+      {
+        "title": "Aquaman",
+        "year": 2018,
+        "rating": 3
+      },
+      {
+        "title": "Transformers: Revenge of the Fallen",
+        "year": 2009,
+        "rating": 1
+      }
+    ],
+    "songs": [
+      {
+        "title": "Cruel Summer",
+        "artist": "Taylor Swift"
+      },
+      {
+        "title": "Flowers",
+        "artist": "Miley Cyrus"
+      },
+      {
+        "title": "Anti-Hero",
+        "artist": "Taylor Swift"
+      },
+      {
+        "title": "Levitating",
+        "artist": "Dua Lipa"
+      },
+      {
+        "title": "good 4 u",
+        "artist": "Olivia Rodrigo"
+      },
+      {
+        "title": "Peaches",
+        "artist": "Justin Bieber"
+      },
+      {
+        "title": "Watermelon Sugar",
+        "artist": "Harry Styles"
+      },
+      {
+        "title": "We Found Love",
+        "artist": "Rihanna"
+      },
+      {
+        "title": "Shape of You",
+        "artist": "Ed Sheeran"
+      },
+      {
+        "title": "Blinding Lights",
+        "artist": "The Weeknd"
+      },
+      {
+        "title": "Can't Stop the Feeling!",
+        "artist": "Justin Timberlake"
+      },
+      {
+        "title": "Dance Monkey",
+        "artist": "Tones and I"
+      },
+      {
+        "title": "Shivers",
+        "artist": "Ed Sheeran"
+      },
+      {
+        "title": "Stay",
+        "artist": "The Kid LAROI & Justin Bieber"
+      },
+      {
+        "title": "Don't Start Now",
+        "artist": "Dua Lipa"
+      },
+      {
+        "title": "positions",
+        "artist": "Ariana Grande"
+      },
+      {
+        "title": "drivers license",
+        "artist": "Olivia Rodrigo"
+      },
+      {
+        "title": "Heat Waves",
+        "artist": "Glass Animals"
+      },
+      {
+        "title": "As It Was",
+        "artist": "Harry Styles"
+      },
+      {
+        "title": "I'm Good (Blue)",
+        "artist": "David Guetta & Bebe Rexha"
+      }
+    ]
+  },
+  {
+    "name": "Elena Park",
+    "books": [
+      {
+        "title": "The Old Man and the Sea",
+        "author": "Ernest Hemingway",
+        "rating": 5
+      },
+      {
+        "title": "Meditations",
+        "author": "Marcus Aurelius",
+        "rating": 5
+      },
+      {
+        "title": "The Things You Can See Only When You Slow Down",
+        "author": "Haemin Sunim",
+        "rating": 4
+      },
+      {
+        "title": "Animal Farm",
+        "author": "George Orwell",
+        "rating": 4
+      },
+      {
+        "title": "Walden",
+        "author": "Henry David Thoreau",
+        "rating": 4
+      },
+      {
+        "title": "Siddhartha",
+        "author": "Hermann Hesse",
+        "rating": 4
+      },
+      {
+        "title": "Silence",
+        "author": "Shūsaku Endō",
+        "rating": 3
+      },
+      {
+        "title": "The Tao of Pooh",
+        "author": "Benjamin Hoff",
+        "rating": 3
+      },
+      {
+        "title": "The Alchemist",
+        "author": "Paulo Coelho",
+        "rating": 2
+      },
+      {
+        "title": "Fahrenheit 451",
+        "author": "Ray Bradbury",
+        "rating": 4
+      },
+      {
+        "title": "Man's Search for Meaning",
+        "author": "Viktor E. Frankl",
+        "rating": 5
+      },
+      {
+        "title": "Quiet: The Power of Introverts",
+        "author": "Susan Cain",
+        "rating": 3
+      },
+      {
+        "title": "The Little Prince",
+        "author": "Antoine de Saint-Exupéry",
+        "rating": 5
+      },
+      {
+        "title": "Letters from a Stoic",
+        "author": "Seneca",
+        "rating": 4
+      },
+      {
+        "title": "The Prophet",
+        "author": "Kahlil Gibran",
+        "rating": 3
+      },
+      {
+        "title": "A River Runs Through It",
+        "author": "Norman Maclean",
+        "rating": 4
+      },
+      {
+        "title": "The Power of Less",
+        "author": "Leo Babauta",
+        "rating": 2
+      },
+      {
+        "title": "The Art of Stillness",
+        "author": "Pico Iyer",
+        "rating": 4
+      },
+      {
+        "title": "Zen and the Art of Motorcycle Maintenance",
+        "author": "Robert M. Pirsig",
+        "rating": 2
+      },
+      {
+        "title": "The Untethered Soul",
+        "author": "Michael A. Singer",
+        "rating": 3
+      }
+    ],
+    "movies": [
+      {
+        "title": "Lost in Translation",
+        "year": 2003,
+        "rating": 5
+      },
+      {
+        "title": "Before Sunrise",
+        "year": 1995,
+        "rating": 5
+      },
+      {
+        "title": "Into the Wild",
+        "year": 2007,
+        "rating": 4
+      },
+      {
+        "title": "A Ghost Story",
+        "year": 2017,
+        "rating": 4
+      },
+      {
+        "title": "Paterson",
+        "year": 2016,
+        "rating": 4
+      },
+      {
+        "title": "The Straight Story",
+        "year": 1999,
+        "rating": 4
+      },
+      {
+        "title": "Columbus",
+        "year": 2017,
+        "rating": 3
+      },
+      {
+        "title": "Wendy and Lucy",
+        "year": 2008,
+        "rating": 3
+      },
+      {
+        "title": "Boyhood",
+        "year": 2014,
+        "rating": 3
+      },
+      {
+        "title": "The Tree of Life",
+        "year": 2011,
+        "rating": 2
+      },
+      {
+        "title": "Nomadland",
+        "year": 2020,
+        "rating": 4
+      },
+      {
+        "title": "Her",
+        "year": 2013,
+        "rating": 5
+      },
+      {
+        "title": "Drive My Car",
+        "year": 2021,
+        "rating": 3
+      },
+      {
+        "title": "First Reformed",
+        "year": 2017,
+        "rating": 4
+      },
+      {
+        "title": "Roma",
+        "year": 2018,
+        "rating": 3
+      },
+      {
+        "title": "The Rider",
+        "year": 2017,
+        "rating": 4
+      },
+      {
+        "title": "Arrival",
+        "year": 2016,
+        "rating": 3
+      },
+      {
+        "title": "Manchester by the Sea",
+        "year": 2016,
+        "rating": 3
+      },
+      {
+        "title": "Meek's Cutoff",
+        "year": 2010,
+        "rating": 2
+      },
+      {
+        "title": "The Road",
+        "year": 2009,
+        "rating": 4
+      }
+    ],
+    "songs": [
+      {
+        "title": "Holocene",
+        "artist": "Bon Iver"
+      },
+      {
+        "title": "Flightless Bird, American Mouth",
+        "artist": "Iron & Wine"
+      },
+      {
+        "title": "The Night We Met",
+        "artist": "Lord Huron"
+      },
+      {
+        "title": "Black",
+        "artist": "Pearl Jam"
+      },
+      {
+        "title": "Angeles",
+        "artist": "Elliott Smith"
+      },
+      {
+        "title": "Skinny Love",
+        "artist": "Bon Iver"
+      },
+      {
+        "title": "Dust in the Wind",
+        "artist": "Kansas"
+      },
+      {
+        "title": "Pink Moon",
+        "artist": "Nick Drake"
+      },
+      {
+        "title": "Creep (Acoustic)",
+        "artist": "Radiohead"
+      },
+      {
+        "title": "The Boxer",
+        "artist": "Simon & Garfunkel"
+      },
+      {
+        "title": "Landslide",
+        "artist": "Fleetwood Mac"
+      },
+      {
+        "title": "Big Black Car",
+        "artist": "Gregory Alan Isakov"
+      },
+      {
+        "title": "River",
+        "artist": "Joni Mitchell"
+      },
+      {
+        "title": "Vincent",
+        "artist": "Don McLean"
+      },
+      {
+        "title": "Lua",
+        "artist": "Bright Eyes"
+      },
+      {
+        "title": "The Sound of Silence",
+        "artist": "Simon & Garfunkel"
+      },
+      {
+        "title": "Michigan",
+        "artist": "Sufjan Stevens"
+      },
+      {
+        "title": "Mad World (Acoustic)",
+        "artist": "Gary Jules"
+      },
+      {
+        "title": "Shelter",
+        "artist": "Ray LaMontagne"
+      },
+      {
+        "title": "To Build a Home",
+        "artist": "The Cinematic Orchestra"
+      }
+    ]
+  },
+  {
+    "name": "Lucia Moreau",
+    "books": [
+      {
+        "title": "Wolf Hall",
+        "author": "Hilary Mantel",
+        "rating": 5
+      },
+      {
+        "title": "The Diary of a Young Girl",
+        "author": "Anne Frank",
+        "rating": 5
+      },
+      {
+        "title": "Guns, Germs, and Steel",
+        "author": "Jared Diamond",
+        "rating": 4
+      },
+      {
+        "title": "The Book Thief",
+        "author": "Markus Zusak",
+        "rating": 4
+      },
+      {
+        "title": "The Crusades Through Arab Eyes",
+        "author": "Amin Maalouf",
+        "rating": 5
+      },
+      {
+        "title": "A Distant Mirror",
+        "author": "Barbara Tuchman",
+        "rating": 4
+      },
+      {
+        "title": "The Name of the Rose",
+        "author": "Umberto Eco",
+        "rating": 3
+      },
+      {
+        "title": "The Six Wives of Henry VIII",
+        "author": "Alison Weir",
+        "rating": 4
+      },
+      {
+        "title": "The Prince",
+        "author": "Niccolò Machiavelli",
+        "rating": 3
+      },
+      {
+        "title": "Catherine de Medici: Renaissance Queen of France",
+        "author": "Leonie Frieda",
+        "rating": 4
+      },
+      {
+        "title": "Marie Antoinette: The Journey",
+        "author": "Antonia Fraser",
+        "rating": 3
+      },
+      {
+        "title": "I, Claudius",
+        "author": "Robert Graves",
+        "rating": 5
+      },
+      {
+        "title": "The Time Traveler's Guide to Medieval England",
+        "author": "Ian Mortimer",
+        "rating": 4
+      },
+      {
+        "title": "The Medici Effect",
+        "author": "Frans Johansson",
+        "rating": 3
+      },
+      {
+        "title": "1491",
+        "author": "Charles C. Mann",
+        "rating": 5
+      },
+      {
+        "title": "The Hiding Place",
+        "author": "Corrie ten Boom",
+        "rating": 5
+      },
+      {
+        "title": "SPQR",
+        "author": "Mary Beard",
+        "rating": 4
+      },
+      {
+        "title": "The Forgotten Kingdom",
+        "author": "Signe Pike",
+        "rating": 2
+      },
+      {
+        "title": "The Art of War",
+        "author": "Sun Tzu",
+        "rating": 3
+      },
+      {
+        "title": "The Civilization of the Renaissance in Italy",
+        "author": "Jacob Burckhardt",
+        "rating": 4
+      }
+    ],
+    "movies": [
+      {
+        "title": "Schindler's List",
+        "year": 1993,
+        "rating": 5
+      },
+      {
+        "title": "Elizabeth",
+        "year": 1998,
+        "rating": 5
+      },
+      {
+        "title": "The Lion in Winter",
+        "year": 1968,
+        "rating": 4
+      },
+      {
+        "title": "Atonement",
+        "year": 2007,
+        "rating": 4
+      },
+      {
+        "title": "The King's Speech",
+        "year": 2010,
+        "rating": 5
+      },
+      {
+        "title": "The Crucible",
+        "year": 1996,
+        "rating": 3
+      },
+      {
+        "title": "Marie Antoinette",
+        "year": 2006,
+        "rating": 3
+      },
+      {
+        "title": "The Imitation Game",
+        "year": 2014,
+        "rating": 4
+      },
+      {
+        "title": "The Duchess",
+        "year": 2008,
+        "rating": 3
+      },
+      {
+        "title": "The Last Duel",
+        "year": 2021,
+        "rating": 4
+      },
+      {
+        "title": "12 Years a Slave",
+        "year": 2013,
+        "rating": 5
+      },
+      {
+        "title": "The Young Victoria",
+        "year": 2009,
+        "rating": 4
+      },
+      {
+        "title": "The Other Boleyn Girl",
+        "year": 2008,
+        "rating": 2
+      },
+      {
+        "title": "Pride & Prejudice",
+        "year": 2005,
+        "rating": 5
+      },
+      {
+        "title": "The New World",
+        "year": 2005,
+        "rating": 3
+      },
+      {
+        "title": "Midway",
+        "year": 2019,
+        "rating": 2
+      },
+      {
+        "title": "The Mission",
+        "year": 1986,
+        "rating": 4
+      },
+      {
+        "title": "Becoming Jane",
+        "year": 2007,
+        "rating": 3
+      },
+      {
+        "title": "Hotel Rwanda",
+        "year": 2004,
+        "rating": 5
+      },
+      {
+        "title": "A Man for All Seasons",
+        "year": 1966,
+        "rating": 4
+      }
+    ],
+    "songs": [
+      {
+        "title": "Ludlows",
+        "artist": "James Horner"
+      },
+      {
+        "title": "Kingdom of Heaven",
+        "artist": "Harry Gregson-Williams"
+      },
+      {
+        "title": "Downton Abbey Theme",
+        "artist": "John Lunn"
+      },
+      {
+        "title": "Now We Are Free",
+        "artist": "Hans Zimmer"
+      },
+      {
+        "title": "Gabriel's Oboe",
+        "artist": "Ennio Morricone"
+      },
+      {
+        "title": "The Ludlows",
+        "artist": "James Galway"
+      },
+      {
+        "title": "Baroque Lute Suite",
+        "artist": "J.S. Bach"
+      },
+      {
+        "title": "Conquest of Paradise",
+        "artist": "Vangelis"
+      },
+      {
+        "title": "The Last Samurai",
+        "artist": "Hans Zimmer"
+      },
+      {
+        "title": "The Gael",
+        "artist": "Dougie MacLean"
+      },
+      {
+        "title": "Carmina Burana",
+        "artist": "Carl Orff"
+      },
+      {
+        "title": "Medieval Chant",
+        "artist": "Anonymous"
+      },
+      {
+        "title": "The Assassin's Creed Theme",
+        "artist": "Jesper Kyd"
+      },
+      {
+        "title": "Palladio",
+        "artist": "Karl Jenkins"
+      },
+      {
+        "title": "Greensleeves",
+        "artist": "David Nevue"
+      },
+      {
+        "title": "Coronation Mass",
+        "artist": "Wolfgang Amadeus Mozart"
+      },
+      {
+        "title": "Celtic Heartland",
+        "artist": "Loreena McKennitt"
+      },
+      {
+        "title": "The Prince of Egypt",
+        "artist": "Stephen Schwartz"
+      },
+      {
+        "title": "Ave Maria",
+        "artist": "Johann Sebastian Bach"
+      },
+      {
+        "title": "Requiem",
+        "artist": "Giuseppe Verdi"
+      }
+    ]
+  },
+  {
+    "name": "Elena Vargas",
+    "books": [
+      {
+        "title": "The Drama of the Gifted Child",
+        "author": "Alice Miller",
+        "rating": 5
+      },
+      {
+        "title": "Flowers for Algernon",
+        "author": "Daniel Keyes",
+        "rating": 5
+      },
+      {
+        "title": "Quiet: The Power of Introverts",
+        "author": "Susan Cain",
+        "rating": 4
+      },
+      {
+        "title": "The Lucifer Effect",
+        "author": "Philip Zimbardo",
+        "rating": 4
+      },
+      {
+        "title": "Never Let Me Go",
+        "author": "Kazuo Ishiguro",
+        "rating": 4
+      },
+      {
+        "title": "Attached",
+        "author": "Amir Levine & Rachel Heller",
+        "rating": 4
+      },
+      {
+        "title": "Man's Search for Meaning",
+        "author": "Viktor Frankl",
+        "rating": 5
+      },
+      {
+        "title": "The God of Small Things",
+        "author": "Arundhati Roy",
+        "rating": 3
+      },
+      {
+        "title": "Sapiens",
+        "author": "Yuval Noah Harari",
+        "rating": 3
+      },
+      {
+        "title": "Prozac Nation",
+        "author": "Elizabeth Wurtzel",
+        "rating": 3
+      },
+      {
+        "title": "The Stranger",
+        "author": "Albert Camus",
+        "rating": 4
+      },
+      {
+        "title": "When Nietzsche Wept",
+        "author": "Irvin Yalom",
+        "rating": 5
+      },
+      {
+        "title": "Girl, Interrupted",
+        "author": "Susanna Kaysen",
+        "rating": 4
+      },
+      {
+        "title": "Fahrenheit 451",
+        "author": "Ray Bradbury",
+        "rating": 2
+      },
+      {
+        "title": "Thinking, Fast and Slow",
+        "author": "Daniel Kahneman",
+        "rating": 3
+      },
+      {
+        "title": "The Gifts of Imperfection",
+        "author": "Brené Brown",
+        "rating": 4
+      },
+      {
+        "title": "The Little Prince",
+        "author": "Antoine de Saint-Exupéry",
+        "rating": 5
+      },
+      {
+        "title": "The Structure of Scientific Revolutions",
+        "author": "Thomas Kuhn",
+        "rating": 2
+      },
+      {
+        "title": "The Body Keeps the Score",
+        "author": "Bessel van der Kolk",
+        "rating": 5
+      },
+      {
+        "title": "The Perks of Being a Wallflower",
+        "author": "Stephen Chbosky",
+        "rating": 4
+      }
+    ],
+    "movies": [
+      {
+        "title": "Eternal Sunshine of the Spotless Mind",
+        "year": 2004,
+        "rating": 5
+      },
+      {
+        "title": "A Beautiful Mind",
+        "year": 2001,
+        "rating": 4
+      },
+      {
+        "title": "Black Swan",
+        "year": 2010,
+        "rating": 4
+      },
+      {
+        "title": "Good Will Hunting",
+        "year": 1997,
+        "rating": 5
+      },
+      {
+        "title": "The Perks of Being a Wallflower",
+        "year": 2012,
+        "rating": 4
+      },
+      {
+        "title": "Girl, Interrupted",
+        "year": 1999,
+        "rating": 4
+      },
+      {
+        "title": "Inception",
+        "year": 2010,
+        "rating": 3
+      },
+      {
+        "title": "The Matrix",
+        "year": 1999,
+        "rating": 3
+      },
+      {
+        "title": "Her",
+        "year": 2013,
+        "rating": 5
+      },
+      {
+        "title": "Silver Linings Playbook",
+        "year": 2012,
+        "rating": 4
+      },
+      {
+        "title": "Donnie Darko",
+        "year": 2001,
+        "rating": 2
+      },
+      {
+        "title": "The Truman Show",
+        "year": 1998,
+        "rating": 5
+      },
+      {
+        "title": "Fight Club",
+        "year": 1999,
+        "rating": 3
+      },
+      {
+        "title": "A Clockwork Orange",
+        "year": 1971,
+        "rating": 2
+      },
+      {
+        "title": "Inside Out",
+        "year": 2015,
+        "rating": 4
+      },
+      {
+        "title": "The Stanford Prison Experiment",
+        "year": 2015,
+        "rating": 3
+      },
+      {
+        "title": "The Social Network",
+        "year": 2010,
+        "rating": 4
+      },
+      {
+        "title": "Requiem for a Dream",
+        "year": 2000,
+        "rating": 2
+      },
+      {
+        "title": "Lost in Translation",
+        "year": 2003,
+        "rating": 5
+      },
+      {
+        "title": "Birdman",
+        "year": 2014,
+        "rating": 3
+      }
+    ],
+    "songs": [
+      {
+        "title": "Motion Picture Soundtrack",
+        "artist": "Radiohead"
+      },
+      {
+        "title": "Holocene",
+        "artist": "Bon Iver"
+      },
+      {
+        "title": "The Night We Met",
+        "artist": "Lord Huron"
+      },
+      {
+        "title": "Breathe Me",
+        "artist": "Sia"
+      },
+      {
+        "title": "First Day of My Life",
+        "artist": "Bright Eyes"
+      },
+      {
+        "title": "Skinny Love",
+        "artist": "Bon Iver"
+      },
+      {
+        "title": "Mad World",
+        "artist": "Gary Jules"
+      },
+      {
+        "title": "To Build a Home",
+        "artist": "The Cinematic Orchestra"
+      },
+      {
+        "title": "Somebody Else",
+        "artist": "The 1975"
+      },
+      {
+        "title": "Hurt",
+        "artist": "Johnny Cash"
+      },
+      {
+        "title": "Liability",
+        "artist": "Lorde"
+      },
+      {
+        "title": "The Predatory Wasp of the Palisades",
+        "artist": "Sufjan Stevens"
+      },
+      {
+        "title": "How to Disappear Completely",
+        "artist": "Radiohead"
+      },
+      {
+        "title": "Coney Island",
+        "artist": "Taylor Swift feat. The National"
+      },
+      {
+        "title": "Shallows",
+        "artist": "Daughter"
+      },
+      {
+        "title": "Liability",
+        "artist": "Phoebe Bridgers"
+      },
+      {
+        "title": "Pink Moon",
+        "artist": "Nick Drake"
+      },
+      {
+        "title": "The Night Josh Tillman Came to Our Apartment",
+        "artist": "Father John Misty"
+      },
+      {
+        "title": "Hope",
+        "artist": "Arctic Monkeys"
+      },
+      {
+        "title": "Exit Music (For a Film)",
+        "artist": "Radiohead"
+      }
+    ]
+  },
+  {
+    "name": "Rowan Valdez",
+    "books": [
+      {
+        "title": "Into the Wild",
+        "author": "Jon Krakauer",
+        "rating": 5
+      },
+      {
+        "title": "A Walk in the Woods",
+        "author": "Bill Bryson",
+        "rating": 4
+      },
+      {
+        "title": "Wild",
+        "author": "Cheryl Strayed",
+        "rating": 4
+      },
+      {
+        "title": "The Alchemist",
+        "author": "Paulo Coelho",
+        "rating": 3
+      },
+      {
+        "title": "Vagabonding",
+        "author": "Rolf Potts",
+        "rating": 5
+      },
+      {
+        "title": "Turn Right at Machu Picchu",
+        "author": "Mark Adams",
+        "rating": 4
+      },
+      {
+        "title": "The Art of Travel",
+        "author": "Alain de Botton",
+        "rating": 4
+      },
+      {
+        "title": "Eat Pray Love",
+        "author": "Elizabeth Gilbert",
+        "rating": 2
+      },
+      {
+        "title": "Tracks",
+        "author": "Robyn Davidson",
+        "rating": 5
+      },
+      {
+        "title": "The Geography of Bliss",
+        "author": "Eric Weiner",
+        "rating": 3
+      },
+      {
+        "title": "Born to Run",
+        "author": "Christopher McDougall",
+        "rating": 5
+      },
+      {
+        "title": "The Salt Path",
+        "author": "Raynor Winn",
+        "rating": 4
+      },
+      {
+        "title": "Deep Survival",
+        "author": "Laurence Gonzales",
+        "rating": 4
+      },
+      {
+        "title": "The Lost City of Z",
+        "author": "David Grann",
+        "rating": 3
+      },
+      {
+        "title": "Into Thin Air",
+        "author": "Jon Krakauer",
+        "rating": 5
+      },
+      {
+        "title": "Siddhartha",
+        "author": "Hermann Hesse",
+        "rating": 4
+      },
+      {
+        "title": "The Happiness of Pursuit",
+        "author": "Chris Guillebeau",
+        "rating": 2
+      },
+      {
+        "title": "Endurance",
+        "author": "Alfred Lansing",
+        "rating": 5
+      },
+      {
+        "title": "The Teachings of Don Juan",
+        "author": "Carlos Castaneda",
+        "rating": 3
+      },
+      {
+        "title": "Atlas Obscura",
+        "author": "Joshua Foer",
+        "rating": 4
+      }
+    ],
+    "movies": [
+      {
+        "title": "Indiana Jones and the Raiders of the Lost Ark",
+        "year": 1981,
+        "rating": 5
+      },
+      {
+        "title": "The Secret Life of Walter Mitty",
+        "year": 2013,
+        "rating": 4
+      },
+      {
+        "title": "The Beach",
+        "year": 2000,
+        "rating": 3
+      },
+      {
+        "title": "127 Hours",
+        "year": 2010,
+        "rating": 5
+      },
+      {
+        "title": "National Treasure",
+        "year": 2004,
+        "rating": 4
+      },
+      {
+        "title": "The Motorcycle Diaries",
+        "year": 2004,
+        "rating": 4
+      },
+      {
+        "title": "Everest",
+        "year": 2015,
+        "rating": 3
+      },
+      {
+        "title": "The Way",
+        "year": 2010,
+        "rating": 5
+      },
+      {
+        "title": "Wild",
+        "year": 2014,
+        "rating": 4
+      },
+      {
+        "title": "Tomb Raider",
+        "year": 2018,
+        "rating": 2
+      },
+      {
+        "title": "Tracks",
+        "year": 2013,
+        "rating": 5
+      },
+      {
+        "title": "Point Break",
+        "year": 1991,
+        "rating": 4
+      },
+      {
+        "title": "Into the Wild",
+        "year": 2007,
+        "rating": 5
+      },
+      {
+        "title": "The Darjeeling Limited",
+        "year": 2007,
+        "rating": 3
+      },
+      {
+        "title": "Seven Years in Tibet",
+        "year": 1997,
+        "rating": 4
+      },
+      {
+        "title": "Uncharted",
+        "year": 2022,
+        "rating": 3
+      },
+      {
+        "title": "A Map for Saturday",
+        "year": 2007,
+        "rating": 5
+      },
+      {
+        "title": "Romancing the Stone",
+        "year": 1984,
+        "rating": 4
+      },
+      {
+        "title": "The Summit",
+        "year": 2012,
+        "rating": 4
+      },
+      {
+        "title": "Jungle",
+        "year": 2017,
+        "rating": 3
+      }
+    ],
+    "songs": [
+      {
+        "title": "Roam",
+        "artist": "The B-52's"
+      },
+      {
+        "title": "Born to Be Wild",
+        "artist": "Steppenwolf"
+      },
+      {
+        "title": "Wagon Wheel",
+        "artist": "Old Crow Medicine Show"
+      },
+      {
+        "title": "Africa",
+        "artist": "Toto"
+      },
+      {
+        "title": "Life is a Highway",
+        "artist": "Tom Cochrane"
+      },
+      {
+        "title": "Send Me On My Way",
+        "artist": "Rusted Root"
+      },
+      {
+        "title": "The General Specific",
+        "artist": "Band of Horses"
+      },
+      {
+        "title": "Rivers and Roads",
+        "artist": "The Head and the Heart"
+      },
+      {
+        "title": "Home",
+        "artist": "Edward Sharpe & The Magnetic Zeros"
+      },
+      {
+        "title": "Mountain Sound",
+        "artist": "Of Monsters and Men"
+      },
+      {
+        "title": "Brothers on a Hotel Bed",
+        "artist": "Death Cab for Cutie"
+      },
+      {
+        "title": "On Top of the World",
+        "artist": "Imagine Dragons"
+      },
+      {
+        "title": "Wake Me Up",
+        "artist": "Avicii"
+      },
+      {
+        "title": "Wide Open Spaces",
+        "artist": "The Chicks"
+      },
+      {
+        "title": "Holocene",
+        "artist": "Bon Iver"
+      },
+      {
+        "title": "Take Me Home, Country Roads",
+        "artist": "John Denver"
+      },
+      {
+        "title": "The Nights",
+        "artist": "Avicii"
+      },
+      {
+        "title": "Rivers of Babylon",
+        "artist": "Boney M"
+      },
+      {
+        "title": "Carry On",
+        "artist": "fun."
+      },
+      {
+        "title": "Midnight City",
+        "artist": "M83"
+      }
+    ]
+  },
+  {
+    "name": "Sophia Chen",
+    "books": [
+      {
+        "title": "The Time Traveler's Wife",
+        "author": "Audrey Niffenegger",
+        "rating": 5
+      },
+      {
+        "title": "The Alchemist",
+        "author": "Paulo Coelho",
+        "rating": 4
+      },
+      {
+        "title": "Eat, Pray, Love",
+        "author": "Elizabeth Gilbert",
+        "rating": 3
+      },
+      {
+        "title": "All About Love",
+        "author": "bell hooks",
+        "rating": 5
+      },
+      {
+        "title": "The Gifts of Imperfection",
+        "author": "Brené Brown",
+        "rating": 4
+      },
+      {
+        "title": "The Course of Love",
+        "author": "Alain de Botton",
+        "rating": 4
+      },
+      {
+        "title": "Tiny Beautiful Things",
+        "author": "Cheryl Strayed",
+        "rating": 5
+      },
+      {
+        "title": "The Five Love Languages",
+        "author": "Gary Chapman",
+        "rating": 2
+      },
+      {
+        "title": "Attached",
+        "author": "Amir Levine and Rachel Heller",
+        "rating": 3
+      },
+      {
+        "title": "The Art of Loving",
+        "author": "Erich Fromm",
+        "rating": 4
+      },
+      {
+        "title": "Big Magic",
+        "author": "Elizabeth Gilbert",
+        "rating": 3
+      },
+      {
+        "title": "The Rosie Project",
+        "author": "Graeme Simsion",
+        "rating": 4
+      },
+      {
+        "title": "Love in the Time of Cholera",
+        "author": "Gabriel García Márquez",
+        "rating": 5
+      },
+      {
+        "title": "Quiet",
+        "author": "Susan Cain",
+        "rating": 4
+      },
+      {
+        "title": "Maybe You Should Talk to Someone",
+        "author": "Lori Gottlieb",
+        "rating": 5
+      },
+      {
+        "title": "The Life-Changing Magic of Tidying Up",
+        "author": "Marie Kondo",
+        "rating": 2
+      },
+      {
+        "title": "Love Poems",
+        "author": "Pablo Neruda",
+        "rating": 5
+      },
+      {
+        "title": "Why Men Love Bitches",
+        "author": "Sherry Argov",
+        "rating": 1
+      },
+      {
+        "title": "The Little Paris Bookshop",
+        "author": "Nina George",
+        "rating": 3
+      },
+      {
+        "title": "Becoming",
+        "author": "Michelle Obama",
+        "rating": 5
+      }
+    ],
+    "movies": [
+      {
+        "title": "La La Land",
+        "year": 2016,
+        "rating": 5
+      },
+      {
+        "title": "About Time",
+        "year": 2013,
+        "rating": 5
+      },
+      {
+        "title": "Love Actually",
+        "year": 2003,
+        "rating": 4
+      },
+      {
+        "title": "Amélie",
+        "year": 2001,
+        "rating": 4
+      },
+      {
+        "title": "Silver Linings Playbook",
+        "year": 2012,
+        "rating": 3
+      },
+      {
+        "title": "The Princess Bride",
+        "year": 1987,
+        "rating": 5
+      },
+      {
+        "title": "500 Days of Summer",
+        "year": 2009,
+        "rating": 3
+      },
+      {
+        "title": "Crazy Rich Asians",
+        "year": 2018,
+        "rating": 4
+      },
+      {
+        "title": "Pride & Prejudice",
+        "year": 2005,
+        "rating": 5
+      },
+      {
+        "title": "The Holiday",
+        "year": 2006,
+        "rating": 3
+      },
+      {
+        "title": "Before Sunrise",
+        "year": 1995,
+        "rating": 5
+      },
+      {
+        "title": "The Notebook",
+        "year": 2004,
+        "rating": 4
+      },
+      {
+        "title": "Eternal Sunshine of the Spotless Mind",
+        "year": 2004,
+        "rating": 4
+      },
+      {
+        "title": "Notting Hill",
+        "year": 1999,
+        "rating": 2
+      },
+      {
+        "title": "Her",
+        "year": 2013,
+        "rating": 3
+      },
+      {
+        "title": "A Star is Born",
+        "year": 2018,
+        "rating": 4
+      },
+      {
+        "title": "You've Got Mail",
+        "year": 1998,
+        "rating": 5
+      },
+      {
+        "title": "Midnight in Paris",
+        "year": 2011,
+        "rating": 3
+      },
+      {
+        "title": "Call Me By Your Name",
+        "year": 2017,
+        "rating": 4
+      },
+      {
+        "title": "The Big Sick",
+        "year": 2017,
+        "rating": 4
+      }
+    ],
+    "songs": [
+      {
+        "title": "La Vie En Rose",
+        "artist": "Louis Armstrong"
+      },
+      {
+        "title": "I Will Always Love You",
+        "artist": "Whitney Houston"
+      },
+      {
+        "title": "Can't Help Falling in Love",
+        "artist": "Elvis Presley"
+      },
+      {
+        "title": "Lover",
+        "artist": "Taylor Swift"
+      },
+      {
+        "title": "All of Me",
+        "artist": "John Legend"
+      },
+      {
+        "title": "Perfect",
+        "artist": "Ed Sheeran"
+      },
+      {
+        "title": "At Last",
+        "artist": "Etta James"
+      },
+      {
+        "title": "Your Song",
+        "artist": "Elton John"
+      },
+      {
+        "title": "Make You Feel My Love",
+        "artist": "Adele"
+      },
+      {
+        "title": "Just the Two of Us",
+        "artist": "Grover Washington Jr."
+      },
+      {
+        "title": "Kiss Me",
+        "artist": "Sixpence None the Richer"
+      },
+      {
+        "title": "My Girl",
+        "artist": "The Temptations"
+      },
+      {
+        "title": "I Choose You",
+        "artist": "Sara Bareilles"
+      },
+      {
+        "title": "Adore You",
+        "artist": "Harry Styles"
+      },
+      {
+        "title": "Lucky",
+        "artist": "Jason Mraz & Colbie Caillat"
+      },
+      {
+        "title": "Come Away With Me",
+        "artist": "Norah Jones"
+      },
+      {
+        "title": "First Day of My Life",
+        "artist": "Bright Eyes"
+      },
+      {
+        "title": "Beyond",
+        "artist": "Leon Bridges"
+      },
+      {
+        "title": "Best Part",
+        "artist": "Daniel Caesar feat. H.E.R."
+      },
+      {
+        "title": "Flightless Bird, American Mouth",
+        "artist": "Iron & Wine"
+      }
+    ]
+  },
+  {
+    "name": "Sofia Ortega",
+    "books": [
+      {
+        "title": "The New Jim Crow",
+        "author": "Michelle Alexander",
+        "rating": 5
+      },
+      {
+        "title": "How to Be an Antiracist",
+        "author": "Ibram X. Kendi",
+        "rating": 5
+      },
+      {
+        "title": "Emergent Strategy",
+        "author": "adrienne maree brown",
+        "rating": 5
+      },
+      {
+        "title": "Between the World and Me",
+        "author": "Ta-Nehisi Coates",
+        "rating": 4
+      },
+      {
+        "title": "The Color Purple",
+        "author": "Alice Walker",
+        "rating": 5
+      },
+      {
+        "title": "The Fifth Season",
+        "author": "N.K. Jemisin",
+        "rating": 4
+      },
+      {
+        "title": "Braiding Sweetgrass",
+        "author": "Robin Wall Kimmerer",
+        "rating": 4
+      },
+      {
+        "title": "Heavy: An American Memoir",
+        "author": "Kiese Laymon",
+        "rating": 5
+      },
+      {
+        "title": "Hunger",
+        "author": "Roxane Gay",
+        "rating": 3
+      },
+      {
+        "title": "The Next American Revolution",
+        "author": "Grace Lee Boggs",
+        "rating": 4
+      },
+      {
+        "title": "Eloquent Rage",
+        "author": "Brittney Cooper",
+        "rating": 4
+      },
+      {
+        "title": "The Fire Next Time",
+        "author": "James Baldwin",
+        "rating": 5
+      },
+      {
+        "title": "All About Love",
+        "author": "bell hooks",
+        "rating": 4
+      },
+      {
+        "title": "Sister Outsider",
+        "author": "Audre Lorde",
+        "rating": 5
+      },
+      {
+        "title": "The Undocumented Americans",
+        "author": "Karla Cornejo Villavicencio",
+        "rating": 4
+      },
+      {
+        "title": "Freedom Is a Constant Struggle",
+        "author": "Angela Davis",
+        "rating": 5
+      },
+      {
+        "title": "Why I'm No Longer Talking to White People About Race",
+        "author": "Reni Eddo-Lodge",
+        "rating": 3
+      },
+      {
+        "title": "The Dispossessed",
+        "author": "Ursula K. Le Guin",
+        "rating": 4
+      },
+      {
+        "title": "White Fragility",
+        "author": "Robin DiAngelo",
+        "rating": 2
+      },
+      {
+        "title": "Pedagogy of the Oppressed",
+        "author": "Paulo Freire",
+        "rating": 3
+      }
+    ],
+    "movies": [
+      {
+        "title": "Selma",
+        "year": 2014,
+        "rating": 5
+      },
+      {
+        "title": "Moonlight",
+        "year": 2016,
+        "rating": 5
+      },
+      {
+        "title": "Do the Right Thing",
+        "year": 1989,
+        "rating": 5
+      },
+      {
+        "title": "Sorry to Bother You",
+        "year": 2018,
+        "rating": 4
+      },
+      {
+        "title": "Parasite",
+        "year": 2019,
+        "rating": 5
+      },
+      {
+        "title": "The Hate U Give",
+        "year": 2018,
+        "rating": 4
+      },
+      {
+        "title": "Get Out",
+        "year": 2017,
+        "rating": 4
+      },
+      {
+        "title": "I Am Not Your Negro",
+        "year": 2016,
+        "rating": 5
+      },
+      {
+        "title": "Fruitvale Station",
+        "year": 2013,
+        "rating": 5
+      },
+      {
+        "title": "13th",
+        "year": 2016,
+        "rating": 5
+      },
+      {
+        "title": "Judas and the Black Messiah",
+        "year": 2021,
+        "rating": 4
+      },
+      {
+        "title": "If Beale Street Could Talk",
+        "year": 2018,
+        "rating": 4
+      },
+      {
+        "title": "BlacKkKlansman",
+        "year": 2018,
+        "rating": 3
+      },
+      {
+        "title": "Whose Streets?",
+        "year": 2017,
+        "rating": 4
+      },
+      {
+        "title": "The Farewell",
+        "year": 2019,
+        "rating": 3
+      },
+      {
+        "title": "Mudbound",
+        "year": 2017,
+        "rating": 4
+      },
+      {
+        "title": "Clemency",
+        "year": 2019,
+        "rating": 4
+      },
+      {
+        "title": "The Birth of a Nation",
+        "year": 2016,
+        "rating": 2
+      },
+      {
+        "title": "Green Book",
+        "year": 2018,
+        "rating": 2
+      },
+      {
+        "title": "Dear White People",
+        "year": 2014,
+        "rating": 3
+      }
+    ],
+    "songs": [
+      {
+        "title": "Alright",
+        "artist": "Kendrick Lamar"
+      },
+      {
+        "title": "Formation",
+        "artist": "Beyoncé"
+      },
+      {
+        "title": "This Is America",
+        "artist": "Childish Gambino"
+      },
+      {
+        "title": "The Joke",
+        "artist": "Brandi Carlile"
+      },
+      {
+        "title": "Glory",
+        "artist": "Common & John Legend"
+      },
+      {
+        "title": "Be Free",
+        "artist": "J. Cole"
+      },
+      {
+        "title": "Hell You Talmbout",
+        "artist": "Janelle Monáe"
+      },
+      {
+        "title": "Same Love",
+        "artist": "Macklemore & Ryan Lewis feat. Mary Lambert"
+      },
+      {
+        "title": "Brown Skin Girl",
+        "artist": "Beyoncé, SAINt JHN, Wizkid feat. Blue Ivy Carter"
+      },
+      {
+        "title": "Land of the Free",
+        "artist": "The Killers"
+      },
+      {
+        "title": "We the People..",
+        "artist": "A Tribe Called Quest"
+      },
+      {
+        "title": "The Bigger Picture",
+        "artist": "Lil Baby"
+      },
+      {
+        "title": "Americans",
+        "artist": "Janelle Monáe"
+      },
+      {
+        "title": "Black Parade",
+        "artist": "Beyoncé"
+      },
+      {
+        "title": "Fight the Power",
+        "artist": "Public Enemy"
+      },
+      {
+        "title": "Praying",
+        "artist": "Kesha"
+      },
+      {
+        "title": "Talkin' About a Revolution",
+        "artist": "Tracy Chapman"
+      },
+      {
+        "title": "Love It If We Made It",
+        "artist": "The 1975"
+      },
+      {
+        "title": "F.U.B.U.",
+        "artist": "Solange"
+      },
+      {
+        "title": "White Privilege II",
+        "artist": "Macklemore & Ryan Lewis feat. Jamila Woods"
+      }
+    ]
+  },
+  {
+    "name": "Maya Chen",
+    "books": [
+      {
+        "title": "The Girl with the Dragon Tattoo",
+        "author": "Stieg Larsson",
+        "rating": 5
+      },
+      {
+        "title": "In Cold Blood",
+        "author": "Truman Capote",
+        "rating": 5
+      },
+      {
+        "title": "Gone Girl",
+        "author": "Gillian Flynn",
+        "rating": 4
+      },
+      {
+        "title": "The Psychopath Test",
+        "author": "Jon Ronson",
+        "rating": 4
+      },
+      {
+        "title": "Sharp Objects",
+        "author": "Gillian Flynn",
+        "rating": 4
+      },
+      {
+        "title": "I'll Be Gone in the Dark",
+        "author": "Michelle McNamara",
+        "rating": 5
+      },
+      {
+        "title": "The Silence of the Lambs",
+        "author": "Thomas Harris",
+        "rating": 5
+      },
+      {
+        "title": "The Stranger Beside Me",
+        "author": "Ann Rule",
+        "rating": 3
+      },
+      {
+        "title": "The Big Sleep",
+        "author": "Raymond Chandler",
+        "rating": 3
+      },
+      {
+        "title": "Mindhunter",
+        "author": "John Douglas",
+        "rating": 4
+      },
+      {
+        "title": "The Gift of Fear",
+        "author": "Gavin de Becker",
+        "rating": 4
+      },
+      {
+        "title": "The Alienist",
+        "author": "Caleb Carr",
+        "rating": 3
+      },
+      {
+        "title": "The Anatomy of Violence",
+        "author": "Adrian Raine",
+        "rating": 3
+      },
+      {
+        "title": "The Secret History",
+        "author": "Donna Tartt",
+        "rating": 5
+      },
+      {
+        "title": "Helter Skelter",
+        "author": "Vincent Bugliosi",
+        "rating": 2
+      },
+      {
+        "title": "The Hound of the Baskervilles",
+        "author": "Arthur Conan Doyle",
+        "rating": 4
+      },
+      {
+        "title": "Dark Dreams",
+        "author": "Roy Hazelwood",
+        "rating": 2
+      },
+      {
+        "title": "Why We Love Serial Killers",
+        "author": "Scott Bonn",
+        "rating": 3
+      },
+      {
+        "title": "The Wisdom of Insecurity",
+        "author": "Alan Watts",
+        "rating": 4
+      },
+      {
+        "title": "The Sociopath Next Door",
+        "author": "Martha Stout",
+        "rating": 4
+      }
+    ],
+    "movies": [
+      {
+        "title": "Zodiac",
+        "year": 2007,
+        "rating": 5
+      },
+      {
+        "title": "Se7en",
+        "year": 1995,
+        "rating": 5
+      },
+      {
+        "title": "Prisoners",
+        "year": 2013,
+        "rating": 4
+      },
+      {
+        "title": "Gone Girl",
+        "year": 2014,
+        "rating": 4
+      },
+      {
+        "title": "Nightcrawler",
+        "year": 2014,
+        "rating": 5
+      },
+      {
+        "title": "Shutter Island",
+        "year": 2010,
+        "rating": 3
+      },
+      {
+        "title": "The Silence of the Lambs",
+        "year": 1991,
+        "rating": 5
+      },
+      {
+        "title": "Memento",
+        "year": 2000,
+        "rating": 4
+      },
+      {
+        "title": "The Girl with the Dragon Tattoo",
+        "year": 2011,
+        "rating": 4
+      },
+      {
+        "title": "The Machinist",
+        "year": 2004,
+        "rating": 3
+      },
+      {
+        "title": "Mindhunter",
+        "year": 2017,
+        "rating": 5
+      },
+      {
+        "title": "The Prestige",
+        "year": 2006,
+        "rating": 4
+      },
+      {
+        "title": "The Invitation",
+        "year": 2015,
+        "rating": 3
+      },
+      {
+        "title": "Arrival",
+        "year": 2016,
+        "rating": 4
+      },
+      {
+        "title": "The Game",
+        "year": 1997,
+        "rating": 3
+      },
+      {
+        "title": "Oldboy",
+        "year": 2003,
+        "rating": 4
+      },
+      {
+        "title": "The Bone Collector",
+        "year": 1999,
+        "rating": 2
+      },
+      {
+        "title": "Kiss the Girls",
+        "year": 1997,
+        "rating": 2
+      },
+      {
+        "title": "The Vanishing",
+        "year": 1988,
+        "rating": 4
+      },
+      {
+        "title": "Martha Marcy May Marlene",
+        "year": 2011,
+        "rating": 3
+      }
+    ],
+    "songs": [
+      {
+        "title": "House of the Rising Sun",
+        "artist": "The Animals"
+      },
+      {
+        "title": "Psycho Killer",
+        "artist": "Talking Heads"
+      },
+      {
+        "title": "Where Is My Mind",
+        "artist": "Pixies"
+      },
+      {
+        "title": "No Church in the Wild",
+        "artist": "JAY-Z & Kanye West"
+      },
+      {
+        "title": "Hurt",
+        "artist": "Johnny Cash"
+      },
+      {
+        "title": "The Night We Met",
+        "artist": "Lord Huron"
+      },
+      {
+        "title": "Breezeblocks",
+        "artist": "alt-J"
+      },
+      {
+        "title": "Howlin' for You",
+        "artist": "The Black Keys"
+      },
+      {
+        "title": "Bad Guy",
+        "artist": "Billie Eilish"
+      },
+      {
+        "title": "Black",
+        "artist": "Pearl Jam"
+      },
+      {
+        "title": "The Sound of Silence",
+        "artist": "Simon & Garfunkel"
+      },
+      {
+        "title": "Mad World",
+        "artist": "Gary Jules"
+      },
+      {
+        "title": "Clint Eastwood",
+        "artist": "Gorillaz"
+      },
+      {
+        "title": "Seven Nation Army",
+        "artist": "The White Stripes"
+      },
+      {
+        "title": "Take Me to Church",
+        "artist": "Hozier"
+      },
+      {
+        "title": "Midnight City",
+        "artist": "M83"
+      },
+      {
+        "title": "Red Right Hand",
+        "artist": "Nick Cave & The Bad Seeds"
+      },
+      {
+        "title": "Paint It Black",
+        "artist": "The Rolling Stones"
+      },
+      {
+        "title": "Smells Like Teen Spirit",
+        "artist": "Nirvana"
+      },
+      {
+        "title": "Hey Ya!",
+        "artist": "OutKast"
+      }
+    ]
+  },
+  {
+    "name": "Elena Rowan",
+    "books": [
+      {
+        "title": "The Name of the Wind",
+        "author": "Patrick Rothfuss",
+        "rating": 5
+      },
+      {
+        "title": "Mistborn: The Final Empire",
+        "author": "Brandon Sanderson",
+        "rating": 5
+      },
+      {
+        "title": "The Night Circus",
+        "author": "Erin Morgenstern",
+        "rating": 4
+      },
+      {
+        "title": "Uprooted",
+        "author": "Naomi Novik",
+        "rating": 4
+      },
+      {
+        "title": "A Darker Shade of Magic",
+        "author": "V.E. Schwab",
+        "rating": 4
+      },
+      {
+        "title": "The Scorpio Races",
+        "author": "Maggie Stiefvater",
+        "rating": 3
+      },
+      {
+        "title": "The Bear and the Nightingale",
+        "author": "Katherine Arden",
+        "rating": 4
+      },
+      {
+        "title": "The Lies of Locke Lamora",
+        "author": "Scott Lynch",
+        "rating": 5
+      },
+      {
+        "title": "The Golem and the Jinni",
+        "author": "Helene Wecker",
+        "rating": 3
+      },
+      {
+        "title": "Priory of the Orange Tree",
+        "author": "Samantha Shannon",
+        "rating": 4
+      },
+      {
+        "title": "The Power of Myth",
+        "author": "Joseph Campbell",
+        "rating": 5
+      },
+      {
+        "title": "The Gifts of Imperfection",
+        "author": "Brené Brown",
+        "rating": 4
+      },
+      {
+        "title": "The Tao of Pooh",
+        "author": "Benjamin Hoff",
+        "rating": 3
+      },
+      {
+        "title": "Meditations",
+        "author": "Marcus Aurelius",
+        "rating": 4
+      },
+      {
+        "title": "The Hero with a Thousand Faces",
+        "author": "Joseph Campbell",
+        "rating": 5
+      },
+      {
+        "title": "The Life-Changing Magic of Tidying Up",
+        "author": "Marie Kondo",
+        "rating": 2
+      },
+      {
+        "title": "Sapiens",
+        "author": "Yuval Noah Harari",
+        "rating": 4
+      },
+      {
+        "title": "The Artist's Way",
+        "author": "Julia Cameron",
+        "rating": 3
+      },
+      {
+        "title": "Letters to a Young Poet",
+        "author": "Rainer Maria Rilke",
+        "rating": 5
+      },
+      {
+        "title": "The Art of Stillness",
+        "author": "Pico Iyer",
+        "rating": 2
+      }
+    ],
+    "movies": [
+      {
+        "title": "Pan's Labyrinth",
+        "year": 2006,
+        "rating": 5
+      },
+      {
+        "title": "Stardust",
+        "year": 2007,
+        "rating": 4
+      },
+      {
+        "title": "Spirited Away",
+        "year": 2001,
+        "rating": 5
+      },
+      {
+        "title": "The Secret of Kells",
+        "year": 2009,
+        "rating": 4
+      },
+      {
+        "title": "The Chronicles of Narnia: The Lion, the Witch and the Wardrobe",
+        "year": 2005,
+        "rating": 4
+      },
+      {
+        "title": "The City of Lost Children",
+        "year": 1995,
+        "rating": 3
+      },
+      {
+        "title": "Coraline",
+        "year": 2009,
+        "rating": 4
+      },
+      {
+        "title": "The NeverEnding Story",
+        "year": 1984,
+        "rating": 5
+      },
+      {
+        "title": "Labyrinth",
+        "year": 1986,
+        "rating": 4
+      },
+      {
+        "title": "The Dark Crystal",
+        "year": 1982,
+        "rating": 3
+      },
+      {
+        "title": "The Princess Bride",
+        "year": 1987,
+        "rating": 5
+      },
+      {
+        "title": "Howl's Moving Castle",
+        "year": 2004,
+        "rating": 4
+      },
+      {
+        "title": "Song of the Sea",
+        "year": 2014,
+        "rating": 4
+      },
+      {
+        "title": "Willow",
+        "year": 1988,
+        "rating": 3
+      },
+      {
+        "title": "The Secret of Roan Inish",
+        "year": 1994,
+        "rating": 4
+      },
+      {
+        "title": "Fantastic Beasts and Where to Find Them",
+        "year": 2016,
+        "rating": 3
+      },
+      {
+        "title": "Tangled",
+        "year": 2010,
+        "rating": 4
+      },
+      {
+        "title": "Alice in Wonderland",
+        "year": 2010,
+        "rating": 2
+      },
+      {
+        "title": "The BFG",
+        "year": 2016,
+        "rating": 3
+      },
+      {
+        "title": "Maleficent",
+        "year": 2014,
+        "rating": 2
+      }
+    ],
+    "songs": [
+      {
+        "title": "Journey of the Sorcerer",
+        "artist": "The Eagles"
+      },
+      {
+        "title": "The Dragonborn Comes",
+        "artist": "Jeremy Soule"
+      },
+      {
+        "title": "Concerning Hobbits",
+        "artist": "Howard Shore"
+      },
+      {
+        "title": "Prologue",
+        "artist": "Cécile Corbel"
+      },
+      {
+        "title": "The Breaking of the Fellowship",
+        "artist": "Howard Shore"
+      },
+      {
+        "title": "Aniron",
+        "artist": "Enya"
+      },
+      {
+        "title": "Into the West",
+        "artist": "Annie Lennox"
+      },
+      {
+        "title": "May It Be",
+        "artist": "Enya"
+      },
+      {
+        "title": "The Last Goodbye",
+        "artist": "Billy Boyd"
+      },
+      {
+        "title": "Story of Your Life",
+        "artist": "Peter Hollens"
+      },
+      {
+        "title": "Song of the Lonely Mountain",
+        "artist": "Neil Finn"
+      },
+      {
+        "title": "The Edge of Night",
+        "artist": "Billy Boyd"
+      },
+      {
+        "title": "The Rains of Castamere",
+        "artist": "Ramin Djawadi"
+      },
+      {
+        "title": "Jenny of Oldstones",
+        "artist": "Florence + The Machine"
+      },
+      {
+        "title": "Light of the Seven",
+        "artist": "Ramin Djawadi"
+      },
+      {
+        "title": "Dragonstone Theme",
+        "artist": "Ramin Djawadi"
+      },
+      {
+        "title": "Arrival at Aslan's How",
+        "artist": "Harry Gregson-Williams"
+      },
+      {
+        "title": "The Wardrobe",
+        "artist": "Harry Gregson-Williams"
+      },
+      {
+        "title": "Flying Theme",
+        "artist": "John Williams"
+      },
+      {
+        "title": "Hedwig's Theme",
+        "artist": "John Williams"
+      }
+    ]
+  },
+  {
+    "name": "Jada Ortiz",
+    "books": [
+      {
+        "title": "Bossypants",
+        "author": "Tina Fey",
+        "rating": 5
+      },
+      {
+        "title": "The Daily Show: An Oral History",
+        "author": "Chris Smith",
+        "rating": 5
+      },
+      {
+        "title": "Yes Please",
+        "author": "Amy Poehler",
+        "rating": 4
+      },
+      {
+        "title": "Born Standing Up",
+        "author": "Steve Martin",
+        "rating": 5
+      },
+      {
+        "title": "Is Everyone Hanging Out Without Me?",
+        "author": "Mindy Kaling",
+        "rating": 3
+      },
+      {
+        "title": "The Disaster Artist",
+        "author": "Greg Sestero",
+        "rating": 5
+      },
+      {
+        "title": "The Onion Book of Known Knowledge",
+        "author": "The Onion Editors",
+        "rating": 4
+      },
+      {
+        "title": "Me Talk Pretty One Day",
+        "author": "David Sedaris",
+        "rating": 5
+      },
+      {
+        "title": "The Code of the Woosters",
+        "author": "P.G. Wodehouse",
+        "rating": 3
+      },
+      {
+        "title": "Catch-22",
+        "author": "Joseph Heller",
+        "rating": 2
+      },
+      {
+        "title": "The Hitchhiker's Guide to the Galaxy",
+        "author": "Douglas Adams",
+        "rating": 4
+      },
+      {
+        "title": "Good Omens",
+        "author": "Terry Pratchett & Neil Gaiman",
+        "rating": 4
+      },
+      {
+        "title": "The Psychopath Test",
+        "author": "Jon Ronson",
+        "rating": 3
+      },
+      {
+        "title": "How to Be a Woman",
+        "author": "Caitlin Moran",
+        "rating": 4
+      },
+      {
+        "title": "The Areas of My Expertise",
+        "author": "John Hodgman",
+        "rating": 3
+      },
+      {
+        "title": "The Bed of Procrustes",
+        "author": "Nassim Nicholas Taleb",
+        "rating": 2
+      },
+      {
+        "title": "Going Clear",
+        "author": "Lawrence Wright",
+        "rating": 4
+      },
+      {
+        "title": "Why I Am So Wise",
+        "author": "Friedrich Nietzsche",
+        "rating": 1
+      },
+      {
+        "title": "This Is Going to Hurt",
+        "author": "Adam Kay",
+        "rating": 5
+      },
+      {
+        "title": "I Am America (And So Can You!)",
+        "author": "Stephen Colbert",
+        "rating": 4
+      }
+    ],
+    "movies": [
+      {
+        "title": "Monty Python and the Holy Grail",
+        "year": 1975,
+        "rating": 5
+      },
+      {
+        "title": "The Big Lebowski",
+        "year": 1998,
+        "rating": 5
+      },
+      {
+        "title": "Hot Fuzz",
+        "year": 2007,
+        "rating": 5
+      },
+      {
+        "title": "Airplane!",
+        "year": 1980,
+        "rating": 4
+      },
+      {
+        "title": "Bridesmaids",
+        "year": 2011,
+        "rating": 4
+      },
+      {
+        "title": "What We Do in the Shadows",
+        "year": 2014,
+        "rating": 5
+      },
+      {
+        "title": "The Nice Guys",
+        "year": 2016,
+        "rating": 4
+      },
+      {
+        "title": "Superbad",
+        "year": 2007,
+        "rating": 3
+      },
+      {
+        "title": "The Death of Stalin",
+        "year": 2017,
+        "rating": 4
+      },
+      {
+        "title": "Talladega Nights",
+        "year": 2006,
+        "rating": 2
+      },
+      {
+        "title": "In the Loop",
+        "year": 2009,
+        "rating": 4
+      },
+      {
+        "title": "Zoolander",
+        "year": 2001,
+        "rating": 3
+      },
+      {
+        "title": "Borat",
+        "year": 2006,
+        "rating": 3
+      },
+      {
+        "title": "Burn After Reading",
+        "year": 2008,
+        "rating": 4
+      },
+      {
+        "title": "Anchorman",
+        "year": 2004,
+        "rating": 5
+      },
+      {
+        "title": "Team America: World Police",
+        "year": 2004,
+        "rating": 3
+      },
+      {
+        "title": "The Interview",
+        "year": 2014,
+        "rating": 2
+      },
+      {
+        "title": "This Is Spinal Tap",
+        "year": 1984,
+        "rating": 5
+      },
+      {
+        "title": "The Wolf of Wall Street",
+        "year": 2013,
+        "rating": 3
+      },
+      {
+        "title": "Deadpool",
+        "year": 2016,
+        "rating": 3
+      }
+    ],
+    "songs": [
+      {
+        "title": "Business Time",
+        "artist": "Flight of the Conchords"
+      },
+      {
+        "title": "White & Nerdy",
+        "artist": "Weird Al Yankovic"
+      },
+      {
+        "title": "Thrift Shop",
+        "artist": "Macklemore & Ryan Lewis"
+      },
+      {
+        "title": "All About That Bass",
+        "artist": "Meghan Trainor"
+      },
+      {
+        "title": "I'm on a Boat",
+        "artist": "The Lonely Island"
+      },
+      {
+        "title": "Dick in a Box",
+        "artist": "The Lonely Island"
+      },
+      {
+        "title": "Started from the Bottom",
+        "artist": "Chamillionaire"
+      },
+      {
+        "title": "Tacky",
+        "artist": "Weird Al Yankovic"
+      },
+      {
+        "title": "I Will Always Love You (Parody)",
+        "artist": "Nicole Scherzinger"
+      },
+      {
+        "title": "Gangnam Style",
+        "artist": "PSY"
+      },
+      {
+        "title": "Walk Like an Egyptian",
+        "artist": "The Bangles"
+      },
+      {
+        "title": "Let It Go (Parody)",
+        "artist": "Pentatonix"
+      },
+      {
+        "title": "Y.M.C.A.",
+        "artist": "Village People"
+      },
+      {
+        "title": "The Fox (What Does the Fox Say?)",
+        "artist": "Ylvis"
+      },
+      {
+        "title": "Word Crimes",
+        "artist": "Weird Al Yankovic"
+      },
+      {
+        "title": "Friday",
+        "artist": "Rebecca Black"
+      },
+      {
+        "title": "I'm Too Sexy",
+        "artist": "Right Said Fred"
+      },
+      {
+        "title": "Chocolate",
+        "artist": "The 1975"
+      },
+      {
+        "title": "My Humps",
+        "artist": "Black Eyed Peas"
+      },
+      {
+        "title": "Welcome to the Internet",
+        "artist": "Bo Burnham"
+      }
+    ]
+  },
+  {
+    "name": "Leila Greene",
+    "books": [
+      {
+        "title": "Braiding Sweetgrass",
+        "author": "Robin Wall Kimmerer",
+        "rating": 5
+      },
+      {
+        "title": "Desert Solitaire",
+        "author": "Edward Abbey",
+        "rating": 5
+      },
+      {
+        "title": "The Overstory",
+        "author": "Richard Powers",
+        "rating": 4
+      },
+      {
+        "title": "Silent Spring",
+        "author": "Rachel Carson",
+        "rating": 4
+      },
+      {
+        "title": "Pilgrim at Tinker Creek",
+        "author": "Annie Dillard",
+        "rating": 4
+      },
+      {
+        "title": "A Sand County Almanac",
+        "author": "Aldo Leopold",
+        "rating": 5
+      },
+      {
+        "title": "The Nature Fix",
+        "author": "Florence Williams",
+        "rating": 3
+      },
+      {
+        "title": "Into the Wild",
+        "author": "Jon Krakauer",
+        "rating": 4
+      },
+      {
+        "title": "Becoming Wild",
+        "author": "Carl Safina",
+        "rating": 4
+      },
+      {
+        "title": "Wild: From Lost to Found on the Pacific Crest Trail",
+        "author": "Cheryl Strayed",
+        "rating": 3
+      },
+      {
+        "title": "Meditations",
+        "author": "Marcus Aurelius",
+        "rating": 5
+      },
+      {
+        "title": "Walden",
+        "author": "Henry David Thoreau",
+        "rating": 3
+      },
+      {
+        "title": "The Hidden Life of Trees",
+        "author": "Peter Wohlleben",
+        "rating": 4
+      },
+      {
+        "title": "The Outrun",
+        "author": "Amy Liptrot",
+        "rating": 4
+      },
+      {
+        "title": "Lab Girl",
+        "author": "Hope Jahren",
+        "rating": 5
+      },
+      {
+        "title": "The Sixth Extinction",
+        "author": "Elizabeth Kolbert",
+        "rating": 4
+      },
+      {
+        "title": "The Upcycle",
+        "author": "William McDonough & Michael Braungart",
+        "rating": 2
+      },
+      {
+        "title": "The Salt Path",
+        "author": "Raynor Winn",
+        "rating": 4
+      },
+      {
+        "title": "An Almost Zero Waste Life",
+        "author": "Megean Weldon",
+        "rating": 3
+      },
+      {
+        "title": "Buddhist Boot Camp",
+        "author": "Timber Hawkeye",
+        "rating": 3
+      }
+    ],
+    "movies": [
+      {
+        "title": "My Octopus Teacher",
+        "year": 2020,
+        "rating": 5
+      },
+      {
+        "title": "March of the Penguins",
+        "year": 2005,
+        "rating": 4
+      },
+      {
+        "title": "Into the Wild",
+        "year": 2007,
+        "rating": 4
+      },
+      {
+        "title": "Wild",
+        "year": 2014,
+        "rating": 3
+      },
+      {
+        "title": "Princess Mononoke",
+        "year": 1997,
+        "rating": 5
+      },
+      {
+        "title": "A Plastic Ocean",
+        "year": 2016,
+        "rating": 4
+      },
+      {
+        "title": "The Secret Life of Walter Mitty",
+        "year": 2013,
+        "rating": 4
+      },
+      {
+        "title": "Free Solo",
+        "year": 2018,
+        "rating": 5
+      },
+      {
+        "title": "The Revenant",
+        "year": 2015,
+        "rating": 3
+      },
+      {
+        "title": "The Lorax",
+        "year": 2012,
+        "rating": 2
+      },
+      {
+        "title": "The Biggest Little Farm",
+        "year": 2018,
+        "rating": 4
+      },
+      {
+        "title": "The River Runner",
+        "year": 2021,
+        "rating": 3
+      },
+      {
+        "title": "Paddleton",
+        "year": 2019,
+        "rating": 3
+      },
+      {
+        "title": "Moonrise Kingdom",
+        "year": 2012,
+        "rating": 5
+      },
+      {
+        "title": "The 11th Hour",
+        "year": 2007,
+        "rating": 2
+      },
+      {
+        "title": "Chasing Coral",
+        "year": 2017,
+        "rating": 4
+      },
+      {
+        "title": "Tracks",
+        "year": 2013,
+        "rating": 3
+      },
+      {
+        "title": "Kings of Summer",
+        "year": 2013,
+        "rating": 4
+      },
+      {
+        "title": "The Summit",
+        "year": 2012,
+        "rating": 3
+      },
+      {
+        "title": "Planet Earth II",
+        "year": 2016,
+        "rating": 5
+      }
+    ],
+    "songs": [
+      {
+        "title": "Holocene",
+        "artist": "Bon Iver"
+      },
+      {
+        "title": "The Wolves (Act I and II)",
+        "artist": "Bon Iver"
+      },
+      {
+        "title": "River",
+        "artist": "Joni Mitchell"
+      },
+      {
+        "title": "Big Yellow Taxi",
+        "artist": "Joni Mitchell"
+      },
+      {
+        "title": "Woodland",
+        "artist": "The Paper Kites"
+      },
+      {
+        "title": "Bloom",
+        "artist": "The Paper Kites"
+      },
+      {
+        "title": "Sprawl II (Mountains Beyond Mountains)",
+        "artist": "Arcade Fire"
+      },
+      {
+        "title": "Wake Up",
+        "artist": "Arcade Fire"
+      },
+      {
+        "title": "Take a Walk",
+        "artist": "Passion Pit"
+      },
+      {
+        "title": "Home",
+        "artist": "Edward Sharpe & The Magnetic Zeros"
+      },
+      {
+        "title": "Mountain Sound",
+        "artist": "Of Monsters and Men"
+      },
+      {
+        "title": "Dirty Paws",
+        "artist": "Of Monsters and Men"
+      },
+      {
+        "title": "The Night We Met",
+        "artist": "Lord Huron"
+      },
+      {
+        "title": "Ends of the Earth",
+        "artist": "Lord Huron"
+      },
+      {
+        "title": "Rivers and Roads",
+        "artist": "The Head and the Heart"
+      },
+      {
+        "title": "Down in the Valley",
+        "artist": "The Head and the Heart"
+      },
+      {
+        "title": "First Winter",
+        "artist": "S. Carey"
+      },
+      {
+        "title": "Dust in the Wind",
+        "artist": "Kansas"
+      },
+      {
+        "title": "Mushaboom",
+        "artist": "Feist"
+      },
+      {
+        "title": "Sunset Lover",
+        "artist": "Petit Biscuit"
+      }
+    ]
+  },
+  {
+    "name": "Jasmine Chen",
+    "books": [
+      {
+        "title": "The Death and Life of Great American Cities",
+        "author": "Jane Jacobs",
+        "rating": 5
+      },
+      {
+        "title": "Just Kids",
+        "author": "Patti Smith",
+        "rating": 5
+      },
+      {
+        "title": "The Power of Now",
+        "author": "Eckhart Tolle",
+        "rating": 3
+      },
+      {
+        "title": "Sapiens",
+        "author": "Yuval Noah Harari",
+        "rating": 4
+      },
+      {
+        "title": "Giovanni's Room",
+        "author": "James Baldwin",
+        "rating": 5
+      },
+      {
+        "title": "The Autobiography of Malcolm X",
+        "author": "Malcolm X",
+        "rating": 5
+      },
+      {
+        "title": "Girls to the Front",
+        "author": "Sara Marcus",
+        "rating": 4
+      },
+      {
+        "title": "The Unbearable Lightness of Being",
+        "author": "Milan Kundera",
+        "rating": 4
+      },
+      {
+        "title": "The Life-Changing Magic of Tidying Up",
+        "author": "Marie Kondo",
+        "rating": 2
+      },
+      {
+        "title": "How to Be Alone",
+        "author": "Sara Maitland",
+        "rating": 3
+      },
+      {
+        "title": "Kitchen Confidential",
+        "author": "Anthony Bourdain",
+        "rating": 5
+      },
+      {
+        "title": "The New Jim Crow",
+        "author": "Michelle Alexander",
+        "rating": 5
+      },
+      {
+        "title": "Eating Animals",
+        "author": "Jonathan Safran Foer",
+        "rating": 4
+      },
+      {
+        "title": "The Dharma Bums",
+        "author": "Jack Kerouac",
+        "rating": 3
+      },
+      {
+        "title": "Between the World and Me",
+        "author": "Ta-Nehisi Coates",
+        "rating": 5
+      },
+      {
+        "title": "Americanah",
+        "author": "Chimamanda Ngozi Adichie",
+        "rating": 4
+      },
+      {
+        "title": "Hip Hop Family Tree",
+        "author": "Ed Piskor",
+        "rating": 4
+      },
+      {
+        "title": "The Subtle Art of Not Giving a F*ck",
+        "author": "Mark Manson",
+        "rating": 3
+      },
+      {
+        "title": "The Lonely City",
+        "author": "Olivia Laing",
+        "rating": 5
+      },
+      {
+        "title": "Emergency Contact",
+        "author": "Mary H.K. Choi",
+        "rating": 4
+      }
+    ],
+    "movies": [
+      {
+        "title": "Frances Ha",
+        "year": 2012,
+        "rating": 5
+      },
+      {
+        "title": "Lost in Translation",
+        "year": 2003,
+        "rating": 5
+      },
+      {
+        "title": "Moonlight",
+        "year": 2016,
+        "rating": 5
+      },
+      {
+        "title": "Columbus",
+        "year": 2017,
+        "rating": 4
+      },
+      {
+        "title": "La La Land",
+        "year": 2016,
+        "rating": 4
+      },
+      {
+        "title": "The Devil Wears Prada",
+        "year": 2006,
+        "rating": 3
+      },
+      {
+        "title": "Birdman",
+        "year": 2014,
+        "rating": 4
+      },
+      {
+        "title": "Her",
+        "year": 2013,
+        "rating": 5
+      },
+      {
+        "title": "Ingrid Goes West",
+        "year": 2017,
+        "rating": 4
+      },
+      {
+        "title": "Eighth Grade",
+        "year": 2018,
+        "rating": 4
+      },
+      {
+        "title": "Mid90s",
+        "year": 2018,
+        "rating": 3
+      },
+      {
+        "title": "The Social Network",
+        "year": 2010,
+        "rating": 5
+      },
+      {
+        "title": "Chef",
+        "year": 2014,
+        "rating": 3
+      },
+      {
+        "title": "Garden State",
+        "year": 2004,
+        "rating": 2
+      },
+      {
+        "title": "Short Term 12",
+        "year": 2013,
+        "rating": 5
+      },
+      {
+        "title": "The Florida Project",
+        "year": 2017,
+        "rating": 4
+      },
+      {
+        "title": "Like Crazy",
+        "year": 2011,
+        "rating": 3
+      },
+      {
+        "title": "Lady Bird",
+        "year": 2017,
+        "rating": 5
+      },
+      {
+        "title": "Paterson",
+        "year": 2016,
+        "rating": 4
+      },
+      {
+        "title": "Begin Again",
+        "year": 2013,
+        "rating": 3
+      }
+    ],
+    "songs": [
+      {
+        "title": "Motion Sickness",
+        "artist": "Phoebe Bridgers"
+      },
+      {
+        "title": "Alaska",
+        "artist": "Maggie Rogers"
+      },
+      {
+        "title": "Drew Barrymore",
+        "artist": "SZA"
+      },
+      {
+        "title": "Space Song",
+        "artist": "Beach House"
+      },
+      {
+        "title": "Anything Could Happen",
+        "artist": "Beyoncé"
+      },
+      {
+        "title": "The Louvre",
+        "artist": "Lorde"
+      },
+      {
+        "title": "Video Games",
+        "artist": "Lana Del Rey"
+      },
+      {
+        "title": "Sofia",
+        "artist": "Clairo"
+      },
+      {
+        "title": "Nights",
+        "artist": "Frank Ocean"
+      },
+      {
+        "title": "Reflections",
+        "artist": "The Neighbourhood"
+      },
+      {
+        "title": "Everybody Wants to Love You",
+        "artist": "Japanese Breakfast"
+      },
+      {
+        "title": "September",
+        "artist": "Earth, Wind & Fire"
+      },
+      {
+        "title": "Pink Moon",
+        "artist": "Nick Drake"
+      },
+      {
+        "title": "Dum Surfer",
+        "artist": "King Krule"
+      },
+      {
+        "title": "Bags",
+        "artist": "Clairo"
+      },
+      {
+        "title": "Dancing On My Own",
+        "artist": "Robyn"
+      },
+      {
+        "title": "Malibu",
+        "artist": "Kim Petras"
+      },
+      {
+        "title": "Archie, Marry Me",
+        "artist": "Alvvays"
+      },
+      {
+        "title": "Cruel World",
+        "artist": "Active Child"
+      },
+      {
+        "title": "Walking on a Dream",
+        "artist": "Empire of the Sun"
+      }
+    ]
+  },
+  {
+    "name": "Marina Delgado",
+    "books": [
+      {
+        "title": "The Medium is the Massage",
+        "author": "Marshall McLuhan",
+        "rating": 5
+      },
+      {
+        "title": "The Power of Now",
+        "author": "Eckhart Tolle",
+        "rating": 3
+      },
+      {
+        "title": "Walden",
+        "author": "Henry David Thoreau",
+        "rating": 5
+      },
+      {
+        "title": "Man's Search for Meaning",
+        "author": "Viktor Frankl",
+        "rating": 4
+      },
+      {
+        "title": "Dune",
+        "author": "Frank Herbert",
+        "rating": 2
+      },
+      {
+        "title": "The Doors of Perception",
+        "author": "Aldous Huxley",
+        "rating": 5
+      },
+      {
+        "title": "Meditations",
+        "author": "Marcus Aurelius",
+        "rating": 4
+      },
+      {
+        "title": "The Old Man and the Sea",
+        "author": "Ernest Hemingway",
+        "rating": 3
+      },
+      {
+        "title": "The Hero with a Thousand Faces",
+        "author": "Joseph Campbell",
+        "rating": 4
+      },
+      {
+        "title": "Zen and the Art of Motorcycle Maintenance",
+        "author": "Robert M. Pirsig",
+        "rating": 5
+      },
+      {
+        "title": "Brave New World",
+        "author": "Aldous Huxley",
+        "rating": 4
+      },
+      {
+        "title": "The Electric Kool-Aid Acid Test",
+        "author": "Tom Wolfe",
+        "rating": 3
+      },
+      {
+        "title": "Autobiography of a Yogi",
+        "author": "Paramahansa Yogananda",
+        "rating": 4
+      },
+      {
+        "title": "Steppenwolf",
+        "author": "Hermann Hesse",
+        "rating": 2
+      },
+      {
+        "title": "The Teachings of Don Juan",
+        "author": "Carlos Castaneda",
+        "rating": 3
+      },
+      {
+        "title": "The Little Prince",
+        "author": "Antoine de Saint-Exupéry",
+        "rating": 5
+      },
+      {
+        "title": "Siddhartha",
+        "author": "Hermann Hesse",
+        "rating": 4
+      },
+      {
+        "title": "One Flew Over the Cuckoo's Nest",
+        "author": "Ken Kesey",
+        "rating": 3
+      },
+      {
+        "title": "The Prophet",
+        "author": "Kahlil Gibran",
+        "rating": 5
+      },
+      {
+        "title": "The Dharma Bums",
+        "author": "Jack Kerouac",
+        "rating": 4
+      }
+    ],
+    "movies": [
+      {
+        "title": "The Graduate",
+        "year": 1967,
+        "rating": 5
+      },
+      {
+        "title": "Easy Rider",
+        "year": 1969,
+        "rating": 4
+      },
+      {
+        "title": "2001: A Space Odyssey",
+        "year": 1968,
+        "rating": 4
+      },
+      {
+        "title": "Harold and Maude",
+        "year": 1971,
+        "rating": 5
+      },
+      {
+        "title": "One Flew Over the Cuckoo's Nest",
+        "year": 1975,
+        "rating": 4
+      },
+      {
+        "title": "The Holy Mountain",
+        "year": 1973,
+        "rating": 3
+      },
+      {
+        "title": "Pink Floyd: The Wall",
+        "year": 1982,
+        "rating": 4
+      },
+      {
+        "title": "Chinatown",
+        "year": 1974,
+        "rating": 3
+      },
+      {
+        "title": "The Trip",
+        "year": 1967,
+        "rating": 2
+      },
+      {
+        "title": "Altered States",
+        "year": 1980,
+        "rating": 3
+      },
+      {
+        "title": "Network",
+        "year": 1976,
+        "rating": 4
+      },
+      {
+        "title": "The Last Waltz",
+        "year": 1978,
+        "rating": 5
+      },
+      {
+        "title": "Barbarella",
+        "year": 1968,
+        "rating": 3
+      },
+      {
+        "title": "Alice's Restaurant",
+        "year": 1969,
+        "rating": 4
+      },
+      {
+        "title": "The Trip to Bountiful",
+        "year": 1985,
+        "rating": 2
+      },
+      {
+        "title": "Woodstock",
+        "year": 1970,
+        "rating": 5
+      },
+      {
+        "title": "The Wicker Man",
+        "year": 1973,
+        "rating": 3
+      },
+      {
+        "title": "Performance",
+        "year": 1970,
+        "rating": 4
+      },
+      {
+        "title": "Head",
+        "year": 1968,
+        "rating": 3
+      },
+      {
+        "title": "Koyaanisqatsi",
+        "year": 1982,
+        "rating": 5
+      }
+    ],
+    "songs": [
+      {
+        "title": "White Rabbit",
+        "artist": "Jefferson Airplane"
+      },
+      {
+        "title": "The Weight",
+        "artist": "The Band"
+      },
+      {
+        "title": "Both Sides Now",
+        "artist": "Joni Mitchell"
+      },
+      {
+        "title": "Stairway to Heaven",
+        "artist": "Led Zeppelin"
+      },
+      {
+        "title": "For What It's Worth",
+        "artist": "Buffalo Springfield"
+      },
+      {
+        "title": "California Dreamin'",
+        "artist": "The Mamas and the Papas"
+      },
+      {
+        "title": "Hallelujah",
+        "artist": "Leonard Cohen"
+      },
+      {
+        "title": "A Whiter Shade of Pale",
+        "artist": "Procol Harum"
+      },
+      {
+        "title": "Baba O'Riley",
+        "artist": "The Who"
+      },
+      {
+        "title": "Space Oddity",
+        "artist": "David Bowie"
+      },
+      {
+        "title": "Like a Rolling Stone",
+        "artist": "Bob Dylan"
+      },
+      {
+        "title": "The End",
+        "artist": "The Doors"
+      },
+      {
+        "title": "While My Guitar Gently Weeps",
+        "artist": "The Beatles"
+      },
+      {
+        "title": "Mr. Tambourine Man",
+        "artist": "The Byrds"
+      },
+      {
+        "title": "Suite: Judy Blue Eyes",
+        "artist": "Crosby, Stills & Nash"
+      },
+      {
+        "title": "Woodstock",
+        "artist": "Joni Mitchell"
+      },
+      {
+        "title": "Time of the Season",
+        "artist": "The Zombies"
+      },
+      {
+        "title": "Moonlight Mile",
+        "artist": "The Rolling Stones"
+      },
+      {
+        "title": "The Sound of Silence",
+        "artist": "Simon & Garfunkel"
+      },
+      {
+        "title": "Aquarius/Let the Sunshine In",
+        "artist": "The 5th Dimension"
+      }
+    ]
+  },
+  {
+    "name": "Fatima Al-Rashid",
+    "books": [
+      {
+        "title": "The Prophet",
+        "author": "Kahlil Gibran",
+        "rating": 5
+      },
+      {
+        "title": "Sapiens",
+        "author": "Yuval Noah Harari",
+        "rating": 4
+      },
+      {
+        "title": "The Forty Rules of Love",
+        "author": "Elif Shafak",
+        "rating": 5
+      },
+      {
+        "title": "Persepolis",
+        "author": "Marjane Satrapi",
+        "rating": 5
+      },
+      {
+        "title": "Thinking, Fast and Slow",
+        "author": "Daniel Kahneman",
+        "rating": 3
+      },
+      {
+        "title": "The Dance of Anger",
+        "author": "Harriet Lerner",
+        "rating": 3
+      },
+      {
+        "title": "In the Country of Men",
+        "author": "Hisham Matar",
+        "rating": 4
+      },
+      {
+        "title": "Why We Sleep",
+        "author": "Matthew Walker",
+        "rating": 2
+      },
+      {
+        "title": "The God of Small Things",
+        "author": "Arundhati Roy",
+        "rating": 5
+      },
+      {
+        "title": "I Am Malala",
+        "author": "Malala Yousafzai",
+        "rating": 4
+      },
+      {
+        "title": "Neuromancer",
+        "author": "William Gibson",
+        "rating": 3
+      },
+      {
+        "title": "The Tao of Physics",
+        "author": "Fritjof Capra",
+        "rating": 4
+      },
+      {
+        "title": "Between the World and Me",
+        "author": "Ta-Nehisi Coates",
+        "rating": 5
+      },
+      {
+        "title": "The Art of Stillness",
+        "author": "Pico Iyer",
+        "rating": 4
+      },
+      {
+        "title": "The Secret Life of Bees",
+        "author": "Sue Monk Kidd",
+        "rating": 2
+      },
+      {
+        "title": "Night",
+        "author": "Elie Wiesel",
+        "rating": 5
+      },
+      {
+        "title": "A Brief History of Time",
+        "author": "Stephen Hawking",
+        "rating": 3
+      },
+      {
+        "title": "The Power of Now",
+        "author": "Eckhart Tolle",
+        "rating": 1
+      },
+      {
+        "title": "Purple Hibiscus",
+        "author": "Chimamanda Ngozi Adichie",
+        "rating": 5
+      },
+      {
+        "title": "The Body",
+        "author": "Bill Bryson",
+        "rating": 3
+      }
+    ],
+    "movies": [
+      {
+        "title": "The Intouchables",
+        "year": 2011,
+        "rating": 5
+      },
+      {
+        "title": "Coco",
+        "year": 2017,
+        "rating": 5
+      },
+      {
+        "title": "The Lives of Others",
+        "year": 2006,
+        "rating": 4
+      },
+      {
+        "title": "Captain Marvel",
+        "year": 2019,
+        "rating": 3
+      },
+      {
+        "title": "Paradise Now",
+        "year": 2005,
+        "rating": 4
+      },
+      {
+        "title": "Inception",
+        "year": 2010,
+        "rating": 5
+      },
+      {
+        "title": "Crouching Tiger, Hidden Dragon",
+        "year": 2000,
+        "rating": 4
+      },
+      {
+        "title": "Wadjda",
+        "year": 2012,
+        "rating": 5
+      },
+      {
+        "title": "The Farewell",
+        "year": 2019,
+        "rating": 4
+      },
+      {
+        "title": "Aladdin",
+        "year": 2019,
+        "rating": 2
+      },
+      {
+        "title": "The Motorcycle Diaries",
+        "year": 2004,
+        "rating": 4
+      },
+      {
+        "title": "La La Land",
+        "year": 2016,
+        "rating": 3
+      },
+      {
+        "title": "A Separation",
+        "year": 2011,
+        "rating": 5
+      },
+      {
+        "title": "Roma",
+        "year": 2018,
+        "rating": 3
+      },
+      {
+        "title": "Black Panther",
+        "year": 2018,
+        "rating": 4
+      },
+      {
+        "title": "The Kite Runner",
+        "year": 2007,
+        "rating": 3
+      },
+      {
+        "title": "Amélie",
+        "year": 2001,
+        "rating": 2
+      },
+      {
+        "title": "Slumdog Millionaire",
+        "year": 2008,
+        "rating": 3
+      },
+      {
+        "title": "Persepolis",
+        "year": 2007,
+        "rating": 4
+      },
+      {
+        "title": "Doctor Strange",
+        "year": 2016,
+        "rating": 3
+      }
+    ],
+    "songs": [
+      {
+        "title": "Ya Tair",
+        "artist": "Nancy Ajram"
+      },
+      {
+        "title": "Havana",
+        "artist": "Camila Cabello"
+      },
+      {
+        "title": "Desert Rose",
+        "artist": "Sting feat. Cheb Mami"
+      },
+      {
+        "title": "Zombie",
+        "artist": "The Cranberries"
+      },
+      {
+        "title": "Habibi",
+        "artist": "Tamer Hosny"
+      },
+      {
+        "title": "Dilbar",
+        "artist": "Neha Kakkar"
+      },
+      {
+        "title": "Salute",
+        "artist": "Little Mix"
+      },
+      {
+        "title": "Waka Waka",
+        "artist": "Shakira"
+      },
+      {
+        "title": "Aicha",
+        "artist": "Outlandish"
+      },
+      {
+        "title": "Taki Taki",
+        "artist": "DJ Snake"
+      },
+      {
+        "title": "Numb",
+        "artist": "Linkin Park"
+      },
+      {
+        "title": "Malhari",
+        "artist": "Vishal Dadlani"
+      },
+      {
+        "title": "This Is America",
+        "artist": "Childish Gambino"
+      },
+      {
+        "title": "Bailando",
+        "artist": "Enrique Iglesias"
+      },
+      {
+        "title": "One Day",
+        "artist": "Matisyahu"
+      },
+      {
+        "title": "Jerusalema",
+        "artist": "Master KG"
+      },
+      {
+        "title": "Unstoppable",
+        "artist": "Sia"
+      },
+      {
+        "title": "Shape of You",
+        "artist": "Ed Sheeran"
+      },
+      {
+        "title": "La Vie En Rose",
+        "artist": "Édith Piaf"
+      },
+      {
+        "title": "The Nights",
+        "artist": "Avicii"
+      }
+    ]
+  },
+  {
+    "name": "Riley Carter",
+    "books": [
+      {
+        "title": "Open",
+        "author": "Andre Agassi",
+        "rating": 5
+      },
+      {
+        "title": "Shoe Dog",
+        "author": "Phil Knight",
+        "rating": 5
+      },
+      {
+        "title": "Can't Hurt Me",
+        "author": "David Goggins",
+        "rating": 4
+      },
+      {
+        "title": "Mind Gym",
+        "author": "Gary Mack",
+        "rating": 4
+      },
+      {
+        "title": "Friday Night Lights",
+        "author": "Buzz Bissinger",
+        "rating": 5
+      },
+      {
+        "title": "The TB12 Method",
+        "author": "Tom Brady",
+        "rating": 3
+      },
+      {
+        "title": "Eleven Rings",
+        "author": "Phil Jackson",
+        "rating": 5
+      },
+      {
+        "title": "Relentless",
+        "author": "Tim S. Grover",
+        "rating": 4
+      },
+      {
+        "title": "The Last Season",
+        "author": "Phil Jackson",
+        "rating": 4
+      },
+      {
+        "title": "Zen and the Art of Motorcycle Maintenance",
+        "author": "Robert M. Pirsig",
+        "rating": 3
+      },
+      {
+        "title": "The Boys in the Boat",
+        "author": "Daniel James Brown",
+        "rating": 5
+      },
+      {
+        "title": "Let Your Mind Run",
+        "author": "Deena Kastor",
+        "rating": 4
+      },
+      {
+        "title": "Outliers",
+        "author": "Malcolm Gladwell",
+        "rating": 3
+      },
+      {
+        "title": "The Inner Game of Tennis",
+        "author": "W. Timothy Gallwey",
+        "rating": 4
+      },
+      {
+        "title": "The Champion's Mind",
+        "author": "Jim Afremow",
+        "rating": 3
+      },
+      {
+        "title": "Born to Run",
+        "author": "Christopher McDougall",
+        "rating": 4
+      },
+      {
+        "title": "Above the Line",
+        "author": "Urban Meyer",
+        "rating": 2
+      },
+      {
+        "title": "Seabiscuit",
+        "author": "Laura Hillenbrand",
+        "rating": 4
+      },
+      {
+        "title": "The Obstacle is the Way",
+        "author": "Ryan Holiday",
+        "rating": 4
+      },
+      {
+        "title": "Playing for Keeps",
+        "author": "David Halberstam",
+        "rating": 5
+      }
+    ],
+    "movies": [
+      {
+        "title": "Remember the Titans",
+        "year": 2000,
+        "rating": 5
+      },
+      {
+        "title": "Miracle",
+        "year": 2004,
+        "rating": 5
+      },
+      {
+        "title": "Coach Carter",
+        "year": 2005,
+        "rating": 4
+      },
+      {
+        "title": "Friday Night Lights",
+        "year": 2004,
+        "rating": 5
+      },
+      {
+        "title": "Moneyball",
+        "year": 2011,
+        "rating": 5
+      },
+      {
+        "title": "Rudy",
+        "year": 1993,
+        "rating": 5
+      },
+      {
+        "title": "The Blind Side",
+        "year": 2009,
+        "rating": 4
+      },
+      {
+        "title": "Space Jam",
+        "year": 1996,
+        "rating": 3
+      },
+      {
+        "title": "I, Tonya",
+        "year": 2017,
+        "rating": 4
+      },
+      {
+        "title": "Creed",
+        "year": 2015,
+        "rating": 4
+      },
+      {
+        "title": "Million Dollar Baby",
+        "year": 2004,
+        "rating": 4
+      },
+      {
+        "title": "The Way Back",
+        "year": 2020,
+        "rating": 3
+      },
+      {
+        "title": "Draft Day",
+        "year": 2014,
+        "rating": 3
+      },
+      {
+        "title": "Warrior",
+        "year": 2011,
+        "rating": 5
+      },
+      {
+        "title": "We Are Marshall",
+        "year": 2006,
+        "rating": 4
+      },
+      {
+        "title": "The Fighter",
+        "year": 2010,
+        "rating": 4
+      },
+      {
+        "title": "Cool Runnings",
+        "year": 1993,
+        "rating": 3
+      },
+      {
+        "title": "Seabiscuit",
+        "year": 2003,
+        "rating": 4
+      },
+      {
+        "title": "Varsity Blues",
+        "year": 1999,
+        "rating": 2
+      },
+      {
+        "title": "Concussion",
+        "year": 2015,
+        "rating": 3
+      }
+    ],
+    "songs": [
+      {
+        "title": "Thunderstruck",
+        "artist": "AC/DC"
+      },
+      {
+        "title": "Remember the Name",
+        "artist": "Fort Minor"
+      },
+      {
+        "title": "Till I Collapse",
+        "artist": "Eminem"
+      },
+      {
+        "title": "All I Do Is Win",
+        "artist": "DJ Khaled"
+      },
+      {
+        "title": "Eye of the Tiger",
+        "artist": "Survivor"
+      },
+      {
+        "title": "We Will Rock You",
+        "artist": "Queen"
+      },
+      {
+        "title": "Sirius",
+        "artist": "The Alan Parsons Project"
+      },
+      {
+        "title": "Jumpman",
+        "artist": "Drake"
+      },
+      {
+        "title": "POWER",
+        "artist": "Kanye West"
+      },
+      {
+        "title": "Can't Hold Us",
+        "artist": "Macklemore & Ryan Lewis"
+      },
+      {
+        "title": "Stronger",
+        "artist": "Kanye West"
+      },
+      {
+        "title": "Lose Yourself",
+        "artist": "Eminem"
+      },
+      {
+        "title": "Seven Nation Army",
+        "artist": "The White Stripes"
+      },
+      {
+        "title": "Turn Down for What",
+        "artist": "DJ Snake & Lil Jon"
+      },
+      {
+        "title": "HUMBLE.",
+        "artist": "Kendrick Lamar"
+      },
+      {
+        "title": "The Nights",
+        "artist": "Avicii"
+      },
+      {
+        "title": "Shipping Up to Boston",
+        "artist": "Dropkick Murphys"
+      },
+      {
+        "title": "Started From the Bottom",
+        "artist": "Drake"
+      },
+      {
+        "title": "DNA.",
+        "artist": "Kendrick Lamar"
+      },
+      {
+        "title": "Sabotage",
+        "artist": "Beastie Boys"
+      }
+    ]
+  },
+  {
+    "name": "Jordan Chen",
+    "books": [
+      {
+        "title": "The Lean Startup",
+        "author": "Eric Ries",
+        "rating": 5
+      },
+      {
+        "title": "Zero to One",
+        "author": "Peter Thiel",
+        "rating": 5
+      },
+      {
+        "title": "The Hard Thing About Hard Things",
+        "author": "Ben Horowitz",
+        "rating": 4
+      },
+      {
+        "title": "The Alchemist",
+        "author": "Paulo Coelho",
+        "rating": 4
+      },
+      {
+        "title": "Man's Search for Meaning",
+        "author": "Viktor Frankl",
+        "rating": 5
+      },
+      {
+        "title": "The Power of Now",
+        "author": "Eckhart Tolle",
+        "rating": 3
+      },
+      {
+        "title": "Thinking, Fast and Slow",
+        "author": "Daniel Kahneman",
+        "rating": 4
+      },
+      {
+        "title": "The 7 Habits of Highly Effective People",
+        "author": "Stephen Covey",
+        "rating": 3
+      },
+      {
+        "title": "Good to Great",
+        "author": "Jim Collins",
+        "rating": 4
+      },
+      {
+        "title": "The Tipping Point",
+        "author": "Malcolm Gladwell",
+        "rating": 4
+      },
+      {
+        "title": "Siddhartha",
+        "author": "Hermann Hesse",
+        "rating": 5
+      },
+      {
+        "title": "The Four Agreements",
+        "author": "Don Miguel Ruiz",
+        "rating": 3
+      },
+      {
+        "title": "Built to Sell",
+        "author": "John Warrillow",
+        "rating": 5
+      },
+      {
+        "title": "The Art of Possibility",
+        "author": "Rosamund Stone Zander",
+        "rating": 2
+      },
+      {
+        "title": "The E-Myth Revisited",
+        "author": "Michael Gerber",
+        "rating": 4
+      },
+      {
+        "title": "The Goal",
+        "author": "Eliyahu Goldratt",
+        "rating": 4
+      },
+      {
+        "title": "The Innovator's Dilemma",
+        "author": "Clayton Christensen",
+        "rating": 5
+      },
+      {
+        "title": "The Millionaire Fastlane",
+        "author": "MJ DeMarco",
+        "rating": 3
+      },
+      {
+        "title": "The $100 Startup",
+        "author": "Chris Guillebeau",
+        "rating": 3
+      },
+      {
+        "title": "Elon Musk",
+        "author": "Ashlee Vance",
+        "rating": 5
+      }
+    ],
+    "movies": [
+      {
+        "title": "The Social Network",
+        "year": 2010,
+        "rating": 5
+      },
+      {
+        "title": "Steve Jobs",
+        "year": 2015,
+        "rating": 4
+      },
+      {
+        "title": "The Pursuit of Happyness",
+        "year": 2006,
+        "rating": 5
+      },
+      {
+        "title": "Moneyball",
+        "year": 2011,
+        "rating": 4
+      },
+      {
+        "title": "The Wolf of Wall Street",
+        "year": 2013,
+        "rating": 3
+      },
+      {
+        "title": "Joy",
+        "year": 2015,
+        "rating": 3
+      },
+      {
+        "title": "The Big Short",
+        "year": 2015,
+        "rating": 4
+      },
+      {
+        "title": "Wall Street",
+        "year": 1987,
+        "rating": 3
+      },
+      {
+        "title": "Boiler Room",
+        "year": 2000,
+        "rating": 2
+      },
+      {
+        "title": "The Founder",
+        "year": 2016,
+        "rating": 4
+      },
+      {
+        "title": "Flash of Genius",
+        "year": 2008,
+        "rating": 3
+      },
+      {
+        "title": "Jerry Maguire",
+        "year": 1996,
+        "rating": 4
+      },
+      {
+        "title": "Office Space",
+        "year": 1999,
+        "rating": 5
+      },
+      {
+        "title": "Thank You for Smoking",
+        "year": 2005,
+        "rating": 4
+      },
+      {
+        "title": "The Intern",
+        "year": 2015,
+        "rating": 3
+      },
+      {
+        "title": "Limitless",
+        "year": 2011,
+        "rating": 3
+      },
+      {
+        "title": "Up in the Air",
+        "year": 2009,
+        "rating": 4
+      },
+      {
+        "title": "The Devil Wears Prada",
+        "year": 2006,
+        "rating": 2
+      },
+      {
+        "title": "Glengarry Glen Ross",
+        "year": 1992,
+        "rating": 5
+      },
+      {
+        "title": "Baby Boom",
+        "year": 1987,
+        "rating": 3
+      }
+    ],
+    "songs": [
+      {
+        "title": "Can't Stop",
+        "artist": "Red Hot Chili Peppers"
+      },
+      {
+        "title": "Eye of the Tiger",
+        "artist": "Survivor"
+      },
+      {
+        "title": "Till I Collapse",
+        "artist": "Eminem"
+      },
+      {
+        "title": "Stronger",
+        "artist": "Kanye West"
+      },
+      {
+        "title": "Don't Stop Believin'",
+        "artist": "Journey"
+      },
+      {
+        "title": "Lose Yourself",
+        "artist": "Eminem"
+      },
+      {
+        "title": "Power",
+        "artist": "Kanye West"
+      },
+      {
+        "title": "The Climb",
+        "artist": "Miley Cyrus"
+      },
+      {
+        "title": "HUMBLE.",
+        "artist": "Kendrick Lamar"
+      },
+      {
+        "title": "Started from the Bottom",
+        "artist": "Drake"
+      },
+      {
+        "title": "Work Hard, Play Hard",
+        "artist": "Wiz Khalifa"
+      },
+      {
+        "title": "All I Do Is Win",
+        "artist": "DJ Khaled"
+      },
+      {
+        "title": "Remember the Name",
+        "artist": "Fort Minor"
+      },
+      {
+        "title": "Can't Hold Us",
+        "artist": "Macklemore & Ryan Lewis"
+      },
+      {
+        "title": "The Middle",
+        "artist": "Jimmy Eat World"
+      },
+      {
+        "title": "Levels",
+        "artist": "Avicii"
+      },
+      {
+        "title": "Hall of Fame",
+        "artist": "The Script"
+      },
+      {
+        "title": "Baba O'Riley",
+        "artist": "The Who"
+      },
+      {
+        "title": "Billionaire",
+        "artist": "Bruno Mars"
+      },
+      {
+        "title": "Hustlin'",
+        "artist": "Rick Ross"
+      }
+    ]
+  },
+  {
+    "name": "Juno Reyes",
+    "books": [
+      {
+        "title": "Catching the Big Fish",
+        "author": "David Lynch",
+        "rating": 5
+      },
+      {
+        "title": "The Medium is the Massage",
+        "author": "Marshall McLuhan",
+        "rating": 4
+      },
+      {
+        "title": "Ways of Seeing",
+        "author": "John Berger",
+        "rating": 5
+      },
+      {
+        "title": "The Hero with a Thousand Faces",
+        "author": "Joseph Campbell",
+        "rating": 3
+      },
+      {
+        "title": "The Creative Act: A Way of Being",
+        "author": "Rick Rubin",
+        "rating": 4
+      },
+      {
+        "title": "Understanding Comics",
+        "author": "Scott McCloud",
+        "rating": 5
+      },
+      {
+        "title": "The Philosophy of Andy Warhol",
+        "author": "Andy Warhol",
+        "rating": 2
+      },
+      {
+        "title": "Wabi-Sabi for Artists, Designers, Poets & Philosophers",
+        "author": "Leonard Koren",
+        "rating": 5
+      },
+      {
+        "title": "Camera Lucida",
+        "author": "Roland Barthes",
+        "rating": 3
+      },
+      {
+        "title": "The Image",
+        "author": "Jean-Paul Sartre",
+        "rating": 2
+      },
+      {
+        "title": "The Picture of Dorian Gray",
+        "author": "Oscar Wilde",
+        "rating": 5
+      },
+      {
+        "title": "Frida Kahlo: The Story of Her Life",
+        "author": "Vanna Vinci",
+        "rating": 4
+      },
+      {
+        "title": "The Art of Cruelty",
+        "author": "Maggie Nelson",
+        "rating": 3
+      },
+      {
+        "title": "The Secret Life of Salvador Dalí",
+        "author": "Salvador Dalí",
+        "rating": 4
+      },
+      {
+        "title": "Design as Art",
+        "author": "Bruno Munari",
+        "rating": 5
+      },
+      {
+        "title": "The Subtle Art of Not Giving a F*ck",
+        "author": "Mark Manson",
+        "rating": 2
+      },
+      {
+        "title": "The Alchemy of the Heavens",
+        "author": "Ken Croswell",
+        "rating": 4
+      },
+      {
+        "title": "Memories, Dreams, Reflections",
+        "author": "Carl Jung",
+        "rating": 4
+      },
+      {
+        "title": "Art as Therapy",
+        "author": "Alain de Botton",
+        "rating": 3
+      },
+      {
+        "title": "The Artist's Way",
+        "author": "Julia Cameron",
+        "rating": 3
+      }
+    ],
+    "movies": [
+      {
+        "title": "Eternal Sunshine of the Spotless Mind",
+        "year": 2004,
+        "rating": 5
+      },
+      {
+        "title": "Spirited Away",
+        "year": 2001,
+        "rating": 5
+      },
+      {
+        "title": "Waking Life",
+        "year": 2001,
+        "rating": 4
+      },
+      {
+        "title": "Pan's Labyrinth",
+        "year": 2006,
+        "rating": 5
+      },
+      {
+        "title": "Enter the Void",
+        "year": 2009,
+        "rating": 3
+      },
+      {
+        "title": "The Holy Mountain",
+        "year": 1973,
+        "rating": 4
+      },
+      {
+        "title": "Blue Velvet",
+        "year": 1986,
+        "rating": 4
+      },
+      {
+        "title": "Synecdoche, New York",
+        "year": 2008,
+        "rating": 3
+      },
+      {
+        "title": "Uncut Gems",
+        "year": 2019,
+        "rating": 4
+      },
+      {
+        "title": "The Lobster",
+        "year": 2015,
+        "rating": 3
+      },
+      {
+        "title": "The Grand Budapest Hotel",
+        "year": 2014,
+        "rating": 5
+      },
+      {
+        "title": "Mandy",
+        "year": 2018,
+        "rating": 2
+      },
+      {
+        "title": "Interstellar",
+        "year": 2014,
+        "rating": 4
+      },
+      {
+        "title": "Hereditary",
+        "year": 2018,
+        "rating": 3
+      },
+      {
+        "title": "Blade Runner 2049",
+        "year": 2017,
+        "rating": 5
+      },
+      {
+        "title": "A Ghost Story",
+        "year": 2017,
+        "rating": 4
+      },
+      {
+        "title": "The Neon Demon",
+        "year": 2016,
+        "rating": 2
+      },
+      {
+        "title": "The Fountain",
+        "year": 2006,
+        "rating": 3
+      },
+      {
+        "title": "Lost in Translation",
+        "year": 2003,
+        "rating": 5
+      },
+      {
+        "title": "Midsommar",
+        "year": 2019,
+        "rating": 4
+      }
+    ],
+    "songs": [
+      {
+        "title": "Motion Picture Soundtrack",
+        "artist": "Radiohead"
+      },
+      {
+        "title": "Tezeta",
+        "artist": "Mulatu Astatke"
+      },
+      {
+        "title": "Intro",
+        "artist": "The xx"
+      },
+      {
+        "title": "Weight of Love",
+        "artist": "The Black Keys"
+      },
+      {
+        "title": "The Mother We Share",
+        "artist": "CHVRCHES"
+      },
+      {
+        "title": "Videotape",
+        "artist": "Radiohead"
+      },
+      {
+        "title": "Myth",
+        "artist": "Beach House"
+      },
+      {
+        "title": "Genesis",
+        "artist": "Grimes"
+      },
+      {
+        "title": "Midnight City",
+        "artist": "M83"
+      },
+      {
+        "title": "Everything in Its Right Place",
+        "artist": "Radiohead"
+      },
+      {
+        "title": "Two Weeks",
+        "artist": "FKA twigs"
+      },
+      {
+        "title": "Nightcall",
+        "artist": "Kavinsky"
+      },
+      {
+        "title": "Elephant",
+        "artist": "Tame Impala"
+      },
+      {
+        "title": "Providence",
+        "artist": "Godspeed You! Black Emperor"
+      },
+      {
+        "title": "Runaway",
+        "artist": "AURORA"
+      },
+      {
+        "title": "Oblivion",
+        "artist": "Grimes"
+      },
+      {
+        "title": "Breathe Deeper",
+        "artist": "Tame Impala"
+      },
+      {
+        "title": "Lemon Glow",
+        "artist": "Beach House"
+      },
+      {
+        "title": "House of Balloons/Glass Table Girls",
+        "artist": "The Weeknd"
+      },
+      {
+        "title": "Dayvan Cowboy",
+        "artist": "Boards of Canada"
+      }
+    ]
+  }
+]
