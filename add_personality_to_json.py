@@ -49,20 +49,17 @@ def generate_gemini_embedding(text, api_key):
             print(f"Response: {e.response.text}")
         return None
 
-def generate_pca_visualization(data):
+def generate_pca_visualization(data, new_user_name=None):
     """Generate 3D PCA visualization from embeddings"""
     print("📊 Generating 3D PCA visualization...")
     
-    # Extract embeddings and names - use books_vector for existing users, personality_vector for new user
+    # Extract embeddings and names - use books_vector only
     embeddings = []
     names = []
     
     for user in data:
-        # Use personality_vector if available, otherwise books_vector
-        if 'personality_vector' in user and user['personality_vector']:
-            embeddings.append(user['personality_vector'])
-            names.append(user['name'])
-        elif 'books_vector' in user and user['books_vector']:
+        # Use books_vector only
+        if 'books_vector' in user and user['books_vector']:
             embeddings.append(user['books_vector'])
             names.append(user['name'])
     
@@ -79,13 +76,6 @@ def generate_pca_visualization(data):
     
     print(f"📈 PCA explained variance: {pca.explained_variance_ratio_}")
     print(f"📈 Total variance captured: {np.sum(pca.explained_variance_ratio_):.1%}")
-    
-    # Find the new user (has personality_vector)
-    new_user_name = None
-    for user in data:
-        if 'personality_vector' in user and user['personality_vector']:
-            new_user_name = user['name']
-            break
     
     # Create visualization data
     users_3d = []
@@ -182,10 +172,9 @@ def main():
     # Create new user profile
     new_user = {
         "name": args.name,
-        "book_taste": "",  # Empty since this is personality-based
-        "books_vector": [],  # Empty since this is personality-based
+        "book_taste": args.description,  # Store personality description as book taste
+        "books_vector": personality_embedding,  # Store personality embedding as books vector
         "personality_description": args.description,
-        "personality_vector": personality_embedding
     }
     
     # Check if user already exists
@@ -207,7 +196,7 @@ def main():
     print(f"💾 Saved main.json with {len(existing_data)} users")
     
     # Generate PCA visualization
-    pca_data, png_filename = generate_pca_visualization(existing_data)
+    pca_data, png_filename = generate_pca_visualization(existing_data, args.name)
     
     if pca_data:
         # Copy to both directories
