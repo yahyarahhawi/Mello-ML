@@ -1,0 +1,1397 @@
+{
+  "users": [
+    {
+      "name": "David Anderson",
+      "x": 3.509592294692993,
+      "y": 1.964981198310852,
+      "isCurrentUser": false,
+      "special_user": false
+    },
+    {
+      "name": "Lindsey Burnett",
+      "x": -0.39714112877845764,
+      "y": 3.227154016494751,
+      "isCurrentUser": false,
+      "special_user": false
+    },
+    {
+      "name": "Miss Jennifer Brady",
+      "x": 5.784572124481201,
+      "y": 5.240662574768066,
+      "isCurrentUser": false,
+      "special_user": false
+    },
+    {
+      "name": "Lawrence Davis",
+      "x": 2.312439203262329,
+      "y": 7.000831127166748,
+      "isCurrentUser": false,
+      "special_user": false
+    },
+    {
+      "name": "Jennifer Fernandez",
+      "x": 3.9522528648376465,
+      "y": 3.857761859893799,
+      "isCurrentUser": false,
+      "special_user": false
+    },
+    {
+      "name": "Jacqueline Hancock",
+      "x": 3.152092695236206,
+      "y": 4.2953009605407715,
+      "isCurrentUser": false,
+      "special_user": false
+    },
+    {
+      "name": "Anthony Johnson",
+      "x": 0.034294117242097855,
+      "y": 1.467510461807251,
+      "isCurrentUser": false,
+      "special_user": false
+    },
+    {
+      "name": "Jason Carpenter",
+      "x": 4.00019645690918,
+      "y": 1.6984823942184448,
+      "isCurrentUser": false,
+      "special_user": false
+    },
+    {
+      "name": "Michael Knox",
+      "x": 5.987024307250977,
+      "y": 0.8451962471008301,
+      "isCurrentUser": false,
+      "special_user": false
+    },
+    {
+      "name": "Christina Conner",
+      "x": 1.9776597023010254,
+      "y": 3.7998569011688232,
+      "isCurrentUser": false,
+      "special_user": false
+    },
+    {
+      "name": "Mrs. Rebecca Romero",
+      "x": 3.353529930114746,
+      "y": 6.183988571166992,
+      "isCurrentUser": false,
+      "special_user": false
+    },
+    {
+      "name": "Dominique Wilson",
+      "x": 0.38167524337768555,
+      "y": 3.881465435028076,
+      "isCurrentUser": false,
+      "special_user": false
+    },
+    {
+      "name": "Richard Goodwin",
+      "x": 1.369080662727356,
+      "y": 2.2017338275909424,
+      "isCurrentUser": false,
+      "special_user": false
+    },
+    {
+      "name": "John Bauer",
+      "x": 4.355300426483154,
+      "y": 4.837492942810059,
+      "isCurrentUser": false,
+      "special_user": false
+    },
+    {
+      "name": "Jonathan Hart",
+      "x": 4.151235103607178,
+      "y": 6.911553382873535,
+      "isCurrentUser": false,
+      "special_user": false
+    },
+    {
+      "name": "Amanda Newman",
+      "x": 0.16767559945583344,
+      "y": 2.1687490940093994,
+      "isCurrentUser": false,
+      "special_user": false
+    },
+    {
+      "name": "Angela Johnson",
+      "x": 5.639348030090332,
+      "y": 1.3689223527908325,
+      "isCurrentUser": false,
+      "special_user": false
+    },
+    {
+      "name": "Emma Osborn",
+      "x": 4.872000217437744,
+      "y": 3.5153777599334717,
+      "isCurrentUser": false,
+      "special_user": false
+    },
+    {
+      "name": "Andrew Kelly",
+      "x": 1.7044124603271484,
+      "y": 4.195718288421631,
+      "isCurrentUser": false,
+      "special_user": false
+    },
+    {
+      "name": "Shelley Stewart",
+      "x": 1.1598726511001587,
+      "y": 3.381246566772461,
+      "isCurrentUser": false,
+      "special_user": false
+    },
+    {
+      "name": "James Hawkins",
+      "x": 4.942320346832275,
+      "y": 1.49787175655365,
+      "isCurrentUser": false,
+      "special_user": false
+    },
+    {
+      "name": "Terry Farrell",
+      "x": 6.043495178222656,
+      "y": 0.5423292517662048,
+      "isCurrentUser": false,
+      "special_user": false
+    },
+    {
+      "name": "Laurie Allen",
+      "x": 4.865082263946533,
+      "y": 5.608213424682617,
+      "isCurrentUser": false,
+      "special_user": false
+    },
+    {
+      "name": "Steven Coleman",
+      "x": 3.6429529190063477,
+      "y": 4.553379058837891,
+      "isCurrentUser": false,
+      "special_user": false
+    },
+    {
+      "name": "Timothy Kennedy",
+      "x": 5.330682277679443,
+      "y": 3.9910271167755127,
+      "isCurrentUser": false,
+      "special_user": false
+    },
+    {
+      "name": "Ryan Olson",
+      "x": 2.9163153171539307,
+      "y": 5.142574310302734,
+      "isCurrentUser": false,
+      "special_user": false
+    },
+    {
+      "name": "Destiny Nguyen",
+      "x": 5.499622821807861,
+      "y": 5.619010925292969,
+      "isCurrentUser": false,
+      "special_user": false
+    },
+    {
+      "name": "Amy Meyer",
+      "x": 0.18031436204910278,
+      "y": 2.6434125900268555,
+      "isCurrentUser": false,
+      "special_user": false
+    },
+    {
+      "name": "Lauren Bishop",
+      "x": 3.91586971282959,
+      "y": 4.143279552459717,
+      "isCurrentUser": false,
+      "special_user": false
+    },
+    {
+      "name": "Rachel Clark",
+      "x": 5.202739238739014,
+      "y": 3.573073148727417,
+      "isCurrentUser": false,
+      "special_user": false
+    },
+    {
+      "name": "Stephanie Santiago",
+      "x": 3.42315936088562,
+      "y": 4.031246185302734,
+      "isCurrentUser": false,
+      "special_user": false
+    },
+    {
+      "name": "Aaron Larson",
+      "x": 2.6195085048675537,
+      "y": 5.0376057624816895,
+      "isCurrentUser": false,
+      "special_user": false
+    },
+    {
+      "name": "Betty Ward",
+      "x": 2.2906877994537354,
+      "y": 7.226449489593506,
+      "isCurrentUser": false,
+      "special_user": false
+    },
+    {
+      "name": "Lisa Williams",
+      "x": 3.896185874938965,
+      "y": 2.319852590560913,
+      "isCurrentUser": false,
+      "special_user": false
+    },
+    {
+      "name": "Kevin Kim",
+      "x": 0.031003877520561218,
+      "y": 1.4298243522644043,
+      "isCurrentUser": false,
+      "special_user": false
+    },
+    {
+      "name": "Jennifer Miller",
+      "x": 3.5993568897247314,
+      "y": 4.101317405700684,
+      "isCurrentUser": false,
+      "special_user": false
+    },
+    {
+      "name": "Elizabeth Jacobs",
+      "x": 3.2076070308685303,
+      "y": 6.335122108459473,
+      "isCurrentUser": false,
+      "special_user": false
+    },
+    {
+      "name": "Dr. James Armstrong",
+      "x": 4.756485939025879,
+      "y": 5.619301795959473,
+      "isCurrentUser": false,
+      "special_user": false
+    },
+    {
+      "name": "Dr. Heidi Olson",
+      "x": 2.5240278244018555,
+      "y": 2.199596643447876,
+      "isCurrentUser": false,
+      "special_user": false
+    },
+    {
+      "name": "Richard Kelly",
+      "x": 3.6662209033966064,
+      "y": 5.474257946014404,
+      "isCurrentUser": false,
+      "special_user": false
+    },
+    {
+      "name": "Jessica Johnston",
+      "x": -0.6379027366638184,
+      "y": 3.2292566299438477,
+      "isCurrentUser": false,
+      "special_user": false
+    },
+    {
+      "name": "Joseph Martin",
+      "x": 4.3201904296875,
+      "y": 4.309937477111816,
+      "isCurrentUser": false,
+      "special_user": false
+    },
+    {
+      "name": "William Carter",
+      "x": 3.1421496868133545,
+      "y": 1.9939831495285034,
+      "isCurrentUser": false,
+      "special_user": false
+    },
+    {
+      "name": "Ashley Jones",
+      "x": 6.144298553466797,
+      "y": 0.789047360420227,
+      "isCurrentUser": false,
+      "special_user": false
+    },
+    {
+      "name": "Gregory Chung",
+      "x": 4.262414455413818,
+      "y": 6.852560997009277,
+      "isCurrentUser": false,
+      "special_user": false
+    },
+    {
+      "name": "Sabrina Clark",
+      "x": 0.638828694820404,
+      "y": 2.9543511867523193,
+      "isCurrentUser": false,
+      "special_user": false
+    },
+    {
+      "name": "Jasmine Adams",
+      "x": 4.947431564331055,
+      "y": 4.5937180519104,
+      "isCurrentUser": false,
+      "special_user": false
+    },
+    {
+      "name": "John Campbell",
+      "x": 2.3620359897613525,
+      "y": 2.4145548343658447,
+      "isCurrentUser": false,
+      "special_user": false
+    },
+    {
+      "name": "Daniel Haas",
+      "x": 0.5300094485282898,
+      "y": 3.9298830032348633,
+      "isCurrentUser": false,
+      "special_user": false
+    },
+    {
+      "name": "Michael George",
+      "x": 0.034867413341999054,
+      "y": 4.1275763511657715,
+      "isCurrentUser": false,
+      "special_user": false
+    },
+    {
+      "name": "Jonathan Hampton",
+      "x": 3.2759175300598145,
+      "y": 2.358755588531494,
+      "isCurrentUser": false,
+      "special_user": false
+    },
+    {
+      "name": "Jessica Williams",
+      "x": -0.5068734288215637,
+      "y": 3.448763608932495,
+      "isCurrentUser": false,
+      "special_user": false
+    },
+    {
+      "name": "Rachel Mason",
+      "x": 5.7704997062683105,
+      "y": 5.46714973449707,
+      "isCurrentUser": false,
+      "special_user": false
+    },
+    {
+      "name": "Glen Singleton",
+      "x": 2.310281991958618,
+      "y": 7.174631595611572,
+      "isCurrentUser": false,
+      "special_user": false
+    },
+    {
+      "name": "Samantha Mills",
+      "x": 4.02593469619751,
+      "y": 3.5878734588623047,
+      "isCurrentUser": false,
+      "special_user": false
+    },
+    {
+      "name": "Kelly Serrano",
+      "x": 3.225956678390503,
+      "y": 4.474878311157227,
+      "isCurrentUser": false,
+      "special_user": false
+    },
+    {
+      "name": "Karen Allen",
+      "x": -0.09295374155044556,
+      "y": 1.5485663414001465,
+      "isCurrentUser": false,
+      "special_user": false
+    },
+    {
+      "name": "Ronald White",
+      "x": 4.108770847320557,
+      "y": 1.7730724811553955,
+      "isCurrentUser": false,
+      "special_user": false
+    },
+    {
+      "name": "Robin Hawkins",
+      "x": 6.0030131340026855,
+      "y": 0.9220647811889648,
+      "isCurrentUser": false,
+      "special_user": false
+    },
+    {
+      "name": "Heather Rice",
+      "x": 2.397930383682251,
+      "y": 4.028988838195801,
+      "isCurrentUser": false,
+      "special_user": false
+    },
+    {
+      "name": "Stacy Smith",
+      "x": 3.207871198654175,
+      "y": 6.34971284866333,
+      "isCurrentUser": false,
+      "special_user": false
+    },
+    {
+      "name": "Emma Herman",
+      "x": 0.08600595593452454,
+      "y": 3.9078314304351807,
+      "isCurrentUser": false,
+      "special_user": false
+    },
+    {
+      "name": "James Atkinson",
+      "x": 1.4999176263809204,
+      "y": 2.168571949005127,
+      "isCurrentUser": false,
+      "special_user": false
+    },
+    {
+      "name": "Jill Gibbs",
+      "x": 4.5044097900390625,
+      "y": 4.964809417724609,
+      "isCurrentUser": false,
+      "special_user": false
+    },
+    {
+      "name": "Becky Johnson",
+      "x": 4.048369407653809,
+      "y": 6.889894008636475,
+      "isCurrentUser": false,
+      "special_user": false
+    },
+    {
+      "name": "Joseph Rivera DVM",
+      "x": 0.19834835827350616,
+      "y": 2.1364755630493164,
+      "isCurrentUser": false,
+      "special_user": false
+    },
+    {
+      "name": "James Riddle",
+      "x": 5.766012668609619,
+      "y": 1.0742511749267578,
+      "isCurrentUser": false,
+      "special_user": false
+    },
+    {
+      "name": "Marie Ortiz",
+      "x": 4.943535804748535,
+      "y": 3.2983288764953613,
+      "isCurrentUser": false,
+      "special_user": false
+    },
+    {
+      "name": "Howard Park",
+      "x": 1.4415067434310913,
+      "y": 4.1075968742370605,
+      "isCurrentUser": false,
+      "special_user": false
+    },
+    {
+      "name": "Ashley Johns",
+      "x": 0.9412262439727783,
+      "y": 3.3085362911224365,
+      "isCurrentUser": false,
+      "special_user": false
+    },
+    {
+      "name": "Christine Wilson",
+      "x": 5.214713096618652,
+      "y": 1.3734312057495117,
+      "isCurrentUser": false,
+      "special_user": false
+    },
+    {
+      "name": "Christine Miller",
+      "x": 5.864805221557617,
+      "y": 0.5904880166053772,
+      "isCurrentUser": false,
+      "special_user": false
+    },
+    {
+      "name": "James Brady",
+      "x": 4.805144309997559,
+      "y": 5.606388568878174,
+      "isCurrentUser": false,
+      "special_user": false
+    },
+    {
+      "name": "Paul Harrell",
+      "x": 3.353827714920044,
+      "y": 4.728308200836182,
+      "isCurrentUser": false,
+      "special_user": false
+    },
+    {
+      "name": "Christine Adams",
+      "x": 5.465418338775635,
+      "y": 4.010341167449951,
+      "isCurrentUser": false,
+      "special_user": false
+    },
+    {
+      "name": "Antonio Lopez",
+      "x": 2.9280922412872314,
+      "y": 4.898916721343994,
+      "isCurrentUser": false,
+      "special_user": false
+    },
+    {
+      "name": "Sergio King",
+      "x": 5.614772796630859,
+      "y": 5.569410800933838,
+      "isCurrentUser": false,
+      "special_user": false
+    },
+    {
+      "name": "Sean Carney",
+      "x": 0.3060325086116791,
+      "y": 2.8643767833709717,
+      "isCurrentUser": false,
+      "special_user": false
+    },
+    {
+      "name": "Jessica Townsend",
+      "x": 4.021877288818359,
+      "y": 4.375173568725586,
+      "isCurrentUser": false,
+      "special_user": false
+    },
+    {
+      "name": "Susan Hernandez",
+      "x": 5.104896545410156,
+      "y": 3.7180192470550537,
+      "isCurrentUser": false,
+      "special_user": false
+    },
+    {
+      "name": "Ronnie Gibson",
+      "x": 3.4810781478881836,
+      "y": 3.809450149536133,
+      "isCurrentUser": false,
+      "special_user": false
+    },
+    {
+      "name": "William Reynolds",
+      "x": 2.6202948093414307,
+      "y": 4.939366340637207,
+      "isCurrentUser": false,
+      "special_user": false
+    },
+    {
+      "name": "Vanessa Hanson",
+      "x": 2.301171064376831,
+      "y": 7.254685401916504,
+      "isCurrentUser": false,
+      "special_user": false
+    },
+    {
+      "name": "Melissa Carter",
+      "x": 3.865368604660034,
+      "y": 2.3910388946533203,
+      "isCurrentUser": false,
+      "special_user": false
+    },
+    {
+      "name": "Andrew Hayes",
+      "x": 0.0004191552579868585,
+      "y": 1.3440324068069458,
+      "isCurrentUser": false,
+      "special_user": false
+    },
+    {
+      "name": "Karla Smith",
+      "x": 3.8014135360717773,
+      "y": 3.2988011837005615,
+      "isCurrentUser": false,
+      "special_user": false
+    },
+    {
+      "name": "Mr. Bradley Johnson",
+      "x": 3.478652238845825,
+      "y": 6.097914218902588,
+      "isCurrentUser": false,
+      "special_user": false
+    },
+    {
+      "name": "Jeffrey Fletcher",
+      "x": 5.161621570587158,
+      "y": 5.1713032722473145,
+      "isCurrentUser": false,
+      "special_user": false
+    },
+    {
+      "name": "Jason Gonzalez",
+      "x": 2.1022322177886963,
+      "y": 2.320685386657715,
+      "isCurrentUser": false,
+      "special_user": false
+    },
+    {
+      "name": "Michael Elliott",
+      "x": 4.260616302490234,
+      "y": 5.649230003356934,
+      "isCurrentUser": false,
+      "special_user": false
+    },
+    {
+      "name": "Lisa Moran",
+      "x": -0.6525379419326782,
+      "y": 3.3370423316955566,
+      "isCurrentUser": false,
+      "special_user": false
+    },
+    {
+      "name": "Raymond Parks",
+      "x": 3.8932559490203857,
+      "y": 4.604969024658203,
+      "isCurrentUser": false,
+      "special_user": false
+    },
+    {
+      "name": "Joanna Crawford",
+      "x": 4.086310386657715,
+      "y": 5.179753303527832,
+      "isCurrentUser": false,
+      "special_user": false
+    },
+    {
+      "name": "Sarah Kim",
+      "x": 5.9263176918029785,
+      "y": 0.6525160074234009,
+      "isCurrentUser": false,
+      "special_user": false
+    },
+    {
+      "name": "Paul Martinez",
+      "x": 4.3542375564575195,
+      "y": 6.877596378326416,
+      "isCurrentUser": false,
+      "special_user": false
+    },
+    {
+      "name": "Alexis Carter",
+      "x": 0.3552352488040924,
+      "y": 2.196037530899048,
+      "isCurrentUser": false,
+      "special_user": false
+    },
+    {
+      "name": "Jason Campbell",
+      "x": 4.9762187004089355,
+      "y": 4.465620517730713,
+      "isCurrentUser": false,
+      "special_user": false
+    },
+    {
+      "name": "Greg Thomas",
+      "x": 2.739217758178711,
+      "y": 2.252279043197632,
+      "isCurrentUser": false,
+      "special_user": false
+    },
+    {
+      "name": "Diana Hernandez",
+      "x": 0.6033737063407898,
+      "y": 3.8960301876068115,
+      "isCurrentUser": false,
+      "special_user": false
+    },
+    {
+      "name": "Andrea Anderson",
+      "x": 0.2871745824813843,
+      "y": 4.03439474105835,
+      "isCurrentUser": false,
+      "special_user": false
+    },
+    {
+      "name": "Isaiah Riddle",
+      "x": 3.2770912647247314,
+      "y": 2.1101913452148438,
+      "isCurrentUser": false,
+      "special_user": false
+    },
+    {
+      "name": "John Dunn",
+      "x": -0.5228685140609741,
+      "y": 3.3870689868927,
+      "isCurrentUser": false,
+      "special_user": false
+    },
+    {
+      "name": "Jessica Delacruz",
+      "x": 5.764003276824951,
+      "y": 5.26174259185791,
+      "isCurrentUser": false,
+      "special_user": false
+    },
+    {
+      "name": "Virginia Davis",
+      "x": 2.4164071083068848,
+      "y": 7.096704483032227,
+      "isCurrentUser": false,
+      "special_user": false
+    },
+    {
+      "name": "Michael Roberts",
+      "x": 4.306450843811035,
+      "y": 3.5349926948547363,
+      "isCurrentUser": false,
+      "special_user": false
+    },
+    {
+      "name": "Kimberly Hernandez",
+      "x": 3.336031198501587,
+      "y": 4.67803430557251,
+      "isCurrentUser": false,
+      "special_user": false
+    },
+    {
+      "name": "Mercedes Kidd",
+      "x": 0.056532829999923706,
+      "y": 1.4329777956008911,
+      "isCurrentUser": false,
+      "special_user": false
+    },
+    {
+      "name": "Stephen Brown",
+      "x": 4.08093786239624,
+      "y": 1.7352529764175415,
+      "isCurrentUser": false,
+      "special_user": false
+    },
+    {
+      "name": "Heather Gonzalez",
+      "x": 5.867117404937744,
+      "y": 0.6816520094871521,
+      "isCurrentUser": false,
+      "special_user": false
+    },
+    {
+      "name": "Ashley Dixon",
+      "x": 1.7722573280334473,
+      "y": 3.634999990463257,
+      "isCurrentUser": false,
+      "special_user": false
+    },
+    {
+      "name": "Nicole West",
+      "x": 3.405921220779419,
+      "y": 6.1732354164123535,
+      "isCurrentUser": false,
+      "special_user": false
+    },
+    {
+      "name": "Emily Gibson",
+      "x": 0.2658073604106903,
+      "y": 4.0690412521362305,
+      "isCurrentUser": false,
+      "special_user": false
+    },
+    {
+      "name": "Megan Harris",
+      "x": 1.4498244524002075,
+      "y": 2.158926010131836,
+      "isCurrentUser": false,
+      "special_user": false
+    },
+    {
+      "name": "Shane Hill",
+      "x": 4.316120624542236,
+      "y": 5.127605438232422,
+      "isCurrentUser": false,
+      "special_user": false
+    },
+    {
+      "name": "Melanie Dalton",
+      "x": 3.990633487701416,
+      "y": 6.729976177215576,
+      "isCurrentUser": false,
+      "special_user": false
+    },
+    {
+      "name": "Amy Ellison",
+      "x": 0.12784652411937714,
+      "y": 2.048074245452881,
+      "isCurrentUser": false,
+      "special_user": false
+    },
+    {
+      "name": "Elizabeth Davidson",
+      "x": 5.489391803741455,
+      "y": 1.2154691219329834,
+      "isCurrentUser": false,
+      "special_user": false
+    },
+    {
+      "name": "Sonya Evans",
+      "x": 4.7416462898254395,
+      "y": 3.4672744274139404,
+      "isCurrentUser": false,
+      "special_user": false
+    },
+    {
+      "name": "Steven Mendez",
+      "x": 1.3657423257827759,
+      "y": 4.033167839050293,
+      "isCurrentUser": false,
+      "special_user": false
+    },
+    {
+      "name": "Darryl Brandt",
+      "x": 1.2757765054702759,
+      "y": 3.5042097568511963,
+      "isCurrentUser": false,
+      "special_user": false
+    },
+    {
+      "name": "Adam Price",
+      "x": 5.133296489715576,
+      "y": 1.5115833282470703,
+      "isCurrentUser": false,
+      "special_user": false
+    },
+    {
+      "name": "Adam Lopez",
+      "x": 5.988500595092773,
+      "y": 0.48527008295059204,
+      "isCurrentUser": false,
+      "special_user": false
+    },
+    {
+      "name": "Julie Phillips",
+      "x": 4.788565158843994,
+      "y": 5.473241806030273,
+      "isCurrentUser": false,
+      "special_user": false
+    },
+    {
+      "name": "Joshua Lloyd",
+      "x": 3.5648183822631836,
+      "y": 4.537450790405273,
+      "isCurrentUser": false,
+      "special_user": false
+    },
+    {
+      "name": "Anthony Osborne",
+      "x": 5.5264129638671875,
+      "y": 3.8922014236450195,
+      "isCurrentUser": false,
+      "special_user": false
+    },
+    {
+      "name": "Barbara Cook",
+      "x": 3.1828248500823975,
+      "y": 5.039524078369141,
+      "isCurrentUser": false,
+      "special_user": false
+    },
+    {
+      "name": "Veronica Hartman",
+      "x": 5.472256183624268,
+      "y": 5.53344202041626,
+      "isCurrentUser": false,
+      "special_user": false
+    },
+    {
+      "name": "Christopher Harvey",
+      "x": 0.19185446202754974,
+      "y": 2.747800588607788,
+      "isCurrentUser": false,
+      "special_user": false
+    },
+    {
+      "name": "Samuel Martinez",
+      "x": 3.8488504886627197,
+      "y": 4.2450785636901855,
+      "isCurrentUser": false,
+      "special_user": false
+    },
+    {
+      "name": "Adam Nguyen",
+      "x": 5.125009059906006,
+      "y": 3.6253223419189453,
+      "isCurrentUser": false,
+      "special_user": false
+    },
+    {
+      "name": "Collin Spence",
+      "x": 3.470736503601074,
+      "y": 3.9237890243530273,
+      "isCurrentUser": false,
+      "special_user": false
+    },
+    {
+      "name": "Justin Turner",
+      "x": 2.707819938659668,
+      "y": 5.081568241119385,
+      "isCurrentUser": false,
+      "special_user": false
+    },
+    {
+      "name": "Donna Clarke",
+      "x": 2.2337827682495117,
+      "y": 7.343286991119385,
+      "isCurrentUser": false,
+      "special_user": false
+    },
+    {
+      "name": "Leah Kelly",
+      "x": 3.8807806968688965,
+      "y": 2.3126652240753174,
+      "isCurrentUser": false,
+      "special_user": false
+    },
+    {
+      "name": "Lori Bernard",
+      "x": -0.051466330885887146,
+      "y": 1.3295422792434692,
+      "isCurrentUser": false,
+      "special_user": false
+    },
+    {
+      "name": "Joshua Hodges",
+      "x": 3.4630627632141113,
+      "y": 2.7862050533294678,
+      "isCurrentUser": false,
+      "special_user": false
+    },
+    {
+      "name": "Michael Rogers",
+      "x": 3.3289036750793457,
+      "y": 5.8827033042907715,
+      "isCurrentUser": false,
+      "special_user": false
+    },
+    {
+      "name": "Dale Ramirez",
+      "x": 4.969101905822754,
+      "y": 5.5950822830200195,
+      "isCurrentUser": false,
+      "special_user": false
+    },
+    {
+      "name": "Bonnie Anderson",
+      "x": 2.615159749984741,
+      "y": 2.3640944957733154,
+      "isCurrentUser": false,
+      "special_user": false
+    },
+    {
+      "name": "Peggy Hall",
+      "x": 3.8467166423797607,
+      "y": 5.407959938049316,
+      "isCurrentUser": false,
+      "special_user": false
+    },
+    {
+      "name": "Larry Tanner",
+      "x": -0.6705723404884338,
+      "y": 3.06296968460083,
+      "isCurrentUser": false,
+      "special_user": false
+    },
+    {
+      "name": "Sarah Blair",
+      "x": 3.6721389293670654,
+      "y": 4.866324424743652,
+      "isCurrentUser": false,
+      "special_user": false
+    },
+    {
+      "name": "Hailey Barrett",
+      "x": 3.0596444606781006,
+      "y": 2.052250385284424,
+      "isCurrentUser": false,
+      "special_user": false
+    },
+    {
+      "name": "Jessica Hancock",
+      "x": 6.189444065093994,
+      "y": 0.7133917808532715,
+      "isCurrentUser": false,
+      "special_user": false
+    },
+    {
+      "name": "Amy Henderson",
+      "x": 4.193282604217529,
+      "y": 6.679123401641846,
+      "isCurrentUser": false,
+      "special_user": false
+    },
+    {
+      "name": "Amy Kelley",
+      "x": 0.481966495513916,
+      "y": 2.7773029804229736,
+      "isCurrentUser": false,
+      "special_user": false
+    },
+    {
+      "name": "Jeffrey Burke",
+      "x": 5.129991054534912,
+      "y": 4.925472259521484,
+      "isCurrentUser": false,
+      "special_user": false
+    },
+    {
+      "name": "Tristan Hopkins",
+      "x": 2.2527618408203125,
+      "y": 2.366183042526245,
+      "isCurrentUser": false,
+      "special_user": false
+    },
+    {
+      "name": "Dustin Rogers",
+      "x": 0.4703132212162018,
+      "y": 3.6623950004577637,
+      "isCurrentUser": false,
+      "special_user": false
+    },
+    {
+      "name": "Jodi Daniel",
+      "x": 0.11349735409021378,
+      "y": 4.050514221191406,
+      "isCurrentUser": false,
+      "special_user": false
+    },
+    {
+      "name": "Eric Santiago",
+      "x": 3.380394697189331,
+      "y": 2.06130051612854,
+      "isCurrentUser": false,
+      "special_user": false
+    },
+    {
+      "name": "Sandra Hamilton",
+      "x": -0.5068702697753906,
+      "y": 3.4212839603424072,
+      "isCurrentUser": false,
+      "special_user": false
+    },
+    {
+      "name": "Susan Hull",
+      "x": 5.867137908935547,
+      "y": 5.371510982513428,
+      "isCurrentUser": false,
+      "special_user": false
+    },
+    {
+      "name": "Susan Bowen",
+      "x": 2.3985557556152344,
+      "y": 7.1457200050354,
+      "isCurrentUser": false,
+      "special_user": false
+    },
+    {
+      "name": "Angela Moore",
+      "x": 4.487622261047363,
+      "y": 3.9806900024414062,
+      "isCurrentUser": false,
+      "special_user": false
+    },
+    {
+      "name": "Jennifer Collins",
+      "x": 3.0630109310150146,
+      "y": 4.240128993988037,
+      "isCurrentUser": false,
+      "special_user": false
+    },
+    {
+      "name": "Andrea Kennedy",
+      "x": -0.04357502609491348,
+      "y": 1.3586786985397339,
+      "isCurrentUser": false,
+      "special_user": false
+    },
+    {
+      "name": "Bailey Sullivan",
+      "x": 4.099759101867676,
+      "y": 1.7586150169372559,
+      "isCurrentUser": false,
+      "special_user": false
+    },
+    {
+      "name": "Diane Frye MD",
+      "x": 6.0902934074401855,
+      "y": 0.9375123977661133,
+      "isCurrentUser": false,
+      "special_user": false
+    },
+    {
+      "name": "John Schwartz",
+      "x": 2.096850633621216,
+      "y": 3.9120497703552246,
+      "isCurrentUser": false,
+      "special_user": false
+    },
+    {
+      "name": "James Moreno",
+      "x": 3.304363250732422,
+      "y": 6.309467315673828,
+      "isCurrentUser": false,
+      "special_user": false
+    },
+    {
+      "name": "Mr. Philip Reyes",
+      "x": 0.17177706956863403,
+      "y": 3.9095985889434814,
+      "isCurrentUser": false,
+      "special_user": false
+    },
+    {
+      "name": "Ralph Patel",
+      "x": 1.543954849243164,
+      "y": 2.0786049365997314,
+      "isCurrentUser": false,
+      "special_user": false
+    },
+    {
+      "name": "Mrs. Angela Barnes",
+      "x": 4.517413139343262,
+      "y": 4.994320869445801,
+      "isCurrentUser": false,
+      "special_user": false
+    },
+    {
+      "name": "Jamie Edwards",
+      "x": 3.9773972034454346,
+      "y": 6.886507511138916,
+      "isCurrentUser": false,
+      "special_user": false
+    },
+    {
+      "name": "Sandra Andersen",
+      "x": 0.47090908885002136,
+      "y": 2.3276538848876953,
+      "isCurrentUser": false,
+      "special_user": false
+    },
+    {
+      "name": "Gloria Shaw",
+      "x": 5.640719890594482,
+      "y": 1.2874689102172852,
+      "isCurrentUser": false,
+      "special_user": false
+    },
+    {
+      "name": "Amanda Colon",
+      "x": 4.850714206695557,
+      "y": 3.624314308166504,
+      "isCurrentUser": false,
+      "special_user": false
+    },
+    {
+      "name": "Angela Walker",
+      "x": 1.2979446649551392,
+      "y": 4.028816223144531,
+      "isCurrentUser": false,
+      "special_user": false
+    },
+    {
+      "name": "Jamie Roberts",
+      "x": 1.0695521831512451,
+      "y": 3.425978422164917,
+      "isCurrentUser": false,
+      "special_user": false
+    },
+    {
+      "name": "Donald Smith",
+      "x": 5.052078723907471,
+      "y": 1.4504625797271729,
+      "isCurrentUser": false,
+      "special_user": false
+    },
+    {
+      "name": "Jordan Swanson",
+      "x": 5.900302410125732,
+      "y": 0.532113254070282,
+      "isCurrentUser": false,
+      "special_user": false
+    },
+    {
+      "name": "Dustin Valdez",
+      "x": 5.051388263702393,
+      "y": 5.54377555847168,
+      "isCurrentUser": false,
+      "special_user": false
+    },
+    {
+      "name": "Nancy Cox",
+      "x": 3.418257236480713,
+      "y": 4.564992904663086,
+      "isCurrentUser": false,
+      "special_user": false
+    },
+    {
+      "name": "Steven Miller",
+      "x": 5.586904525756836,
+      "y": 3.8096399307250977,
+      "isCurrentUser": false,
+      "special_user": false
+    },
+    {
+      "name": "John Le",
+      "x": 3.04323673248291,
+      "y": 5.017519474029541,
+      "isCurrentUser": false,
+      "special_user": false
+    },
+    {
+      "name": "Linda Martinez",
+      "x": 5.3985466957092285,
+      "y": 5.700338363647461,
+      "isCurrentUser": false,
+      "special_user": false
+    },
+    {
+      "name": "Tracy Casey",
+      "x": 0.1472514271736145,
+      "y": 2.639364719390869,
+      "isCurrentUser": false,
+      "special_user": false
+    },
+    {
+      "name": "Troy Edwards",
+      "x": 3.788922071456909,
+      "y": 3.848611354827881,
+      "isCurrentUser": false,
+      "special_user": false
+    },
+    {
+      "name": "Todd Pham",
+      "x": 5.240150451660156,
+      "y": 3.5792291164398193,
+      "isCurrentUser": false,
+      "special_user": false
+    },
+    {
+      "name": "Zachary Guerrero",
+      "x": 3.413666248321533,
+      "y": 3.9206013679504395,
+      "isCurrentUser": false,
+      "special_user": false
+    },
+    {
+      "name": "Terry Cruz",
+      "x": 2.689446449279785,
+      "y": 5.000184059143066,
+      "isCurrentUser": false,
+      "special_user": false
+    },
+    {
+      "name": "Tony Caldwell",
+      "x": 2.217022180557251,
+      "y": 7.350918292999268,
+      "isCurrentUser": false,
+      "special_user": false
+    },
+    {
+      "name": "Jonathan Pearson",
+      "x": 3.9624290466308594,
+      "y": 2.250749349594116,
+      "isCurrentUser": false,
+      "special_user": false
+    },
+    {
+      "name": "Samuel Ross",
+      "x": -0.14073890447616577,
+      "y": 1.4073396921157837,
+      "isCurrentUser": false,
+      "special_user": false
+    },
+    {
+      "name": "Jackson Willis",
+      "x": 3.1766650676727295,
+      "y": 6.338103771209717,
+      "isCurrentUser": false,
+      "special_user": false
+    },
+    {
+      "name": "Nathan Sanchez",
+      "x": 4.945499897003174,
+      "y": 5.456729412078857,
+      "isCurrentUser": false,
+      "special_user": false
+    },
+    {
+      "name": "Shelly Ramirez",
+      "x": 1.9108061790466309,
+      "y": 2.1967263221740723,
+      "isCurrentUser": false,
+      "special_user": false
+    },
+    {
+      "name": "Travis Jackson",
+      "x": 4.155630588531494,
+      "y": 5.702007293701172,
+      "isCurrentUser": false,
+      "special_user": false
+    },
+    {
+      "name": "Mr. Brandon Conway",
+      "x": -0.6049360632896423,
+      "y": 3.084542989730835,
+      "isCurrentUser": false,
+      "special_user": false
+    },
+    {
+      "name": "Joshua Smith",
+      "x": 4.557124137878418,
+      "y": 4.255308151245117,
+      "isCurrentUser": false,
+      "special_user": false
+    },
+    {
+      "name": "Sarah White",
+      "x": 3.076094388961792,
+      "y": 2.089541435241699,
+      "isCurrentUser": false,
+      "special_user": false
+    },
+    {
+      "name": "Monica Marshall",
+      "x": 5.877326965332031,
+      "y": 0.8847160935401917,
+      "isCurrentUser": false,
+      "special_user": false
+    },
+    {
+      "name": "Lauren Gonzalez",
+      "x": 4.431682586669922,
+      "y": 6.712791919708252,
+      "isCurrentUser": false,
+      "special_user": false
+    },
+    {
+      "name": "Charles Hanson",
+      "x": 0.7853649258613586,
+      "y": 2.4915335178375244,
+      "isCurrentUser": false,
+      "special_user": false
+    },
+    {
+      "name": "Cynthia Lynn",
+      "x": 5.016366481781006,
+      "y": 4.472528457641602,
+      "isCurrentUser": false,
+      "special_user": false
+    },
+    {
+      "name": "Christopher Wagner",
+      "x": 2.303072929382324,
+      "y": 2.3380396366119385,
+      "isCurrentUser": false,
+      "special_user": false
+    },
+    {
+      "name": "Jose Montoya",
+      "x": 0.6869617700576782,
+      "y": 3.9048421382904053,
+      "isCurrentUser": false,
+      "special_user": false
+    },
+    {
+      "name": "Joseph Gray",
+      "x": 0.10715371370315552,
+      "y": 3.96993350982666,
+      "isCurrentUser": false,
+      "special_user": false
+    }
+  ]
+}

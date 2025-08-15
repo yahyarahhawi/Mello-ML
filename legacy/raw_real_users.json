@@ -1,0 +1,583 @@
+[
+  {
+    "name": "Yahya Rahhawi",
+    "books": [
+      {
+        "title": "المنقذ من الضلال والمفصح بالأحوال",
+        "author": "Ghazali, Abu Hamid",
+        "rating": 4,
+        "review": "ان مما شدني في كتاب الامام الغزالي رحمه الله هو صدق تعابيره في وصف حالة النزاع النفسي الذي مر به باحثا لمرضاة الله عز وجل. فالمحاسبة النفسية التي توصل من خلالها الغزالي لبطلان نواياه, حتى في تدريس العلم في لطلابه في بغداد, هي انموذج لما يجب على المسلم تعويد نفسه عليه لمعرفة صدق نواياه وضبط معيارها لتكون خالصة لله عز وجل. ان المحاسبة النفسية بذاتها غير كافية, فكثير مننا يقع في فخ اخر وهو ان تكون المحاسبة هذه من الوسائل التي تحاول نفسنا البشرية ارضاء ذاتها, فتصبح المحاسبة هي الغاية لا الوسيلة, ونعتقد حينها بصلاحنا لطالما اننا ادركنا حبنا للدنيا مثلا ولفساد نوايانا. الا ان الملفت في قصة الغزالي التي لخصها في اخر كتبه, هو صدق هذه المحاسبة وكونها الوسيلة لمجاهدته لنفسه وتخليصها من سلاسل المال والجاه, حتى نراه يكسر هذه السلاسل اخيرا ويذهب في رحلته الروحية التي توصل من خلالها لاسمى طرق معرفة الحق وهي التصوف.        ساعود لاقرأ هذا الكتاب بعد ان اطلع على بقية كتب الغزالي والم ببقية تجاربه وتجارب زمانه, لعلي ارى لهذا الكتاب اثرا اكبر وعمقا لم اصل اليه بقراءتي المتسرعة لهذا الكتاب. ولاشبع فضولي في معرفة ما دفع الغزالي الى استبعاد طرق المتكلمين تماما كطرق ممكنة للوصول الى الحقيقة."
+      },
+      {
+        "title": "Not a Hero: A Novel",
+        "author": "Potapenko, Ignaty",
+        "rating": 4,
+        "review": "Ah, it’s time, finally, to be done with this delusion! There is no area on earth where it’s impossible to do some good for the people. You regard the matter as if everything in Rus was splendid, except for one thing – the people are ignorant, they must be raised up, and then we will have an earthly paradise. What a blunder! Well, those who fill your drawing room, those who dance at high society balls, who attend races and ballets constantly, who waste their nights in endless drinking bouts, etc., etc. – aren’t they just as ignorant and uneducated? Are they really less in need of enlightenment than the people, that is, the masses of people? Isn’t it as difficult, or even more difficult to compel them to read a good, clever, decent book, as the dumb peasant? Great book. It makes a clear distinction between the romanticizing of heroism and martyrdom — the illusion that we must sacrifice ourselves in grand gestures — and the genuine work of living by conscience, uplifting harm when encountered and doing practical good. The book illustrates the sickening and poisoning nature of cities, and its effect on corroding the moral aspirations of our characters. It creates a scene of excessive moral performance that strips away anything beautiful and purposeful in life. This toxic environment becomes infective to all those who inhabit it. Maybe through the appeal of the material and the redefinition of one's life by what they appear to posses materially and intellectually.Society does not need our heroic sacrifice. Many of us are not made to be heroic saints, but to recognize our moral limit, and to live with a clear conscience, practically without illusions. We must reject grand illusions, but do good from the true moral obligation we feel. This realization is difficult for us to make when we live in a moral maze, surrounded by gossip, backstabbing and hypocrisy."
+      },
+      {
+        "title": "Being Jewish After the Destruction of Gaza: A Reckoning",
+        "author": "Beinart, Peter",
+        "rating": 4,
+        "review": "A powerful and honest attempt to confront the dangers of treating states as divine. Beinart’s work cuts through common theological misconceptions and logical fallacies about the necessity of a Jewish state. The genocide in Gaza is a grim reminder of the moral collapse of our world order. Oppression only leads to more oppression and violence, and this book is a brave call to break that cycle."
+      },
+      {
+        "title": "Project Hail Mary",
+        "author": "Weir, Andy",
+        "rating": 5,
+        "review": "Just incredible. It truly reignited my teenage love for science, and taught me so much about astrophysics, chemistry, and biology. Every page contributed to a brilliant, imaginative experience. Every page pulled me deeper into a world of discovery, and by the end i honestly wished it was longer not only for more of the incredible plot, but also to learn more about questions i've always had about the universe."
+      },
+      {
+        "title": "The Death of Ivan Ilych",
+        "author": "Tolstoy, Leo",
+        "rating": 5,
+        "review": "A true masterpiece. It was a needed reminder on how someone should live their life (and how they shouldn't); a reminder of what matters and what doesn't. It strikes me how important it is to be mentally prepared for the idea of death, and to support and justify it through a metaphysical purpose."
+      },
+      {
+        "title": "Foster",
+        "author": "Keegan, Claire",
+        "rating": 5,
+        "review": ""
+      },
+      {
+        "title": "The Stranger",
+        "author": "Camus, Albert",
+        "rating": 3,
+        "review": ""
+      },
+      {
+        "title": "White Nights",
+        "author": "Dostoevsky, Fyodor",
+        "rating": 4,
+        "review": ""
+      },
+      {
+        "title": "God Sees the Truth, but Waits",
+        "author": "Tolstoy, Leo",
+        "rating": 3,
+        "review": ""
+      },
+      {
+        "title": "Small Things Like These",
+        "author": "Keegan, Claire",
+        "rating": 5,
+        "review": ""
+      },
+      {
+        "title": "Flowers for Algernon",
+        "author": "Keyes, Daniel",
+        "rating": 5,
+        "review": ""
+      },
+      {
+        "title": "The Brothers Karamazov",
+        "author": "Dostoevsky, Fyodor",
+        "rating": 5,
+        "review": ""
+      },
+      {
+        "title": "Notes From Underground",
+        "author": "Dostoevsky, Fyodor",
+        "rating": 4,
+        "review": ""
+      },
+      {
+        "title": "النبأ العظيم",
+        "author": "دراز, محمد عبد الله",
+        "rating": 4,
+        "review": ""
+      },
+      {
+        "title": "عائد إلى حيفا",
+        "author": "Kanafani, Ghassan",
+        "rating": 5,
+        "review": ""
+      },
+      {
+        "title": "Animal Farm",
+        "author": "Orwell, George",
+        "rating": 3,
+        "review": ""
+      },
+      {
+        "title": "مهزلة العقل البشري",
+        "author": "علي الوردي",
+        "rating": 4,
+        "review": ""
+      },
+      {
+        "title": "1984",
+        "author": "Orwell, George",
+        "rating": 5,
+        "review": ""
+      },
+      {
+        "title": "رجال في الشمس",
+        "author": "Kanafani, Ghassan",
+        "rating": 4,
+        "review": ""
+      },
+      {
+        "title": "Rebel Ideas: The Power of Diverse Thinking",
+        "author": "Syed, Matthew",
+        "rating": 5,
+        "review": ""
+      },
+      {
+        "title": "Burmese Days",
+        "author": "Orwell, George",
+        "rating": 4,
+        "review": ""
+      },
+      {
+        "title": "Things Fall Apart",
+        "author": "Achebe, Chinua",
+        "rating": 3,
+        "review": ""
+      },
+      {
+        "title": "Hell is the Absence of God",
+        "author": "Chiang, Ted",
+        "rating": 4,
+        "review": ""
+      }
+    ],
+    "movies": [
+      {
+        "title": "Oppenheimer",
+        "year": 2023,
+        "rating": 9
+      },
+      {
+        "title": "Better Call Saul",
+        "year": 2015,
+        "rating": 10
+      },
+      {
+        "title": "Detachment",
+        "year": 2011,
+        "rating": 9
+      },
+      {
+        "title": "About Time",
+        "year": 2013,
+        "rating": 8
+      },
+      {
+        "title": "Arrival",
+        "year": 2016,
+        "rating": 7
+      },
+      {
+        "title": "Lost",
+        "year": 2004,
+        "rating": 8
+      },
+      {
+        "title": "The Intouchables",
+        "year": 2011,
+        "rating": 9
+      },
+      {
+        "title": "The Grand Budapest Hotel",
+        "year": 2014,
+        "rating": 10
+      },
+      {
+        "title": "Friends",
+        "year": 1994,
+        "rating": 7
+      },
+      {
+        "title": "Baghdad Central",
+        "year": 2020,
+        "rating": 10
+      },
+      {
+        "title": "Prison Break",
+        "year": 2005,
+        "rating": 8
+      },
+      {
+        "title": "Back to the Future",
+        "year": 1985,
+        "rating": 7
+      },
+      {
+        "title": "Cuties",
+        "year": 2020,
+        "rating": 1
+      },
+      {
+        "title": "Adrift",
+        "year": 2018,
+        "rating": 7
+      },
+      {
+        "title": "The Dark Knight",
+        "year": 2008,
+        "rating": 10
+      },
+      {
+        "title": "Jojo Rabbit",
+        "year": 2019,
+        "rating": 8
+      },
+      {
+        "title": "Knives Out",
+        "year": 2019,
+        "rating": 8
+      },
+      {
+        "title": "Monsters, Inc.",
+        "year": 2001,
+        "rating": 8
+      },
+      {
+        "title": "Logan",
+        "year": 2017,
+        "rating": 8
+      },
+      {
+        "title": "Harry Potter and the Deathly Hallows: Part 2",
+        "year": 2011,
+        "rating": 9
+      },
+      {
+        "title": "Into the Wild",
+        "year": 2007,
+        "rating": 7
+      },
+      {
+        "title": "Mad Max: Fury Road",
+        "year": 2015,
+        "rating": 7
+      },
+      {
+        "title": "12 Years a Slave",
+        "year": 2013,
+        "rating": 7
+      },
+      {
+        "title": "Prisoners",
+        "year": 2013,
+        "rating": 8
+      },
+      {
+        "title": "Catch Me If You Can",
+        "year": 2002,
+        "rating": 8
+      },
+      {
+        "title": "Room",
+        "year": 2015,
+        "rating": 7
+      },
+      {
+        "title": "Finding Nemo",
+        "year": 2003,
+        "rating": 9
+      },
+      {
+        "title": "The Sixth Sense",
+        "year": 1999,
+        "rating": 8
+      },
+      {
+        "title": "Inside Out",
+        "year": 2015,
+        "rating": 7
+      },
+      {
+        "title": "Shutter Island",
+        "year": 2010,
+        "rating": 8
+      },
+      {
+        "title": "A Beautiful Mind",
+        "year": 2001,
+        "rating": 6
+      },
+      {
+        "title": "Green Book",
+        "year": 2018,
+        "rating": 6
+      },
+      {
+        "title": "Batman Begins",
+        "year": 2005,
+        "rating": 8
+      },
+      {
+        "title": "1917",
+        "year": 2019,
+        "rating": 7
+      },
+      {
+        "title": "Eternal Sunshine of the Spotless Mind",
+        "year": 2004,
+        "rating": 9
+      },
+      {
+        "title": "Like Stars on Earth",
+        "year": 2007,
+        "rating": 8
+      },
+      {
+        "title": "Toy Story",
+        "year": 1995,
+        "rating": 9
+      },
+      {
+        "title": "3 Idiots",
+        "year": 2009,
+        "rating": 8
+      },
+      {
+        "title": "Coco",
+        "year": 2017,
+        "rating": 8
+      },
+      {
+        "title": "Your Name",
+        "year": 2016,
+        "rating": 8
+      },
+      {
+        "title": "The Dark Knight Rises",
+        "year": 2012,
+        "rating": 8
+      },
+      {
+        "title": "WALL·E",
+        "year": 2008,
+        "rating": 9
+      },
+      {
+        "title": "Joker",
+        "year": 2019,
+        "rating": 9
+      },
+      {
+        "title": "Grave of the Fireflies",
+        "year": 1988,
+        "rating": 8
+      },
+      {
+        "title": "The Prestige",
+        "year": 2006,
+        "rating": 8
+      },
+      {
+        "title": "The Pianist",
+        "year": 2002,
+        "rating": 9
+      },
+      {
+        "title": "Parasite",
+        "year": 2019,
+        "rating": 8
+      },
+      {
+        "title": "The Green Mile",
+        "year": 1999,
+        "rating": 7
+      },
+      {
+        "title": "Se7en",
+        "year": 1995,
+        "rating": 9
+      },
+      {
+        "title": "Forrest Gump",
+        "year": 1994,
+        "rating": 9
+      },
+      {
+        "title": "The Lord of the Rings: The Fellowship of the Ring",
+        "year": 2001,
+        "rating": 8
+      },
+      {
+        "title": "The Lord of the Rings: The Return of the King",
+        "year": 2003,
+        "rating": 8
+      },
+      {
+        "title": "12 Angry Men",
+        "year": 1957,
+        "rating": 9
+      },
+      {
+        "title": "The Shawshank Redemption",
+        "year": 1994,
+        "rating": 8
+      },
+      {
+        "title": "The Office",
+        "year": 2005,
+        "rating": 10
+      },
+      {
+        "title": "Jinn",
+        "year": 2019,
+        "rating": 7
+      },
+      {
+        "title": "Interstellar",
+        "year": 2014,
+        "rating": 10
+      },
+      {
+        "title": "Game of Thrones",
+        "year": 2011,
+        "rating": 10
+      },
+      {
+        "title": "The Message",
+        "year": 1976,
+        "rating": 10
+      },
+      {
+        "title": "Rick and Morty",
+        "year": 2013,
+        "rating": 10
+      },
+      {
+        "title": "Vantage Point",
+        "year": 2008,
+        "rating": 8
+      },
+      {
+        "title": "The Devil's Game",
+        "year": 2015,
+        "rating": 9
+      },
+      {
+        "title": "The Hunter",
+        "year": 2014,
+        "rating": 9
+      },
+      {
+        "title": "Sherlock",
+        "year": 2010,
+        "rating": 9
+      },
+      {
+        "title": "Kingsman: The Secret Service",
+        "year": 2014,
+        "rating": 8
+      },
+      {
+        "title": "Al Kabeer",
+        "year": 2010,
+        "rating": 9
+      }
+    ],
+    "songs": [
+      {
+        "title": "Indigo Night",
+        "artist": "Tamino"
+      },
+      {
+        "title": "Habibi",
+        "artist": "Tamino"
+      },
+      {
+        "title": "Cigar",
+        "artist": "Tamino"
+      },
+      {
+        "title": "No Time To Die",
+        "artist": "Billie Eilish"
+      },
+      {
+        "title": "Apocalypse",
+        "artist": "Cigarettes After Sex"
+      },
+      {
+        "title": "Intervals (Live At Jet Studio, Brussels, 2019)",
+        "artist": "Tamino"
+      },
+      {
+        "title": "I Bet You Look Good On The Dancefloor",
+        "artist": "Arctic Monkeys"
+      },
+      {
+        "title": "Take Me To Church",
+        "artist": "Hozier"
+      },
+      {
+        "title": "Back To Her Man",
+        "artist": "Damien Rice"
+      },
+      {
+        "title": "Noaata Beida",
+        "artist": "Cairokee"
+      },
+      {
+        "title": "Ohebbou Yadayka",
+        "artist": "Faia Younan"
+      },
+      {
+        "title": "Yaba Yaba iraqi rock",
+        "artist": "Project 904"
+      },
+      {
+        "title": "Falaytaka Tahlou",
+        "artist": "Faia Younan"
+      },
+      {
+        "title": "Leh Ya Hana",
+        "artist": "Arnabeat"
+      },
+      {
+        "title": "مربوط باستك",
+        "artist": "Abdulrahman Othman"
+      },
+      {
+        "title": "Space Song",
+        "artist": "Beach House"
+      },
+      {
+        "title": "Skyfall",
+        "artist": "Adele"
+      },
+      {
+        "title": "Ghani lel hob",
+        "artist": "Faia Younan"
+      },
+      {
+        "title": "Radio Ga Ga",
+        "artist": "Queen"
+      },
+      {
+        "title": "New Light",
+        "artist": "John Mayer"
+      },
+      {
+        "title": "Mawo'od",
+        "artist": "Abdel Halim Hafez"
+      },
+      {
+        "title": "A Different Age",
+        "artist": "Current Joys"
+      },
+      {
+        "title": "Happiness",
+        "artist": "Hooverphonic"
+      },
+      {
+        "title": "The Curse",
+        "artist": "Agnes Obel"
+      },
+      {
+        "title": "Mamnoun",
+        "artist": "Bu Kolthoum"
+      },
+      {
+        "title": "Starry Night",
+        "artist": "Jordan Critz"
+      }
+    ]
+  }
+]
