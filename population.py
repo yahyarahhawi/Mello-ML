@@ -64,13 +64,34 @@ class Population:
                 return user
         return None
     
-    def get_users_with_embeddings(self) -> List[User]:
-        """Get all users that have embeddings."""
-        return [user for user in self.users if user.embedding is not None]
+    def get_users_with_embeddings(self, mode: str = 'any') -> List[User]:
+        """Get all users that have embeddings.
+        
+        Args:
+            mode: 'any', 'legacy', 'interests', 'personality', 'dual', 'combined'
+        """
+        if mode == 'legacy':
+            return [user for user in self.users if hasattr(user, 'embedding') and user.embedding is not None]
+        elif mode == 'interests':
+            return [user for user in self.users if hasattr(user, 'interests_embedding') and user.interests_embedding is not None]
+        elif mode == 'personality':
+            return [user for user in self.users if hasattr(user, 'personality_embedding') and user.personality_embedding is not None]
+        elif mode == 'dual':
+            return [user for user in self.users if hasattr(user, 'interests_embedding') and user.interests_embedding is not None and hasattr(user, 'personality_embedding') and user.personality_embedding is not None]
+        elif mode == 'combined':
+            return [user for user in self.users if hasattr(user, 'interests_embedding') and user.interests_embedding is not None and hasattr(user, 'personality_embedding') and user.personality_embedding is not None]
+        else:  # 'any'
+            return [user for user in self.users if ((hasattr(user, 'embedding') and user.embedding is not None) or 
+                                                   (hasattr(user, 'interests_embedding') and user.interests_embedding is not None) or 
+                                                   (hasattr(user, 'personality_embedding') and user.personality_embedding is not None))]
     
     def get_users_with_taste_profiles(self) -> List[User]:
         """Get all users that have taste profiles."""
-        return [user for user in self.users if user.taste_profile is not None]
+        return [user for user in self.users if hasattr(user, 'taste_profile') and user.taste_profile is not None]
+    
+    def get_users_with_dual_profiles(self) -> List[User]:
+        """Get all users that have both interests and personality profiles."""
+        return [user for user in self.users if hasattr(user, 'interests_profile') and user.interests_profile is not None and hasattr(user, 'personality_profile') and user.personality_profile is not None]
     
     def get_special_users(self) -> List[User]:
         """Get all users marked as special."""
@@ -84,62 +105,93 @@ class Population:
         """Get the number of users in the population."""
         return len(self.users)
     
-    def get_embedding_matrix(self) -> np.ndarray:
+    def get_embedding_matrix(self, mode: str = 'legacy') -> np.ndarray:
         """
         Get embeddings as a matrix.
+        
+        Args:
+            mode: 'legacy', 'interests', 'personality', 'combined'
         
         Returns:
             numpy array of shape (n_users, embedding_dim)
         """
-        users_with_embeddings = self.get_users_with_embeddings()
+        users_with_embeddings = self.get_users_with_embeddings(mode)
         if not users_with_embeddings:
-            raise ValueError("No users have embeddings")
+            raise ValueError(f"No users have {mode} embeddings")
         
-        embeddings = [user.embedding for user in users_with_embeddings]
+        embeddings = []
+        for user in users_with_embeddings:
+            if mode == 'legacy':
+                embeddings.append(user.embedding)
+            elif mode == 'interests':
+                embeddings.append(user.interests_embedding)
+            elif mode == 'personality':
+                embeddings.append(user.personality_embedding)
+            elif mode == 'combined':
+                combined = np.concatenate([user.interests_embedding, user.personality_embedding])
+                embeddings.append(combined)
+        
         return np.array(embeddings)
     
-    def get_embedding_names(self) -> List[str]:
-        """Get names of users that have embeddings."""
-        return [user.name for user in self.get_users_with_embeddings()]
+    def get_embedding_names(self, mode: str = 'any') -> List[str]:
+        """Get names of users that have embeddings.
+        
+        Args:
+            mode: 'any', 'legacy', 'interests', 'personality', 'dual', 'combined'
+        """
+        return [user.name for user in self.get_users_with_embeddings(mode)]
     
-    def find_similar_users(self, target_user: User, top_k: int = 5) -> List[Tuple[User, float]]:
+    def find_similar_users(self, target_user: User, top_k: int = 5, mode: str = 'combined') -> List[Tuple[User, float]]:
         """
         Find the most similar users to a target user.
         
         Args:
             target_user: User to find similarities for
             top_k: Number of similar users to return
+            mode: 'combined', 'interests', 'personality', or 'legacy'
             
         Returns:
             List of (User, similarity_score) tuples, sorted by similarity (descending)
         """
-        if target_user.embedding is None:
-            raise ValueError("Target user must have an embedding")
+        # Check if target user has required embeddings
+        if mode == 'legacy' and target_user.embedding is None:
+            raise ValueError("Target user must have a legacy embedding")
+        elif mode == 'interests' and target_user.interests_embedding is None:
+            raise ValueError("Target user must have an interests embedding")
+        elif mode == 'personality' and target_user.personality_embedding is None:
+            raise ValueError("Target user must have a personality embedding")
+        elif mode == 'combined' and (target_user.interests_embedding is None or target_user.personality_embedding is None):
+            raise ValueError("Target user must have both interests and personality embeddings")
         
-        users_with_embeddings = self.get_users_with_embeddings()
+        users_with_embeddings = self.get_users_with_embeddings(mode)
         similarities = []
         
         for user in users_with_embeddings:
             if user.name != target_user.name:  # Don't include the target user
-                similarity = target_user.calculate_similarity(user)
-                similarities.append((user, similarity))
+                try:
+                    similarity = target_user.calculate_similarity(user, mode)
+                    similarities.append((user, similarity))
+                except ValueError:
+                    # Skip users that don't have the required embedding type
+                    continue
         
         # Sort by similarity (descending) and return top_k
         similarities.sort(key=lambda x: x[1], reverse=True)
         return similarities[:top_k]
     
-    def find_similar_users_by_embedding(self, target_embedding: np.ndarray, top_k: int = 5) -> List[Tuple[User, float]]:
+    def find_similar_users_by_embedding(self, target_embedding: np.ndarray, top_k: int = 5, mode: str = 'legacy') -> List[Tuple[User, float]]:
         """
         Find users similar to a given embedding vector.
         
         Args:
             target_embedding: Vector to find similarities for
             top_k: Number of similar users to return
+            mode: 'legacy', 'interests', 'personality', 'combined'
             
         Returns:
             List of (User, similarity_score) tuples, sorted by similarity (descending)
         """
-        users_with_embeddings = self.get_users_with_embeddings()
+        users_with_embeddings = self.get_users_with_embeddings(mode)
         similarities = []
         
         # Normalize target embedding
@@ -148,11 +200,22 @@ class Population:
             raise ValueError("Target embedding cannot be zero vector")
         
         for user in users_with_embeddings:
+            # Get the appropriate embedding
+            if mode == 'legacy':
+                user_embedding = user.embedding
+            elif mode == 'interests':
+                user_embedding = user.interests_embedding
+            elif mode == 'personality':
+                user_embedding = user.personality_embedding
+            elif mode == 'combined':
+                user_embedding = np.concatenate([user.interests_embedding, user.personality_embedding])
+            
             # Calculate cosine similarity
-            user_norm = np.linalg.norm(user.embedding)
-            if user_norm > 0:
-                similarity = np.dot(target_embedding, user.embedding) / (target_norm * user_norm)
-                similarities.append((user, float(similarity)))
+            if user_embedding is not None:
+                user_norm = np.linalg.norm(user_embedding)
+                if user_norm > 0:
+                    similarity = np.dot(target_embedding, user_embedding) / (target_norm * user_norm)
+                    similarities.append((user, float(similarity)))
         
         # Sort by similarity (descending) and return top_k
         similarities.sort(key=lambda x: x[1], reverse=True)
@@ -160,8 +223,12 @@ class Population:
     
     def get_statistics(self) -> Dict[str, Any]:
         """Get population statistics."""
-        users_with_embeddings = self.get_users_with_embeddings()
-        users_with_profiles = self.get_users_with_taste_profiles()
+        users_with_legacy_embeddings = self.get_users_with_embeddings('legacy')
+        users_with_interests_embeddings = self.get_users_with_embeddings('interests')
+        users_with_personality_embeddings = self.get_users_with_embeddings('personality')
+        users_with_dual_embeddings = self.get_users_with_embeddings('dual')
+        users_with_taste_profiles = self.get_users_with_taste_profiles()
+        users_with_dual_profiles = self.get_users_with_dual_profiles()
         special_users = self.get_special_users()
         regular_users = self.get_regular_users()
         
@@ -178,12 +245,23 @@ class Population:
             "total_users": len(self.users),
             "special_users": len(special_users),
             "regular_users": len(regular_users),
-            "users_with_embeddings": len(users_with_embeddings),
-            "users_with_taste_profiles": len(users_with_profiles),
+            "users_with_legacy_embeddings": len(users_with_legacy_embeddings),
+            "users_with_interests_embeddings": len(users_with_interests_embeddings),
+            "users_with_personality_embeddings": len(users_with_personality_embeddings),
+            "users_with_dual_embeddings": len(users_with_dual_embeddings),
+            "users_with_taste_profiles": len(users_with_taste_profiles),
+            "users_with_dual_profiles": len(users_with_dual_profiles),
             "total_books_rated": total_books,
             "avg_books_per_user": avg_books_per_user,
-            "embedding_dimension": len(users_with_embeddings[0].embedding) if users_with_embeddings else None,
         }
+        
+        # Add embedding dimensions if available
+        if users_with_legacy_embeddings:
+            stats["legacy_embedding_dimension"] = len(users_with_legacy_embeddings[0].embedding)
+        if users_with_interests_embeddings:
+            stats["interests_embedding_dimension"] = len(users_with_interests_embeddings[0].interests_embedding)
+        if users_with_personality_embeddings:
+            stats["personality_embedding_dimension"] = len(users_with_personality_embeddings[0].personality_embedding)
         
         if all_ratings:
             stats.update({
@@ -206,7 +284,12 @@ class Population:
                 "num_movies": len(user.preferences.movies),
                 "num_music": len(user.preferences.music),
                 "has_taste_profile": user.taste_profile is not None,
-                "has_embedding": user.embedding is not None,
+                "has_interests_profile": user.interests_profile is not None,
+                "has_personality_profile": user.personality_profile is not None,
+                "has_legacy_embedding": user.embedding is not None,
+                "has_interests_embedding": user.interests_embedding is not None,
+                "has_personality_embedding": user.personality_embedding is not None,
+                "has_dual_embeddings": user.interests_embedding is not None and user.personality_embedding is not None,
                 "avg_book_rating": np.mean([book.rating for book in user.preferences.books]) if user.preferences.books else None
             }
             
@@ -248,17 +331,43 @@ class Population:
         logging.getLogger(__name__).info(f"Loaded population '{population.name}' with {len(population.users)} users")
         return population
     
-    def export_embeddings_only(self, filepath: str):
-        """Export only embeddings and names in the legacy format."""
-        users_with_embeddings = self.get_users_with_embeddings()
+    def export_embeddings_only(self, filepath: str, mode: str = 'legacy'):
+        """Export only embeddings and names.
+        
+        Args:
+            filepath: Where to save the file
+            mode: 'legacy', 'interests', 'personality', 'dual'
+        """
+        users_with_embeddings = self.get_users_with_embeddings(mode)
         data = []
         
         for user in users_with_embeddings:
-            data.append({
-                "name": user.name,
-                "books_vector": user.embedding.tolist(),
-                "book_taste": user.taste_profile
-            })
+            user_data = {"name": user.name}
+            
+            if mode == 'legacy':
+                user_data.update({
+                    "books_vector": user.embedding.tolist(),
+                    "book_taste": user.taste_profile
+                })
+            elif mode == 'interests':
+                user_data.update({
+                    "interests_vector": user.interests_embedding.tolist(),
+                    "interests_profile": user.interests_profile
+                })
+            elif mode == 'personality':
+                user_data.update({
+                    "personality_vector": user.personality_embedding.tolist(),
+                    "personality_profile": user.personality_profile
+                })
+            elif mode == 'dual':
+                user_data.update({
+                    "interests_vector": user.interests_embedding.tolist(),
+                    "personality_vector": user.personality_embedding.tolist(),
+                    "interests_profile": user.interests_profile,
+                    "personality_profile": user.personality_profile
+                })
+            
+            data.append(user_data)
         
         with open(filepath, 'w') as f:
             json.dump(data, f, indent=2)

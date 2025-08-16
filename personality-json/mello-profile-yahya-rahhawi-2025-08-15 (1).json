@@ -1,0 +1,182 @@
+{
+  "profile": {
+    "fullName": "Yahya Rahhawi",
+    "classYear": "2026",
+    "major": "Computer science, Philosophy",
+    "bio": "I like philosophy, A.I, volleyball, soccer, watching movies and TV shows, and photography",
+    "interests": [
+      "philosophy",
+      "sports",
+      "computer science",
+      "machine learning",
+      "reading",
+      "math"
+    ]
+  },
+  "books": {
+    "favoriteBooks": [
+      "The Brothers Karamazov",
+      "Project Hail Mary",
+      "The death of Ivan Ilyitch, and other stories (Three deaths ; Neglect a fire and it spreads ; Where love is, there God is also ; A candle ;The two old men ; Texts for woodcuts ; The three hermits ; Popular legens ; The godson",
+      "1984",
+      "Small Things Like These (Oprah's Book Club)"
+    ],
+    "bookReviews": {
+      "1984": "Incredibly powerful. What is the cost of security? how much do we lose of our identity and our lives when we give up freedom? and how cab a state deprive its citizens the ability to think for themselves? i grapple with these questions everyday",
+      "The Brothers Karamazov": "This is a masterpiece. I loved every bit of it. It truly delves into the existential questions that we all have had. What is the source of morality? is there a need for faith? what are the implications of living a doubtful life, and how does it influence the world around us? Truly transformative boo",
+      "Project Hail Mary": "Just incredible. It truly reignited my teenage love for science, and taught me so much about astrophysics, chemistry, and biology. Every page contributed to a brilliant, imaginative experience. Every page pulled me deeper into a world of discovery, and by the end i honestly wished it was longer not ",
+      "The death of Ivan Ilyitch, and other stories (Three deaths ; Neglect a fire and it spreads ; Where love is, there God is also ; A candle ;The two old men ; Texts for woodcuts ; The three hermits ; Popular legens ; The godson": "A true masterpiece. It was a needed reminder on how someone should live their life (and how they shouldn't); a reminder of what matters and what doesn't. It strikes me how important it is to be mentally prepared for the idea of death, and to support and justify it through a metaphysical purpose.",
+      "Small Things Like These (Oprah's Book Club)": "Masterpiece. one of the simplest yet deepest books i've read in a while. the story truly emphasize how one can be good in the simplest form, becoming a hero without grand illusions, and the conflict between giving up what you have to better the world, and maintaining what you have for securing your "
+    },
+    "bookReflection": ""
+  },
+  "movies": {
+    "favoriteMovies": [
+      "Interstellar",
+      "The Grand Budapest Hotel",
+      "Detachment",
+      "Oppenheimer",
+      "The Dark Knight"
+    ],
+    "movieReviews": {
+      "Interstellar": "Absolute masterpiece. I loved how deeply it made me think about our roles as humans, our fragility, and the power of our imagination and resilience in exploring the world and saving ourselves. I loved all the physics and science, and it truly fascinated me and made me wonder about what is possible",
+      "The Grand Budapest Hotel": "Best cinematography i've seen. just pure art. every frame is a masterpiece. I was in Awe throughout the movie",
+      "Detachment": "Incredibly powerful. How to be selfless and realistic in the way you approach your moral responsibility to the world. How do you embody humility and accept the corruption of the world and work to fix it. 10/10",
+      "Oppenheimer": "another Nolan Masterpiece. captivating storytelling of an important phase of our history. Beautiful storytelling and excellent colors and cintematography. pure art. ",
+      "The Dark Knight": "Incredible. The philosophical questions it presents are ones we all struggle with every day. why do we do good? just pure excellence"
+    },
+    "movieReflection": ""
+  },
+  "music": {
+    "musicArtists": [
+      "indigo night - tamino",
+      "habibi - tamino",
+      "lady of my life - michael jackson",
+      "fairooz songs",
+      "um kalthoum"
+    ],
+    "vibeMatch": ""
+  },
+  "personality": {
+    "Openness": {
+      "selected": [
+        "I stick mostly to familiar authors or genres when reading",
+        "I prefer detailed itineraries when traveling somewhere new",
+        "I use the same apps and rarely try new ones",
+        "I shop at the same stores and buy similar clothes repeatedly",
+        "I enjoy learning about unfamiliar topics just for fun",
+        "I rewatch the same TV shows or movies for comfort",
+        "I like debating ideas I disagree with to understand other perspectives"
+      ],
+      "not_selected": [
+        "I seek out restaurants serving cuisine I've never tried",
+        "I regularly explore music outside my usual genres",
+        "I enjoy unusual or experimental art even if I don't fully understand it",
+        "I prefer exploring new neighborhoods over returning to familiar ones",
+        "I experiment with new recipes instead of cooking the same meals"
+      ],
+      "notes": ""
+    },
+    "Conscientiousness": {
+      "selected": [
+        "I pack for trips well in advance",
+        "I have dozens of unread notifications on my phone",
+        "I sometimes run a few minutes late to events",
+        "I leave emails unread for long periods",
+        "I set multiple alarms to make sure I wake up",
+        "I sometimes lose momentum on personal goals after the initial excitement"
+      ],
+      "not_selected": [
+        "I write down tasks as soon as I think of them",
+        "I make my bed without thinking about it",
+        "I rarely miss deadlines for assignments or work",
+        "I tidy up my space soon after it gets messy",
+        "I track expenses and stick to budgets",
+        "I write to-do lists and use them to guide my day",
+        "I charge devices before they get close to empty",
+        "I prepare for exams or big projects weeks in advance"
+      ],
+      "notes": "while i do submit assignments late and procrstinate, in real life, i like to work with percision and hate to be late for a meeting, or for me to have to wait for others"
+    },
+    "Extraversion": {
+      "selected": [
+        "I volunteer to speak or present in front of groups",
+        "At parties, I gravitate toward smaller conversations",
+        "I call friends when I have news instead of texting",
+        "I often eat or take breaks alone even when others are around",
+        "Large social events leave me tired afterward",
+        "I sometimes start conversations with strangers",
+        "I enjoy solo hobbies like reading or gaming",
+        "I need alone time to recharge after socializing",
+        "I often get \"in the zone\" when working alone"
+      ],
+      "not_selected": [
+        "I think out loud when working through ideas",
+        "I regularly invite others to hang out",
+        "I prefer quiet study spaces over busy ones",
+        "I feel energized after spending time with groups",
+        "I share personal updates only when asked"
+      ],
+      "notes": ""
+    },
+    "Agreeableness": {
+      "selected": [
+        "I split bills evenly, even if I ordered less or more",
+        "I offer help without waiting to be asked",
+        "I sometimes push for my choice in group decisions",
+        "I check what everyone wants before ordering for a group",
+        "I apologize when I realize I hurt someone",
+        "I tell people directly when something bothers me",
+        "I adjust my plans to fit others' schedules",
+        "I freely lend personal items to friends",
+        "I speak up when someone is treated unfairly"
+      ],
+      "not_selected": [
+        "I'm fine letting others choose the music or activity",
+        "I tend to stay on the phone until the other person hangs up",
+        "I wait to trust people until I know them better",
+        "I remember birthdays or important events for people close to me",
+        "I sometimes put my own needs ahead of others' requests"
+      ],
+      "notes": ""
+    },
+    "Neuroticism": {
+      "selected": [
+        "I reread emails before sending them to avoid mistakes",
+        "I sometimes lose sleep over upcoming events or deadlines",
+        "I get annoyed when unexpected delays happen",
+        "My mood changes easily depending on what's happening",
+        "I sometimes replay conversations or moments in my head",
+        "I make backup plans in case the first one fails",
+        "Small frustrations can affect my mood for hours",
+        "I can laugh off small mistakes easily",
+        "I stay focused in emergencies or high-pressure situations"
+      ],
+      "not_selected": [
+        "I rarely dwell on things I can't control",
+        "I'm usually calm before social events",
+        "I occasionally worry about embarrassing myself",
+        "I recover quickly after disappointment",
+        "I sometimes second-guess decisions I've already made"
+      ],
+      "notes": ""
+    }
+  },
+  "additionalInfo": {
+    "talkAboutForHours": "Morality, the struggle for liberation and freedom, the palestinian cause, science, math, machine learning, philosophy",
+    "naturalConversations": "one on one deep conversations that go beyond small talk and let my mind and imagination work",
+    "aloneTimeReachFor": "reading, coding, watching youtube videos on scientific topics",
+    "comfortZone": "one-on-one",
+    "perfectDay": "I would travel, take my camera with me and document the lives i encounter. ",
+    "energySources": [
+      "deep-conversations",
+      "alone-reflect",
+      "exploring-meeting",
+      "quiet-together"
+    ]
+  },
+  "metadata": {
+    "timestamp": "2025-08-15T18:15:29.128Z",
+    "version": "1.0"
+  }
+}

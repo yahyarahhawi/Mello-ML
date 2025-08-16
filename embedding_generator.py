@@ -238,6 +238,147 @@ class EmbeddingGenerator:
         """
         return self.generate_embedding(text)
     
+    def generate_interests_embedding(self, text: str, target_dims: int = 3072) -> np.ndarray:
+        """
+        Generate interests embedding with specified dimensions.
+        
+        Args:
+            text: Text to embed
+            target_dims: Target dimensions (default 3072)
+            
+        Returns:
+            numpy array containing the interests embedding
+        """
+        # Generate base embedding
+        base_embedding = self.generate_embedding(text)
+        
+        # Adjust dimensions if needed
+        if len(base_embedding) != target_dims:
+            if len(base_embedding) < target_dims:
+                # Pad with zeros
+                padded = np.zeros(target_dims)
+                padded[:len(base_embedding)] = base_embedding
+                return padded
+            else:
+                # Truncate
+                return base_embedding[:target_dims]
+        
+        return base_embedding
+    
+    def generate_personality_embeddings(self, trait_descriptions: Dict[str, str]) -> np.ndarray:
+        """
+        Generate personality embedding by concatenating 5 trait embeddings.
+        
+        Args:
+            trait_descriptions: Dict with trait names as keys and descriptions as values
+            
+        Returns:
+            numpy array containing concatenated personality embedding (5 x 768 = 3840 dims)
+        """
+        trait_embeddings = []
+        target_trait_dims = 768
+        
+        # Generate embedding for each trait
+        traits = ['Openness', 'Conscientiousness', 'Extraversion', 'Agreeableness', 'Neuroticism']
+        
+        for trait in traits:
+            if trait in trait_descriptions:
+                trait_text = trait_descriptions[trait]
+            else:
+                trait_text = f"No description available for {trait}"
+            
+            # Generate embedding for this trait
+            trait_embedding = self.generate_embedding(trait_text)
+            
+            # Ensure correct dimensions
+            if len(trait_embedding) != target_trait_dims:
+                if len(trait_embedding) < target_trait_dims:
+                    # Pad with zeros
+                    padded = np.zeros(target_trait_dims)
+                    padded[:len(trait_embedding)] = trait_embedding
+                    trait_embedding = padded
+                else:
+                    # Truncate
+                    trait_embedding = trait_embedding[:target_trait_dims]
+            
+            trait_embeddings.append(trait_embedding)
+        
+        # Concatenate all trait embeddings
+        personality_embedding = np.concatenate(trait_embeddings)
+        return personality_embedding
+    
+    def embed_user_dual(self, user: User) -> bool:
+        """
+        Generate both interests and personality embeddings for a user.
+        
+        Args:
+            user: User object to generate embeddings for
+            
+        Returns:
+            True if successful, False otherwise
+        """
+        success_count = 0
+        
+        # Generate interests embedding
+        if user.interests_profile:
+            try:
+                interests_embedding = self.generate_interests_embedding(user.interests_profile, 3072)
+                user.set_interests_embedding(interests_embedding)
+                self.logger.info(f"Generated interests embedding for {user.name} (shape: {interests_embedding.shape})")
+                success_count += 1
+            except Exception as e:
+                self.logger.error(f"Failed to generate interests embedding for {user.name}: {e}")
+        else:
+            self.logger.warning(f"User {user.name} has no interests profile")
+        
+        # Generate personality embedding
+        if user.personality_profile:
+            try:
+                personality_embedding = self.generate_personality_embeddings(user.personality_profile)
+                user.set_personality_embedding(personality_embedding)
+                self.logger.info(f"Generated personality embedding for {user.name} (shape: {personality_embedding.shape})")
+                success_count += 1
+            except Exception as e:
+                self.logger.error(f"Failed to generate personality embedding for {user.name}: {e}")
+        else:
+            self.logger.warning(f"User {user.name} has no personality profile")
+        
+        return success_count == 2
+    
+    def embed_population_dual(self, population: Population, progress_callback=None) -> int:
+        """
+        Generate dual embeddings for all users in a population.
+        
+        Args:
+            population: Population to generate embeddings for
+            progress_callback: Function to call with progress updates
+            
+        Returns:
+            Number of users with successful dual embeddings
+        """
+        users_with_profiles = []
+        for user in population.users:
+            if user.interests_profile or user.personality_profile:
+                users_with_profiles.append(user)
+        
+        if not users_with_profiles:
+            self.logger.warning("No users with profiles found")
+            return 0
+        
+        self.logger.info(f"Generating dual embeddings for {len(users_with_profiles)} users")
+        
+        successful_embeddings = 0
+        
+        for i, user in enumerate(users_with_profiles):
+            if self.embed_user_dual(user):
+                successful_embeddings += 1
+            
+            if progress_callback:
+                progress_callback(i + 1, len(users_with_profiles))
+        
+        self.logger.info(f"Successfully generated dual embeddings for {successful_embeddings}/{len(users_with_profiles)} users")
+        return successful_embeddings
+    
     def get_statistics(self) -> Dict[str, Any]:
         """Get statistics about API usage."""
         return {
