@@ -1,335 +1,296 @@
 #!/usr/bin/env python3
 """
-User class for representing individual users with their preferences and embeddings.
+Fresh User class for unified personality profiling system.
 """
 
 import json
 import numpy as np
-from typing import List, Dict, Optional, Any
-from dataclasses import dataclass, asdict
-from datetime import datetime
-
-
-@dataclass
-class BookRating:
-    """Represents a book with its rating."""
-    title: str
-    author: str
-    rating: float
-    genre: Optional[str] = None
-
-
-@dataclass
-class UserPreferences:
-    """Container for all user preferences."""
-    books: List[BookRating]
-    movies: List[Dict[str, Any]] = None
-    music: List[Dict[str, Any]] = None
-    
-    def __post_init__(self):
-        if self.movies is None:
-            self.movies = []
-        if self.music is None:
-            self.music = []
+from typing import Dict, Any, Optional
 
 
 class User:
     """
-    Represents a single user with their preferences, taste profile, and dual embeddings.
+    Represents a user with unified personality profiling approach.
+    Combines cultural preferences with personality traits for rich embeddings.
     """
     
-    def __init__(self, name: str, preferences: UserPreferences = None, special: bool = False):
+    def __init__(self, name: str):
         """
-        Initialize a new user.
+        Initialize a user.
         
         Args:
             name: User's name
-            preferences: UserPreferences object containing books, movies, music
-            special: Whether this user is marked as special (default: False)
         """
         self.name = name
-        self.preferences = preferences or UserPreferences(books=[])
         
-        # Dual profile system
-        self.interests_profile = None  # 200-word interests summary
-        self.personality_profile = None  # Dict of 5 personality trait descriptions
+        # Profile data from frontend JSON
+        self.profile_data = {}  # fullName, major, bio, interests, classYear
+        self.books_data = {}    # favoriteBooks, bookReviews, bookReflection
+        self.movies_data = {}   # favoriteMovies, movieReviews, movieReflection
+        self.music_data = {}    # musicArtists, vibeMatch
+        self.personality_data = {}  # Big 5 responses with selected/not_selected
+        self.additional_info = {}   # talkAboutForHours, perfectDay, etc.
         
-        # Dual embedding system
-        self.interests_embedding = None  # 3072-dimensional vector
-        self.personality_embedding = None  # 3840-dimensional vector (5 x 768)
+        # Generated profiles (unified approach)
+        self.interests_profile = None  # 200-word unified personality from cultural data
+        self.personality_profiles = {}  # 5 trait descriptions in JSON format
         
-        # Legacy fields for backward compatibility
-        self.taste_profile = None
-        self.embedding = None
+        # Embeddings (768D each)
+        self.interests_embedding = None     # 768D from interests_profile
+        self.openness_embedding = None      # 768D from Openness trait
+        self.conscientiousness_embedding = None  # 768D from Conscientiousness trait
+        self.extraversion_embedding = None  # 768D from Extraversion trait
+        self.agreeableness_embedding = None # 768D from Agreeableness trait
+        self.neuroticism_embedding = None   # 768D from Neuroticism trait
         
-        # Additional data from frontend JSON
-        self.profile_data = {}  # Basic profile info
-        self.personality_responses = {}  # Big 5 responses
-        self.additional_info = {}  # Extra questions
-        
-        self.special = special
-        self.created_at = datetime.now()
+        # Metadata
         self.metadata = {}
-    
-    def add_book(self, title: str, author: str, rating: float, genre: str = None):
-        """Add a book rating to the user's preferences."""
-        book = BookRating(title=title, author=author, rating=rating, genre=genre)
-        self.preferences.books.append(book)
-    
-    def add_movie(self, title: str, rating: float, **kwargs):
-        """Add a movie rating to the user's preferences."""
-        movie = {"title": title, "rating": rating, **kwargs}
-        self.preferences.movies.append(movie)
-    
-    def add_music(self, artist: str, rating: float, **kwargs):
-        """Add a music preference to the user's collection."""
-        music = {"artist": artist, "rating": rating, **kwargs}
-        self.preferences.music.append(music)
-    
-    def set_taste_profile(self, profile: str):
-        """Set the AI-generated taste profile description."""
-        self.taste_profile = profile
-    
-    def set_embedding(self, embedding: np.ndarray):
-        """Set the vector embedding for this user."""
-        self.embedding = embedding.copy() if isinstance(embedding, np.ndarray) else np.array(embedding)
-    
-    def set_interests_profile(self, profile: str):
-        """Set the AI-generated interests profile description."""
-        self.interests_profile = profile
-    
-    def set_personality_profile(self, profiles: Dict[str, str]):
-        """Set the AI-generated personality trait descriptions."""
-        self.personality_profile = profiles.copy()
-    
-    def set_interests_embedding(self, embedding: np.ndarray):
-        """Set the 3072-dimensional interests embedding."""
-        self.interests_embedding = embedding.copy() if isinstance(embedding, np.ndarray) else np.array(embedding)
-    
-    def set_personality_embedding(self, embedding: np.ndarray):
-        """Set the 3840-dimensional personality embedding."""
-        self.personality_embedding = embedding.copy() if isinstance(embedding, np.ndarray) else np.array(embedding)
-    
-    def get_books_summary(self) -> str:
-        """Get a formatted summary of the user's book preferences."""
-        if not self.preferences.books:
-            return "No books rated yet."
-        
-        summary = f"{self.name}'s book preferences:\n"
-        for book in self.preferences.books:
-            summary += f"- {book.title} by {book.author}: {book.rating}/5 stars\n"
-        return summary
-    
-    def get_high_rated_books(self, min_rating: float = 4.0) -> List[BookRating]:
-        """Get books rated above a certain threshold."""
-        return [book for book in self.preferences.books if book.rating >= min_rating]
+        self.special = False
     
     @classmethod
-    def from_frontend_json(cls, json_data: Dict[str, Any]) -> 'User':
+    def from_json_file(cls, json_path: str) -> 'User':
         """
-        Create a User instance from frontend JSON format.
+        Create a user from a JSON file (like yahya_profile.json).
         
         Args:
-            json_data: Dictionary in the format exported from the React frontend
+            json_path: Path to the JSON file
             
         Returns:
-            User instance with populated data
+            User instance
         """
-        # Extract basic profile data
-        profile = json_data.get("profile", {})
-        name = profile.get("fullName", "Unknown User")
+        with open(json_path, 'r') as f:
+            data = json.load(f)
         
-        # Create user instance
-        user = cls(name=name)
+        return cls.from_json_data(data)
+    
+    @classmethod
+    def from_json_data(cls, data: Dict[str, Any]) -> 'User':
+        """
+        Create a user from JSON data.
         
-        # Store profile data
+        Args:
+            data: JSON data dictionary
+            
+        Returns:
+            User instance
+        """
+        # Extract name
+        profile = data.get('profile', {})
+        name = profile.get('fullName', 'Unknown User')
+        
+        user = cls(name)
+        
+        # Store all sections
         user.profile_data = profile
+        user.books_data = data.get('books', {})
+        user.movies_data = data.get('movies', {})
+        user.music_data = data.get('music', {})
+        user.personality_data = data.get('personality', {})
+        user.additional_info = data.get('additionalInfo', {})
         
-        # Store personality responses
-        user.personality_responses = json_data.get("personality", {})
-        
-        # Store additional info
-        user.additional_info = json_data.get("additionalInfo", {})
-        
-        # Extract media preferences
-        books_data = json_data.get("books", {})
-        movies_data = json_data.get("movies", {})
-        music_data = json_data.get("music", {})
-        
-        # Convert to internal format
-        user.preferences = UserPreferences(books=[])
-        
-        # Add books
-        for book_title in books_data.get("favoriteBooks", []):
-            # Get review if available
-            review = books_data.get("bookReviews", {}).get(book_title, "")
-            # Create book entry (we don't have author/rating in this format)
-            user.add_book(book_title, "Unknown Author", 5.0, "Unknown")
-        
-        # Add movies
-        for movie_title in movies_data.get("favoriteMovies", []):
-            review = movies_data.get("movieReviews", {}).get(movie_title, "")
-            user.add_movie(movie_title, 5.0, review=review)
-        
-        # Add music
-        for artist in music_data.get("musicArtists", []):
-            user.add_music(artist, 5.0)
-        
-        # Store metadata including original frontend data
+        # Store metadata
         user.metadata = {
-            "source": "frontend_json",
-            "timestamp": json_data.get("metadata", {}).get("timestamp"),
-            "version": json_data.get("metadata", {}).get("version", "1.0"),
-            "frontend_data": json_data  # Store complete original data
+            'source': 'json_file',
+            'original_data': data
         }
         
         return user
     
-    def calculate_similarity(self, other_user: 'User', mode: str = 'combined') -> float:
+    def set_interests_profile(self, profile: str):
+        """Set the unified interests/personality profile."""
+        self.interests_profile = profile
+    
+    def set_personality_profiles(self, profiles: Dict[str, str]):
+        """Set the individual trait profiles."""
+        self.personality_profiles = profiles
+    
+    def set_interests_embedding(self, embedding: np.ndarray):
+        """Set the interests embedding (768D)."""
+        self.interests_embedding = embedding
+    
+    def set_trait_embeddings(self, embeddings: Dict[str, np.ndarray]):
+        """Set the trait embeddings (5 x 768D)."""
+        self.openness_embedding = embeddings.get('Openness')
+        self.conscientiousness_embedding = embeddings.get('Conscientiousness')
+        self.extraversion_embedding = embeddings.get('Extraversion')
+        self.agreeableness_embedding = embeddings.get('Agreeableness')
+        self.neuroticism_embedding = embeddings.get('Neuroticism')
+    
+    def get_combined_embedding(self) -> Optional[np.ndarray]:
         """
-        Calculate cosine similarity with another user based on embeddings.
+        Get combined embedding (interests + 5 traits = 6 x 768D = 4608D).
+        
+        Returns:
+            Combined embedding or None if not all embeddings are available
+        """
+        embeddings = []
+        
+        # Add interests embedding
+        if self.interests_embedding is not None:
+            embeddings.append(self.interests_embedding)
+        else:
+            return None
+        
+        # Add trait embeddings in order
+        trait_embeddings = [
+            self.openness_embedding,
+            self.conscientiousness_embedding,
+            self.extraversion_embedding,
+            self.agreeableness_embedding,
+            self.neuroticism_embedding
+        ]
+        
+        for emb in trait_embeddings:
+            if emb is not None:
+                embeddings.append(emb)
+            else:
+                return None
+        
+        return np.concatenate(embeddings)
+    
+    def calculate_similarity(self, other: 'User', mode: str = 'combined') -> float:
+        """
+        Calculate similarity with another user using Euclidean distance.
         
         Args:
-            other_user: Another User instance
-            mode: 'combined', 'interests', 'personality', or 'legacy'
+            other: Another user
+            mode: 'combined', 'interests', or specific trait name
             
         Returns:
-            Cosine similarity score (0-1)
+            Similarity score (0-1, where 1=most similar, 0=least similar)
         """
-        if mode == 'interests':
-            if self.interests_embedding is None or other_user.interests_embedding is None:
-                raise ValueError("Both users must have interests embeddings")
-            vec1, vec2 = self.interests_embedding, other_user.interests_embedding
-            
-        elif mode == 'personality':
-            if self.personality_embedding is None or other_user.personality_embedding is None:
-                raise ValueError("Both users must have personality embeddings")
-            vec1, vec2 = self.personality_embedding, other_user.personality_embedding
-            
-        elif mode == 'combined':
-            if (self.interests_embedding is None or self.personality_embedding is None or 
-                other_user.interests_embedding is None or other_user.personality_embedding is None):
-                raise ValueError("Both users must have both embedding types for combined similarity")
-            
-            # Concatenate interests and personality embeddings
-            vec1 = np.concatenate([self.interests_embedding, self.personality_embedding])
-            vec2 = np.concatenate([other_user.interests_embedding, other_user.personality_embedding])
-            
-        else:  # legacy mode
-            if self.embedding is None or other_user.embedding is None:
-                raise ValueError("Both users must have legacy embeddings")
-            vec1, vec2 = self.embedding, other_user.embedding
+        if mode == 'combined':
+            emb1 = self.get_combined_embedding()
+            emb2 = other.get_combined_embedding()
+        elif mode == 'interests':
+            emb1 = self.interests_embedding
+            emb2 = other.interests_embedding
+        elif mode == 'Openness':
+            emb1 = self.openness_embedding
+            emb2 = other.openness_embedding
+        elif mode == 'Conscientiousness':
+            emb1 = self.conscientiousness_embedding
+            emb2 = other.conscientiousness_embedding
+        elif mode == 'Extraversion':
+            emb1 = self.extraversion_embedding
+            emb2 = other.extraversion_embedding
+        elif mode == 'Agreeableness':
+            emb1 = self.agreeableness_embedding
+            emb2 = other.agreeableness_embedding
+        elif mode == 'Neuroticism':
+            emb1 = self.neuroticism_embedding
+            emb2 = other.neuroticism_embedding
+        else:
+            raise ValueError(f"Unknown mode: {mode}")
         
-        # Normalize vectors
-        norm1 = np.linalg.norm(vec1)
-        norm2 = np.linalg.norm(vec2)
-        
-        if norm1 == 0 or norm2 == 0:
+        if emb1 is None or emb2 is None:
             return 0.0
         
-        # Calculate cosine similarity
-        similarity = np.dot(vec1, vec2) / (norm1 * norm2)
-        return float(similarity)
+        # Euclidean distance (L2 norm)
+        euclidean_dist = np.sqrt(np.sum((emb1 - emb2) ** 2))
+        
+        # Convert to similarity score (0-1, where 1=most similar)
+        # Normalize by the maximum possible distance between unit vectors
+        max_possible_distance = np.sqrt(2 * len(emb1))  # Max distance between normalized vectors
+        
+        # Normalize embeddings to unit length for consistent comparison
+        norm1 = np.linalg.norm(emb1)
+        norm2 = np.linalg.norm(emb2)
+        
+        if norm1 == 0 or norm2 == 0:
+            return 0.0  # One of the embeddings is zero
+        
+        # Normalize embeddings and calculate Euclidean distance
+        emb1_normalized = emb1 / norm1
+        emb2_normalized = emb2 / norm2
+        normalized_euclidean_dist = np.sqrt(np.sum((emb1_normalized - emb2_normalized) ** 2))
+        
+        # Convert distance to similarity (inverse relationship)
+        similarity = 1.0 - (normalized_euclidean_dist / max_possible_distance)
+        
+        # Ensure the result is between 0 and 1
+        return float(max(0.0, min(1.0, similarity)))
     
     def to_dict(self) -> Dict[str, Any]:
-        """Convert user to dictionary format."""
+        """Convert user to dictionary for saving."""
         return {
-            "name": self.name,
-            "special": self.special,
-            "preferences": {
-                "books": [asdict(book) for book in self.preferences.books],
-                "movies": self.preferences.movies,
-                "music": self.preferences.music
-            },
-            # Dual profile system
-            "interests_profile": self.interests_profile,
-            "personality_profile": self.personality_profile,
-            "interests_embedding": self.interests_embedding.tolist() if self.interests_embedding is not None else None,
-            "personality_embedding": self.personality_embedding.tolist() if self.personality_embedding is not None else None,
-            
-            # Legacy fields (only include if they exist)
-            "taste_profile": getattr(self, 'taste_profile', None),
-            "embedding": getattr(self, 'embedding', None).tolist() if hasattr(self, 'embedding') and self.embedding is not None else None,
-            
-            # Frontend data
-            "profile_data": self.profile_data,
-            "personality_responses": self.personality_responses,
-            "additional_info": self.additional_info,
-            
-            "created_at": self.created_at.isoformat(),
-            "metadata": self.metadata
+            'name': self.name,
+            'profile_data': self.profile_data,
+            'books_data': self.books_data,
+            'movies_data': self.movies_data,
+            'music_data': self.music_data,
+            'personality_data': self.personality_data,
+            'additional_info': self.additional_info,
+            'interests_profile': self.interests_profile,
+            'personality_profiles': self.personality_profiles,
+            'interests_embedding': self.interests_embedding.tolist() if self.interests_embedding is not None else None,
+            'openness_embedding': self.openness_embedding.tolist() if self.openness_embedding is not None else None,
+            'conscientiousness_embedding': self.conscientiousness_embedding.tolist() if self.conscientiousness_embedding is not None else None,
+            'extraversion_embedding': self.extraversion_embedding.tolist() if self.extraversion_embedding is not None else None,
+            'agreeableness_embedding': self.agreeableness_embedding.tolist() if self.agreeableness_embedding is not None else None,
+            'neuroticism_embedding': self.neuroticism_embedding.tolist() if self.neuroticism_embedding is not None else None,
+            'metadata': self.metadata,
+            'special': self.special
         }
     
     @classmethod
     def from_dict(cls, data: Dict[str, Any]) -> 'User':
-        """Create a User instance from dictionary data."""
-        # Create preferences
-        books = [BookRating(**book_data) for book_data in data.get("preferences", {}).get("books", [])]
-        preferences = UserPreferences(
-            books=books,
-            movies=data.get("preferences", {}).get("movies", []),
-            music=data.get("preferences", {}).get("music", [])
-        )
+        """Create user from dictionary."""
+        # Extract clean name from potentially multi-line name field
+        raw_name = data['name']
+        if '\n' in raw_name:
+            # If name contains newlines, extract just the first line (the actual name)
+            clean_name = raw_name.split('\n')[0].strip()
+        else:
+            clean_name = raw_name.strip()
         
-        # Create user with special field
-        user = cls(
-            name=data["name"], 
-            preferences=preferences,
-            special=data.get("special", False)
-        )
+        user = cls(clean_name)
         
-        # Load dual profile system
-        user.interests_profile = data.get("interests_profile")
-        user.personality_profile = data.get("personality_profile")
+        user.profile_data = data.get('profile_data', {})
+        user.books_data = data.get('books_data', {})
+        user.movies_data = data.get('movies_data', {})
+        user.music_data = data.get('music_data', {})
+        user.personality_data = data.get('personality_data', {})
+        user.additional_info = data.get('additional_info', {})
         
-        if data.get("interests_embedding"):
-            user.interests_embedding = np.array(data["interests_embedding"])
+        user.interests_profile = data.get('interests_profile')
+        user.personality_profiles = data.get('personality_profiles', {})
         
-        if data.get("personality_embedding"):
-            user.personality_embedding = np.array(data["personality_embedding"])
+        # Load embeddings
+        if data.get('interests_embedding'):
+            user.interests_embedding = np.array(data['interests_embedding'])
+        if data.get('openness_embedding'):
+            user.openness_embedding = np.array(data['openness_embedding'])
+        if data.get('conscientiousness_embedding'):
+            user.conscientiousness_embedding = np.array(data['conscientiousness_embedding'])
+        if data.get('extraversion_embedding'):
+            user.extraversion_embedding = np.array(data['extraversion_embedding'])
+        if data.get('agreeableness_embedding'):
+            user.agreeableness_embedding = np.array(data['agreeableness_embedding'])
+        if data.get('neuroticism_embedding'):
+            user.neuroticism_embedding = np.array(data['neuroticism_embedding'])
         
-        # Load legacy fields
-        user.taste_profile = data.get("taste_profile")
-        if data.get("embedding"):
-            user.embedding = np.array(data["embedding"])
-        
-        # Load frontend data
-        user.profile_data = data.get("profile_data", {})
-        user.personality_responses = data.get("personality_responses", {})
-        user.additional_info = data.get("additional_info", {})
-        
-        if data.get("created_at"):
-            user.created_at = datetime.fromisoformat(data["created_at"])
-        
-        user.metadata = data.get("metadata", {})
+        user.metadata = data.get('metadata', {})
+        user.special = data.get('special', False)
         
         return user
     
-    def save_to_json(self, filepath: str):
-        """Save user to JSON file."""
-        with open(filepath, 'w') as f:
-            json.dump(self.to_dict(), f, indent=2)
-    
-    @classmethod
-    def load_from_json(cls, filepath: str) -> 'User':
-        """Load user from JSON file."""
-        with open(filepath, 'r') as f:
-            data = json.load(f)
-        return cls.from_dict(data)
-    
     def __str__(self) -> str:
-        """String representation of the user."""
-        book_count = len(self.preferences.books)
-        has_interests_profile = "Yes" if self.interests_profile else "No"
-        has_personality_profile = "Yes" if self.personality_profile else "No"
-        has_interests_embedding = "Yes" if self.interests_embedding is not None else "No"
-        has_personality_embedding = "Yes" if self.personality_embedding is not None else "No"
+        """String representation."""
+        interests_status = "Yes" if self.interests_profile else "No"
+        personality_status = f"{len(self.personality_profiles)}/5" if self.personality_profiles else "No"
+        
+        # Check embeddings
+        emb_count = sum([
+            self.interests_embedding is not None,
+            self.openness_embedding is not None,
+            self.conscientiousness_embedding is not None,
+            self.extraversion_embedding is not None,
+            self.agreeableness_embedding is not None,
+            self.neuroticism_embedding is not None
+        ])
+        
+        embedding_status = f"{emb_count}/6"
         special_marker = "⭐" if self.special else ""
         
-        return (f"User(name='{self.name}', books={book_count}, "
-                f"interests_profile={has_interests_profile}, personality_profile={has_personality_profile}, "
-                f"interests_emb={has_interests_embedding}, personality_emb={has_personality_embedding}, "
-                f"special={self.special}){special_marker}")
-    
-    def __repr__(self) -> str:
-        return self.__str__()
+        return f"User(name='{self.name}', profiles={interests_status}+{personality_status}, embeddings={embedding_status}{special_marker})"

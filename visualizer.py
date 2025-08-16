@@ -1,19 +1,21 @@
 #!/usr/bin/env python3
 """
-Visualizer class for dimensionality reduction and interactive plotting.
+Fresh Visualizer class for 2D PCA and UMAP plotting.
 """
 
 import numpy as np
 import plotly.graph_objects as go
 import plotly.express as px
 from plotly.subplots import make_subplots
-from typing import List, Dict, Any, Optional, Tuple
+from typing import List, Optional, Tuple, Dict, Any
 import logging
-from pathlib import Path
 
-from sklearn.decomposition import PCA
-from sklearn.manifold import TSNE
-from sklearn.preprocessing import StandardScaler
+try:
+    from sklearn.decomposition import PCA
+    from sklearn.preprocessing import StandardScaler
+    PCA_AVAILABLE = True
+except ImportError:
+    PCA_AVAILABLE = False
 
 try:
     import umap
@@ -21,445 +23,490 @@ try:
 except ImportError:
     UMAP_AVAILABLE = False
 
-from population import Population
 from user import User
+from population import Population
 
 
 class Visualizer:
     """
-    Handles dimensionality reduction and visualization of user embeddings
-    using PCA, t-SNE, and UMAP.
+    Creates 2D visualizations of user embeddings using PCA and UMAP.
     """
     
-    def __init__(self, population: Population = None):
+    def __init__(self):
+        """Initialize the visualizer."""
+        self.logger = logging.getLogger(__name__)
+        
+        if not PCA_AVAILABLE:
+            self.logger.warning("sklearn not available. Install with: pip install scikit-learn")
+        
+        if not UMAP_AVAILABLE:
+            self.logger.warning("umap-learn not available. Install with: pip install umap-learn")
+    
+    def plot_population_pca(self, population: Population, mode: str = 'combined', 
+                           highlight_special: bool = True, figsize: Tuple[int, int] = (12, 8),
+                           save_path: Optional[str] = None) -> go.Figure:
         """
-        Initialize the visualizer.
+        Create 2D PCA plot of population embeddings using Plotly.
         
         Args:
             population: Population to visualize
-        """
-        self.population = population
-        self.logger = logging.getLogger(__name__)
-        
-        # Store fitted models for transforming new data
-        self.pca_2d = None
-        self.pca_3d = None
-        self.tsne_2d = None
-        self.tsne_3d = None
-        self.umap_2d = None
-        self.umap_3d = None
-        self.scaler = None
-        
-        # Store transformed coordinates
-        self.coordinates = {}
-        
-        if not UMAP_AVAILABLE:
-            self.logger.warning("UMAP not available. Install with: pip install umap-learn")
-    
-    def set_population(self, population: Population):
-        """Set or update the population to visualize."""
-        self.population = population
-        self.coordinates = {}  # Clear cached coordinates
-    
-    def _prepare_data(self) -> Tuple[np.ndarray, List[str], List[str]]:
-        """
-        Prepare embedding data for visualization.
-        
-        Returns:
-            Tuple of (embeddings_matrix, user_names, taste_profiles)
-        """
-        if not self.population:
-            raise ValueError("No population set for visualization")
-        
-        users_with_embeddings = self.population.get_users_with_embeddings()
-        if not users_with_embeddings:
-            raise ValueError("No users with embeddings found")
-        
-        embeddings = np.array([user.embedding for user in users_with_embeddings])
-        names = [user.name for user in users_with_embeddings]
-        profiles = [user.taste_profile or "No profile" for user in users_with_embeddings]
-        
-        return embeddings, names, profiles
-    
-    def _standardize_embeddings(self, embeddings: np.ndarray) -> np.ndarray:
-        """Standardize embeddings for better dimensionality reduction."""
-        if self.scaler is None:
-            self.scaler = StandardScaler()
-            return self.scaler.fit_transform(embeddings)
-        else:
-            return self.scaler.transform(embeddings)
-    
-    def fit_pca(self, n_components_2d: int = 2, n_components_3d: int = 3) -> Dict[str, np.ndarray]:
-        """
-        Fit PCA models and return transformed coordinates.
-        
-        Args:
-            n_components_2d: Number of components for 2D PCA
-            n_components_3d: Number of components for 3D PCA
+            mode: Embedding mode ('combined', 'interests', or trait name)
+            highlight_special: Whether to highlight special users
+            figsize: Figure size (for compatibility, not used in plotly)
+            save_path: Path to save plot (optional)
             
         Returns:
-            Dictionary with 'pca_2d' and 'pca_3d' coordinates
+            plotly Figure
         """
-        embeddings, names, profiles = self._prepare_data()
-        embeddings_scaled = self._standardize_embeddings(embeddings)
+        if not PCA_AVAILABLE:
+            raise ImportError("sklearn is required for PCA. Install with: pip install scikit-learn")
         
-        # Fit 2D PCA
-        self.pca_2d = PCA(n_components=n_components_2d, random_state=42)
-        coords_2d = self.pca_2d.fit_transform(embeddings_scaled)
+        # Get embedding matrix
+        embedding_matrix, users = population.get_embedding_matrix(mode)
         
-        # Fit 3D PCA
-        self.pca_3d = PCA(n_components=n_components_3d, random_state=42)
-        coords_3d = self.pca_3d.fit_transform(embeddings_scaled)
+        if len(embedding_matrix) == 0:
+            raise ValueError(f"No users with {mode} embeddings found")
         
-        self.coordinates['pca_2d'] = coords_2d
-        self.coordinates['pca_3d'] = coords_3d
+        if len(embedding_matrix) < 3:
+            raise ValueError(f"Need at least 3 users for PCA, got {len(embedding_matrix)}")
         
-        self.logger.info(f"PCA fitted. 2D explained variance: {self.pca_2d.explained_variance_ratio_.sum():.3f}")
-        self.logger.info(f"PCA fitted. 3D explained variance: {self.pca_3d.explained_variance_ratio_.sum():.3f}")
+        # Standardize embeddings
+        scaler = StandardScaler()
+        embeddings_scaled = scaler.fit_transform(embedding_matrix)
         
-        return {'pca_2d': coords_2d, 'pca_3d': coords_3d}
-    
-    def fit_tsne(self, n_components_2d: int = 2, n_components_3d: int = 3, 
-                 perplexity: float = 30.0, n_iter: int = 1000) -> Dict[str, np.ndarray]:
-        """
-        Fit t-SNE models and return transformed coordinates.
+        # Apply PCA
+        pca = PCA(n_components=2)
+        embeddings_2d = pca.fit_transform(embeddings_scaled)
         
-        Args:
-            n_components_2d: Number of components for 2D t-SNE
-            n_components_3d: Number of components for 3D t-SNE
-            perplexity: t-SNE perplexity parameter
-            n_iter: Number of iterations
-            
-        Returns:
-            Dictionary with 'tsne_2d' and 'tsne_3d' coordinates
-        """
-        embeddings, names, profiles = self._prepare_data()
-        embeddings_scaled = self._standardize_embeddings(embeddings)
-        
-        # Fit 2D t-SNE
-        self.tsne_2d = TSNE(n_components=n_components_2d, perplexity=perplexity, 
-                           n_iter=n_iter, random_state=42, init='pca')
-        coords_2d = self.tsne_2d.fit_transform(embeddings_scaled)
-        
-        # Fit 3D t-SNE
-        self.tsne_3d = TSNE(n_components=n_components_3d, perplexity=perplexity, 
-                           n_iter=n_iter, random_state=42, init='pca')
-        coords_3d = self.tsne_3d.fit_transform(embeddings_scaled)
-        
-        self.coordinates['tsne_2d'] = coords_2d
-        self.coordinates['tsne_3d'] = coords_3d
-        
-        self.logger.info(f"t-SNE fitted with perplexity={perplexity}, n_iter={n_iter}")
-        
-        return {'tsne_2d': coords_2d, 'tsne_3d': coords_3d}
-    
-    def fit_umap(self, n_components_2d: int = 2, n_components_3d: int = 3,
-                 n_neighbors: int = 15, min_dist: float = 0.1) -> Dict[str, np.ndarray]:
-        """
-        Fit UMAP models and return transformed coordinates.
-        
-        Args:
-            n_components_2d: Number of components for 2D UMAP
-            n_components_3d: Number of components for 3D UMAP
-            n_neighbors: Number of neighbors for UMAP
-            min_dist: Minimum distance for UMAP
-            
-        Returns:
-            Dictionary with 'umap_2d' and 'umap_3d' coordinates
-        """
-        if not UMAP_AVAILABLE:
-            raise ImportError("UMAP not available. Install with: pip install umap-learn")
-        
-        embeddings, names, profiles = self._prepare_data()
-        embeddings_scaled = self._standardize_embeddings(embeddings)
-        
-        # Fit 2D UMAP
-        self.umap_2d = umap.UMAP(n_components=n_components_2d, n_neighbors=n_neighbors,
-                                min_dist=min_dist, random_state=42)
-        coords_2d = self.umap_2d.fit_transform(embeddings_scaled)
-        
-        # Fit 3D UMAP
-        self.umap_3d = umap.UMAP(n_components=n_components_3d, n_neighbors=n_neighbors,
-                                min_dist=min_dist, random_state=42)
-        coords_3d = self.umap_3d.fit_transform(embeddings_scaled)
-        
-        self.coordinates['umap_2d'] = coords_2d
-        self.coordinates['umap_3d'] = coords_3d
-        
-        self.logger.info(f"UMAP fitted with n_neighbors={n_neighbors}, min_dist={min_dist}")
-        
-        return {'umap_2d': coords_2d, 'umap_3d': coords_3d}
-    
-    def transform_new_embedding(self, embedding: np.ndarray, method: str) -> np.ndarray:
-        """
-        Transform a new embedding using fitted models.
-        
-        Args:
-            embedding: New embedding to transform
-            method: Method to use ('pca_2d', 'pca_3d', 'umap_2d', 'umap_3d')
-            
-        Returns:
-            Transformed coordinates
-        """
-        if self.scaler is None:
-            raise ValueError("Models not fitted yet. Call fit_* methods first.")
-        
-        # Standardize the new embedding
-        embedding_scaled = self.scaler.transform(embedding.reshape(1, -1))
-        
-        if method == 'pca_2d' and self.pca_2d is not None:
-            return self.pca_2d.transform(embedding_scaled)[0]
-        elif method == 'pca_3d' and self.pca_3d is not None:
-            return self.pca_3d.transform(embedding_scaled)[0]
-        elif method == 'umap_2d' and self.umap_2d is not None:
-            return self.umap_2d.transform(embedding_scaled)[0]
-        elif method == 'umap_3d' and self.umap_3d is not None:
-            return self.umap_3d.transform(embedding_scaled)[0]
-        else:
-            raise ValueError(f"Method '{method}' not available or not fitted")
-    
-    def plot_2d(self, method: str = 'umap_2d', highlight_users: List[str] = None,
-                title: str = None, save_path: str = None) -> go.Figure:
-        """
-        Create 2D scatter plot.
-        
-        Args:
-            method: Dimensionality reduction method ('pca_2d', 'tsne_2d', 'umap_2d')
-            highlight_users: List of user names to highlight
-            title: Plot title
-            save_path: Path to save the plot
-            
-        Returns:
-            Plotly figure
-        """
-        if method not in self.coordinates:
-            raise ValueError(f"Method '{method}' not fitted yet")
-        
-        coords = self.coordinates[method]
-        embeddings, names, profiles = self._prepare_data()
-        
-        # Create colors for highlighting
-        colors = ['blue'] * len(names)
-        if highlight_users:
-            for i, name in enumerate(names):
-                if name in highlight_users:
-                    colors[i] = 'red'
-        
+        # Create plotly figure
         fig = go.Figure()
         
-        # Add regular points
-        regular_mask = [c == 'blue' for c in colors]
-        if any(regular_mask):
+        # Separate special and regular users
+        special_indices = []
+        regular_indices = []
+        
+        for i, user in enumerate(users):
+            if user.special and highlight_special:
+                special_indices.append(i)
+            else:
+                regular_indices.append(i)
+        
+        # Plot regular users (dots; hover shows name only)
+        if regular_indices:
+            regular_coords = embeddings_2d[regular_indices]
+            regular_names = [users[i].name for i in regular_indices]
+
             fig.add_trace(go.Scatter(
-                x=coords[regular_mask, 0],
-                y=coords[regular_mask, 1],
+                x=regular_coords[:, 0],
+                y=regular_coords[:, 1],
                 mode='markers',
-                marker=dict(color='blue', size=8, opacity=0.7),
-                text=[names[i] for i in range(len(names)) if regular_mask[i]],
-                hovertemplate='<b>%{text}</b><br>X: %{x:.3f}<br>Y: %{y:.3f}<extra></extra>',
-                name='Users'
+                marker=dict(size=8, color='lightblue', opacity=0.7, line=dict(width=1, color='darkblue')),
+                name=f'Users ({len(regular_indices)})',
+                hovertext=regular_names,                        # ⬅️ drive tooltip from hovertext
+                hovertemplate='<b>%{hovertext}</b><extra></extra>'
             ))
         
-        # Add highlighted points
-        highlight_mask = [c == 'red' for c in colors]
-        if any(highlight_mask):
+        # Plot special users (star markers; hover shows name only)
+        if special_indices:
+            special_coords = embeddings_2d[special_indices]
+            special_names = [users[i].name for i in special_indices]
+
             fig.add_trace(go.Scatter(
-                x=coords[highlight_mask, 0],
-                y=coords[highlight_mask, 1],
+                x=special_coords[:, 0],
+                y=special_coords[:, 1],
                 mode='markers',
-                marker=dict(color='red', size=12, opacity=0.9),
-                text=[names[i] for i in range(len(names)) if highlight_mask[i]],
-                hovertemplate='<b>%{text}</b><br>X: %{x:.3f}<br>Y: %{y:.3f}<extra></extra>',
-                name='Highlighted'
+                marker=dict(size=15, color='red', opacity=0.9, symbol='star', line=dict(width=2, color='darkred')),
+                name=f'Special Users ({len(special_indices)})',
+                hovertext=special_names,                        # ⬅️ only names
+                hovertemplate='<b>%{hovertext}</b><extra></extra>'
             ))
         
+        # Update layout
+        total_variance = pca.explained_variance_ratio_[:2].sum()
         fig.update_layout(
-            title=title or f'{method.upper()} Visualization',
-            xaxis_title=f'{method} Component 1',
-            yaxis_title=f'{method} Component 2',
-            width=800,
-            height=600,
-            showlegend=True
+            title=f'PCA Visualization - {mode.title()} Embeddings<br>{population.name} ({len(users)} users)',
+            xaxis_title=f'PC1 ({pca.explained_variance_ratio_[0]:.1%} variance)',
+            yaxis_title=f'PC2 ({pca.explained_variance_ratio_[1]:.1%} variance)',
+            hovermode='closest',
+            showlegend=True,
+            width=figsize[0] * 80,
+            height=figsize[1] * 80,
+            annotations=[
+                dict(
+                    text=f'Total variance explained: {total_variance:.1%}<br>Similarity metric: Euclidean Distance',
+                    xref="paper", yref="paper",
+                    x=0.02, y=0.98, xanchor='left', yanchor='top',
+                    showarrow=False,
+                    font=dict(size=12),
+                    bgcolor="rgba(255,255,255,0.8)",
+                    bordercolor="rgba(0,0,0,0.5)",
+                    borderwidth=1
+                )
+            ]
         )
         
         if save_path:
             fig.write_html(save_path)
-            self.logger.info(f"Saved plot to {save_path}")
+            self.logger.info(f"Saved PCA plot to {save_path}")
         
         return fig
     
-    def plot_3d(self, method: str = 'umap_3d', highlight_users: List[str] = None,
-                title: str = None, save_path: str = None) -> go.Figure:
+    def plot_population_umap(self, population: Population, mode: str = 'combined',
+                            highlight_special: bool = True, figsize: Tuple[int, int] = (12, 8),
+                            n_neighbors: int = 15, min_dist: float = 0.1, metric: str = 'euclidean',
+                            save_path: Optional[str] = None) -> go.Figure:
         """
-        Create 3D scatter plot.
+        Create 2D UMAP plot of population embeddings using Plotly.
         
         Args:
-            method: Dimensionality reduction method ('pca_3d', 'tsne_3d', 'umap_3d')
-            highlight_users: List of user names to highlight
-            title: Plot title
-            save_path: Path to save the plot
+            population: Population to visualize
+            mode: Embedding mode ('combined', 'interests', or trait name)
+            highlight_special: Whether to highlight special users
+            figsize: Figure size (for compatibility, not used in plotly)
+            n_neighbors: UMAP n_neighbors parameter
+            min_dist: UMAP min_dist parameter
+            metric: UMAP metric parameter (default: euclidean)
+            save_path: Path to save plot (optional)
             
         Returns:
-            Plotly figure
+            plotly Figure
         """
-        if method not in self.coordinates:
-            raise ValueError(f"Method '{method}' not fitted yet")
+        if not UMAP_AVAILABLE:
+            raise ImportError("umap-learn is required for UMAP. Install with: pip install umap-learn")
         
-        coords = self.coordinates[method]
-        embeddings, names, profiles = self._prepare_data()
+        # Get embedding matrix
+        embedding_matrix, users = population.get_embedding_matrix(mode)
         
-        # Create colors for highlighting
-        colors = ['blue'] * len(names)
-        if highlight_users:
-            for i, name in enumerate(names):
-                if name in highlight_users:
-                    colors[i] = 'red'
+        if len(embedding_matrix) == 0:
+            raise ValueError(f"No users with {mode} embeddings found")
         
+        if len(embedding_matrix) < 10:
+            raise ValueError(f"Need at least 10 users for UMAP, got {len(embedding_matrix)}")
+        
+        # Apply UMAP
+        reducer = umap.UMAP(n_neighbors=n_neighbors, min_dist=min_dist, 
+                           metric=metric, random_state=42)
+        embeddings_2d = reducer.fit_transform(embedding_matrix)
+        
+        # Create plotly figure
         fig = go.Figure()
         
-        # Add regular points
-        regular_mask = [c == 'blue' for c in colors]
-        if any(regular_mask):
-            fig.add_trace(go.Scatter3d(
-                x=coords[regular_mask, 0],
-                y=coords[regular_mask, 1],
-                z=coords[regular_mask, 2],
+        # Separate special and regular users
+        special_indices = []
+        regular_indices = []
+        
+        for i, user in enumerate(users):
+            if user.special and highlight_special:
+                special_indices.append(i)
+            else:
+                regular_indices.append(i)
+        
+        # Plot regular users (dots; hover shows name only)
+        if regular_indices:
+            regular_coords = embeddings_2d[regular_indices]
+            regular_names = [users[i].name for i in regular_indices]
+
+            fig.add_trace(go.Scatter(
+                x=regular_coords[:, 0],
+                y=regular_coords[:, 1],
                 mode='markers',
-                marker=dict(color='blue', size=5, opacity=0.7),
-                text=[names[i] for i in range(len(names)) if regular_mask[i]],
-                customdata=[profiles[i] for i in range(len(profiles)) if regular_mask[i]],
-                hovertemplate='<b>%{text}</b><br>%{customdata}<br>X: %{x:.3f}<br>Y: %{y:.3f}<br>Z: %{z:.3f}<extra></extra>',
-                name='Users'
-            ))
-        
-        # Add highlighted points
-        highlight_mask = [c == 'red' for c in colors]
-        if any(highlight_mask):
-            fig.add_trace(go.Scatter3d(
-                x=coords[highlight_mask, 0],
-                y=coords[highlight_mask, 1],
-                z=coords[highlight_mask, 2],
-                mode='markers',
-                marker=dict(color='red', size=8, opacity=0.9),
-                text=[names[i] for i in range(len(names)) if highlight_mask[i]],
-                customdata=[profiles[i] for i in range(len(profiles)) if highlight_mask[i]],
-                hovertemplate='<b>%{text}</b><br>%{customdata}<br>X: %{x:.3f}<br>Y: %{y:.3f}<br>Z: %{z:.3f}<extra></extra>',
-                name='Highlighted'
-            ))
-        
-        fig.update_layout(
-            title=title or f'{method.upper()} 3D Visualization',
-            scene=dict(
-                xaxis_title=f'{method} Component 1',
-                yaxis_title=f'{method} Component 2',
-                zaxis_title=f'{method} Component 3'
-            ),
-            width=900,
-            height=700,
-            showlegend=True
-        )
-        
-        if save_path:
-            fig.write_html(save_path)
-            self.logger.info(f"Saved plot to {save_path}")
-        
-        return fig
-    
-    def plot_comparison(self, methods: List[str] = ['pca_2d', 'tsne_2d', 'umap_2d'],
-                       save_path: str = None) -> go.Figure:
-        """
-        Create comparison plot of different dimensionality reduction methods.
-        
-        Args:
-            methods: List of methods to compare
-            save_path: Path to save the plot
-            
-        Returns:
-            Plotly figure with subplots
-        """
-        n_methods = len(methods)
-        fig = make_subplots(
-            rows=1, cols=n_methods,
-            subplot_titles=[method.upper() for method in methods],
-            specs=[[{"type": "scatter"}] * n_methods]
-        )
-        
-        embeddings, names, profiles = self._prepare_data()
-        
-        for i, method in enumerate(methods):
-            if method not in self.coordinates:
-                continue
-            
-            coords = self.coordinates[method]
-            
-            fig.add_trace(
-                go.Scatter(
-                    x=coords[:, 0],
-                    y=coords[:, 1],
-                    mode='markers',
-                    marker=dict(size=6, opacity=0.7),
-                    text=names,
-                    hovertemplate='<b>%{text}</b><br>X: %{x:.3f}<br>Y: %{y:.3f}<extra></extra>',
-                    name=method.upper()
+                marker=dict(
+                    size=8,
+                    color='lightblue',
+                    opacity=0.7,
+                    line=dict(width=1, color='darkblue')
                 ),
-                row=1, col=i+1
-            )
+                name=f'Users ({len(regular_indices)})',
+                text=regular_names,
+                hovertemplate='<b>%{text}</b><extra></extra>'
+            ))
         
+        # Plot special users (star markers; hover shows name only)
+        if special_indices:
+            special_coords = embeddings_2d[special_indices]
+            special_names = [users[i].name for i in special_indices]
+
+            fig.add_trace(go.Scatter(
+                x=special_coords[:, 0],
+                y=special_coords[:, 1],
+                mode='markers',
+                marker=dict(
+                    size=15,
+                    color='red',
+                    opacity=0.9,
+                    symbol='star',
+                    line=dict(width=2, color='darkred')
+                ),
+                name=f'Special Users ({len(special_indices)})',
+                text=special_names,
+                hovertemplate='<b>%{text}</b><extra></extra>'
+            ))
+        
+        # Update layout
         fig.update_layout(
-            title='Dimensionality Reduction Comparison',
-            height=400,
-            width=300 * n_methods,
+            title=f'UMAP Visualization - {mode.title()} Embeddings<br>{population.name} ({len(users)} users)',
+            xaxis_title='UMAP 1',
+            yaxis_title='UMAP 2',
+            hovermode='closest',
+            showlegend=True,
+            width=figsize[0] * 80,
+            height=figsize[1] * 80,
+            annotations=[
+                dict(
+                    text=f'n_neighbors={n_neighbors}, min_dist={min_dist}<br>metric={metric}, similarity: Euclidean Distance',
+                    xref="paper", yref="paper",
+                    x=0.02, y=0.98, xanchor='left', yanchor='top',
+                    showarrow=False,
+                    font=dict(size=12),
+                    bgcolor="rgba(255,255,255,0.8)",
+                    bordercolor="rgba(0,0,0,0.5)",
+                    borderwidth=1
+                )
+            ]
+        )
+        
+        if save_path:
+            fig.write_html(save_path)
+            self.logger.info(f"Saved UMAP plot to {save_path}")
+        
+        return fig
+    
+    def plot_similarity_comparison(self, target_user: User, similar_users: List[Tuple[User, float]], 
+                                  mode: str = 'combined', figsize: Tuple[int, int] = (10, 6),
+                                  save_path: Optional[str] = None) -> go.Figure:
+        """
+        Plot similarity scores for similar users using Plotly.
+        
+        Args:
+            target_user: Target user
+            similar_users: List of (user, similarity_score) tuples
+            mode: Embedding mode used
+            figsize: Figure size (for compatibility, not used in plotly)
+            save_path: Path to save plot (optional)
+            
+        Returns:
+            plotly Figure
+        """
+        if not similar_users:
+            raise ValueError("No similar users provided")
+        
+        # Extract data
+        users, scores = zip(*similar_users)
+        user_names = [user.name for user in users]
+        
+        # Create colors - highlight most similar user
+        colors = ['orange' if i == 0 else 'lightblue' for i in range(len(users))]
+        
+        # Create bar plot
+        fig = go.Figure(data=[
+            go.Bar(
+                x=user_names,
+                y=scores,
+                marker_color=colors,
+                marker_line_color='navy',
+                marker_line_width=1,
+                text=[f'{score:.3f}' for score in scores],
+                textposition='outside',
+                hovertemplate='<b>%{x}</b><br>Similarity: %{y:.3f}<extra></extra>'
+            )
+        ])
+        
+        # Update layout
+        fig.update_layout(
+            title=f'Most Similar Users to {target_user.name}<br>({mode.title()} Embeddings, Euclidean Distance)',
+            xaxis_title='Users',
+            yaxis_title='Similarity Score',
+            yaxis=dict(range=[0, 1], gridcolor='lightgray', gridwidth=1),
+            width=figsize[0] * 80,
+            height=figsize[1] * 80,
             showlegend=False
         )
         
+        # Rotate x-axis labels if there are many users
+        if len(user_names) > 5:
+            fig.update_xaxes(tickangle=45)
+        
         if save_path:
             fig.write_html(save_path)
-            self.logger.info(f"Saved comparison plot to {save_path}")
+            self.logger.info(f"Saved similarity plot to {save_path}")
         
         return fig
     
-    def find_closest_in_space(self, target_coords: np.ndarray, method: str, k: int = 5) -> List[Tuple[str, float]]:
+    def plot_trait_comparison(self, users: List[User], figsize: Tuple[int, int] = (14, 8),
+                             save_path: Optional[str] = None) -> go.Figure:
         """
-        Find closest users to target coordinates in the reduced space.
+        Plot trait embedding similarities across multiple users.
         
         Args:
-            target_coords: Target coordinates in the reduced space
-            method: Method space to search in
-            k: Number of closest users to return
+            users: List of users to compare
+            figsize: Figure size
+            save_path: Path to save plot (optional)
             
         Returns:
-            List of (username, distance) tuples
+            matplotlib Figure
         """
-        if method not in self.coordinates:
-            raise ValueError(f"Method '{method}' not fitted yet")
+        traits = ['Openness', 'Conscientiousness', 'Extraversion', 'Agreeableness', 'Neuroticism']
         
-        coords = self.coordinates[method]
-        embeddings, names, profiles = self._prepare_data()
+        # Calculate pairwise similarities for each trait
+        trait_similarities = {}
         
-        # Calculate distances
-        distances = np.linalg.norm(coords - target_coords, axis=1)
+        for trait in traits:
+            similarities = []
+            for i, user1 in enumerate(users):
+                for j, user2 in enumerate(users):
+                    if i < j:  # Only upper triangle
+                        try:
+                            sim = user1.calculate_similarity(user2, trait)
+                            similarities.append(sim)
+                        except:
+                            similarities.append(0.0)
+            
+            trait_similarities[trait] = similarities
         
-        # Get k closest
-        closest_indices = np.argsort(distances)[:k]
+        # Create plot
+        fig, ax = plt.subplots(figsize=figsize)
         
-        return [(names[i], distances[i]) for i in closest_indices]
+        # Box plot of trait similarities
+        data = [trait_similarities[trait] for trait in traits]
+        box_plot = ax.boxplot(data, labels=traits, patch_artist=True)
+        
+        # Color the boxes
+        colors = ['lightcoral', 'lightblue', 'lightgreen', 'lightyellow', 'lightpink']
+        for patch, color in zip(box_plot['boxes'], colors):
+            patch.set_facecolor(color)
+            patch.set_alpha(0.7)
+        
+        # Formatting
+        ax.set_ylabel('Similarity Score')
+        ax.set_title(f'Trait Embedding Similarities\\n({len(users)} users, {len(similarities)} pairwise comparisons per trait)')
+        ax.set_ylim(0, 1)
+        ax.grid(True, alpha=0.3, axis='y')
+        
+        # Add mean lines
+        for i, trait in enumerate(traits):
+            mean_sim = np.mean(trait_similarities[trait])
+            ax.hlines(mean_sim, i + 0.8, i + 1.2, colors='red', linestyles='dashed', alpha=0.8)
+            ax.text(i + 1, mean_sim + 0.02, f'{mean_sim:.3f}', ha='center', 
+                   va='bottom', fontsize=10, color='red', fontweight='bold')
+        
+        plt.tight_layout()
+        
+        if save_path:
+            plt.savefig(save_path, dpi=300, bbox_inches='tight')
+            self.logger.info(f"Saved trait comparison plot to {save_path}")
+        
+        return fig
     
-    def get_method_statistics(self) -> Dict[str, Any]:
-        """Get statistics about fitted methods."""
-        stats = {}
+    def create_embedding_summary(self, population: Population) -> Dict[str, Any]:
+        """
+        Create summary statistics of embeddings in the population.
         
-        if self.pca_2d is not None:
-            stats['pca_2d_explained_variance'] = self.pca_2d.explained_variance_ratio_.sum()
+        Args:
+            population: Population to analyze
+            
+        Returns:
+            Dictionary with embedding statistics
+        """
+        summary = {
+            'population_name': population.name,
+            'total_users': len(population),
+            'users_with_embeddings': len(population.get_users_with_embeddings()),
+            'embedding_modes': {}
+        }
         
-        if self.pca_3d is not None:
-            stats['pca_3d_explained_variance'] = self.pca_3d.explained_variance_ratio_.sum()
+        # Check each embedding mode
+        modes = ['combined', 'interests', 'Openness', 'Conscientiousness', 
+                'Extraversion', 'Agreeableness', 'Neuroticism']
         
-        stats['fitted_methods'] = list(self.coordinates.keys())
+        for mode in modes:
+            try:
+                embedding_matrix, users = population.get_embedding_matrix(mode)
+                if len(embedding_matrix) > 0:
+                    summary['embedding_modes'][mode] = {
+                        'users_count': len(users),
+                        'dimensions': embedding_matrix.shape[1],
+                        'mean_norm': float(np.mean(np.linalg.norm(embedding_matrix, axis=1))),
+                        'std_norm': float(np.std(np.linalg.norm(embedding_matrix, axis=1)))
+                    }
+                else:
+                    summary['embedding_modes'][mode] = {'users_count': 0}
+            except Exception as e:
+                summary['embedding_modes'][mode] = {'error': str(e)}
         
-        return stats
+        return summary
     
-    def __str__(self) -> str:
-        """String representation."""
-        n_users = len(self.population.users) if self.population else 0
-        fitted_methods = list(self.coordinates.keys())
-        return f"Visualizer(users={n_users}, methods={fitted_methods})"
+    def plot_interactive_population(self, population: Population, modes: List[str] = None, 
+                                   figsize: Tuple[int, int] = (15, 10)):
+        """
+        Interactive population visualization (disabled - use Plotly methods instead).
+        
+        Args:
+            population: Population to visualize
+            modes: List of embedding modes to include
+            figsize: Figure size
+            
+        Returns:
+            None (method disabled)
+        """
+        raise NotImplementedError("Interactive population plotting is disabled. Use plot_population_pca() or plot_population_umap() with Plotly instead.")
+    
+    def plot_similarity_heatmap(self, users: List[User], mode: str = 'combined', 
+                               figsize: Tuple[int, int] = (12, 10)) -> go.Figure:
+        """
+        Create an interactive similarity heatmap between users using Plotly.
+        
+        Args:
+            users: List of users to compare
+            mode: Embedding mode to use
+            figsize: Figure size (for compatibility, not used in plotly)
+            
+        Returns:
+            plotly Figure with heatmap
+        """
+        if len(users) < 2:
+            raise ValueError("Need at least 2 users for similarity heatmap")
+        
+        # Calculate similarity matrix
+        n_users = len(users)
+        similarity_matrix = np.zeros((n_users, n_users))
+        
+        for i in range(n_users):
+            for j in range(n_users):
+                if i == j:
+                    similarity_matrix[i, j] = 1.0
+                else:
+                    similarity_matrix[i, j] = users[i].calculate_similarity(users[j], mode)
+        
+        # Create user labels
+        user_labels = [f"{user.name[:15]}" for user in users]
+        
+        # Create heatmap
+        fig = go.Figure(data=go.Heatmap(
+            z=similarity_matrix,
+            x=user_labels,
+            y=user_labels,
+            colorscale='RdYlBu_r',
+            zmin=0,
+            zmax=1,
+            text=[[f'{similarity_matrix[i, j]:.2f}' for j in range(n_users)] for i in range(n_users)],
+            texttemplate='%{text}',
+            textfont={"size": 10},
+            hovertemplate='<b>%{y}</b> vs <b>%{x}</b><br>Similarity: %{z:.3f}<extra></extra>',
+            colorbar=dict(
+                title="Euclidean Distance<br>Similarity",
+                titleside="right"
+            )
+        ))
+        
+        # Update layout
+        fig.update_layout(
+            title=f'User Similarity Heatmap - {mode.title()} Embeddings<br>Euclidean Distance Similarity (0=different, 1=identical)',
+            xaxis_title='Users',
+            yaxis_title='Users',
+            width=figsize[0] * 80,
+            height=figsize[1] * 80,
+            xaxis=dict(tickangle=45),
+            yaxis=dict(autorange='reversed')  # Reverse y-axis to match matplotlib convention
+        )
+        
+        return fig
