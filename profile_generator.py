@@ -602,6 +602,142 @@ class ProfileGenerator:
         personality_success = self.generate_personality_profiles(user)
         return interests_success and personality_success
     
+    def generate_profile_from_famous_person(self, famous_person_name: str) -> Optional[str]:
+        """
+        Generate a personality profile based on a famous person.
+        
+        Args:
+            famous_person_name: Name of the famous person to base the profile on
+            
+        Returns:
+            Generated personality profile string, or None if failed
+        """
+        prompt = f"""Based on what you know about {famous_person_name}, write a 200-word personality profile that captures how this type of person thinks, feels, and behaves.
+
+        • Use "they" as the pronoun. Do not mention the famous person's name directly
+        • Focus on personality traits, cognitive style, emotional tendencies, values, motivations, and social orientation
+        • Use clear, semantically rich language with personality-relevant descriptors (e.g., analytical, empathetic, adventurous, introverted, pragmatic, idealistic, resilient)
+        • Avoid listing specific works, achievements, or biographical details. Focus on general behavioral patterns and personality characteristics
+        • Avoid literary analysis; instead, describe character attributes, worldview, and patterns of thought
+        • Organize the profile into a cohesive narrative rather than bullet points
+        • Avoid overly poetic language or abstract metaphors — keep it concrete, direct, and precise
+        • Output exactly one paragraph in plain text, without headings or formatting
+        • The description should be well-rounded, covering intellectual interests, emotional landscape, interpersonal style, and decision-making tendencies
+        • Focus on the personality type rather than specific historical facts
+
+        Generate a profile that captures the essence of this person's personality type without revealing who they are."""
+        
+        response = self._make_api_call(prompt, max_tokens=300, temperature=0.7, model=self.model)
+        
+        if response:
+            self.logger.info(f"Generated profile based on {famous_person_name}")
+            return response
+        else:
+            self.logger.error(f"Failed to generate profile for {famous_person_name}")
+            return None
+
+    def generate_personality_profiles_from_famous_person(self, famous_person_name: str) -> Optional[Dict[str, str]]:
+        """
+        Generate Big 5 personality trait profiles based on a famous person.
+        
+        Args:
+            famous_person_name: Name of the famous person to base the profiles on
+            
+        Returns:
+            Dictionary with Big 5 trait descriptions, or None if failed
+        """
+        prompt = f"""Based on what you know about {famous_person_name}, generate personality descriptions for each of the Big 5 traits. For each trait, write a 2-3 sentence description of how this type of person would manifest that trait.
+
+        The Big 5 traits are:
+        - Openness: creativity, curiosity, intellectual engagement
+        - Conscientiousness: organization, discipline, goal-orientation  
+        - Extraversion: social energy, assertiveness, enthusiasm
+        - Agreeableness: cooperation, trust, empathy
+        - Neuroticism: emotional stability, stress response, anxiety levels
+
+        • Use "they" as the pronoun. Do not mention the famous person's name
+        • Focus on behavioral manifestations of each trait
+        • Be specific about how this personality type would express each dimension
+        • Avoid biographical details or specific achievements
+        • Keep descriptions concrete and behavioral
+
+        Format as valid JSON:
+        {{
+            "Openness": "description here",
+            "Conscientiousness": "description here", 
+            "Extraversion": "description here",
+            "Agreeableness": "description here",
+            "Neuroticism": "description here"
+        }}"""
+        
+        response = self._make_api_call(prompt, max_tokens=400, temperature=0.7, model=self.model)
+        
+        if response:
+            try:
+                # Clean response - remove markdown code blocks if present
+                cleaned_response = response.strip()
+                if cleaned_response.startswith('```json'):
+                    cleaned_response = cleaned_response[7:]  # Remove ```json
+                if cleaned_response.endswith('```'):
+                    cleaned_response = cleaned_response[:-3]  # Remove ```
+                cleaned_response = cleaned_response.strip()
+                
+                # Parse JSON response
+                profiles = json.loads(cleaned_response)
+                self.logger.info(f"Generated Big 5 profiles based on {famous_person_name}")
+                return profiles
+            except json.JSONDecodeError as e:
+                self.logger.error(f"Failed to parse JSON response for {famous_person_name}: {e}")
+                self.logger.error(f"Raw response: {response[:200]}...")
+                return None
+        else:
+            self.logger.error(f"Failed to generate Big 5 profiles for {famous_person_name}")
+            return None
+
+    def create_user_from_famous_person(self, famous_person_name: str, user_name: str = None) -> Optional[User]:
+        """
+        Create a complete User object based on a famous person's personality.
+        
+        Args:
+            famous_person_name: Name of the famous person to base the profile on
+            user_name: Name for the created user (defaults to "User inspired by [famous_person]")
+            
+        Returns:
+            User object with generated profiles, or None if failed
+        """
+        # Generate user name if not provided
+        if user_name is None:
+            user_name = f"User inspired by {famous_person_name}"
+        
+        # Create user
+        user = User(user_name)
+        
+        # Generate interests profile
+        interests_profile = self.generate_profile_from_famous_person(famous_person_name)
+        if interests_profile:
+            user.set_interests_profile(interests_profile)
+        else:
+            self.logger.error(f"Failed to generate interests profile for {famous_person_name}")
+            return None
+        
+        # Generate personality profiles
+        personality_profiles = self.generate_personality_profiles_from_famous_person(famous_person_name)
+        if personality_profiles:
+            user.set_personality_profiles(personality_profiles)
+        else:
+            self.logger.error(f"Failed to generate personality profiles for {famous_person_name}")
+            return None
+        
+        # Add metadata
+        user.metadata = {
+            'source': 'famous_person',
+            'inspiration': famous_person_name,
+            'generation_method': 'AI_profile_from_celebrity'
+        }
+        
+        self.logger.info(f"Created user '{user_name}' based on {famous_person_name}")
+        return user
+
     def get_statistics(self) -> Dict[str, Any]:
         """Get generation statistics."""
         return {
