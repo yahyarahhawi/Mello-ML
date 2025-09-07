@@ -454,7 +454,7 @@ class ProfileGenerator:
         • Use "they" as the pronoun. do not mention name
         • Focus on inferring personality traits from the combined inputs, including cognitive style, emotional tendencies, values, motivations, and social orientation.
         • Use clear, semantically rich language with personality-relevant descriptors (e.g., analytical, empathetic, adventurous, introverted, pragmatic, idealistic, resilient).
-        • Avoid listing titles, authors, or specific movie names. Mention genres, themes, high level topics like science, philosophy, morality
+        • Avoid listing titles, authors, or specific movie names. Mention genres, themes, high level topics like science, philosophy, morality #TODO
         • Avoid literary analysis; instead, describe character attributes, worldview, and patterns of thought.
         • Organize the profile into a cohesive narrative rather than bullet points.
         • Avoid overly poetic language or abstract metaphors — keep it concrete, direct, and precise.
