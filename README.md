@@ -1,6 +1,6 @@
 ## Mello-ML — Unified Personality Profiling and Embeddings
 
-An end‑to‑end system I built to explore personality‑aware matching through culture and behavior. It turns rich, natural‑language inputs (books, films, music, self‑descriptions, and Big Five behaviors) into structured profiles and high‑dimensional embeddings for similarity, clustering, and visualization.
+An end‑to‑end system I built to explore personality‑aware matching and through culture and behavior. It turns rich, natural‑language inputs (books, films, music, self‑descriptions, and Big Five behaviors) into structured profiles and high‑dimensional meaningful embedding space for similarity, clustering, and visualization.
 
 
 ### Why I built this
